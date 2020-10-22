@@ -56,7 +56,7 @@ void Engine::SetMap(glm::vec2 position, glm::vec2 size) {
 }
 
 void Engine::ConfigSpriteMap(const std::string &sprite_name) {
-    map->SetSprite(std::make_shared<Graphic::SpriteAnimator>(pool_sprites.find(sprite_name)->second, std::vector<std::vector<float>>{{1.f, 1.f, 1.f, 0.f, 0.f, 0.f, 0.f, 1.f}}));
+    map->SetSprite(std::make_shared<Graphic::SpriteAnimator>(pool_sprites.find(sprite_name)->second, std::vector<std::vector<float>>{{0.999f, 0.999f, 0.999f, 0.011f, 0.011f, 0.011f, 0.011f, 0.999f}}));
 }
 
 void Engine::SetProp(glm::vec2 position, glm::vec2 size) {
@@ -67,7 +67,7 @@ void Engine::ConfigSpriteProp(const std::string &sprite_name) {
     size_t j = 0;
     for (auto i : props) {
         i->SetSprite(std::make_shared<Graphic::SpriteAnimator>(pool_pack_sprites.find(sprite_name)->second[j++],
-                                                            std::vector<std::vector<float>>{{1.f, 1.f, 1.f, 0.f, 0.f, 0.f, 0.f, 1.f}}));
+                                                            std::vector<std::vector<float>>{{0.98f, 0.98f, 0.98f, 0.02f, 0.02f, 0.02f, 0.02f, 0.98f}}));
     }
 }
 

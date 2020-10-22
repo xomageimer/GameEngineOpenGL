@@ -1,16 +1,16 @@
 #include "Bullet.h"
 
 
-GameObjects::Bullet::Bullet(glm::vec2 & position, glm::vec2 size, float rotation, glm::vec2 direct, float layer) : IGameActor(position, size, rotation, layer), current_target(position) {
+GameObjects::Bullet::Bullet(glm::vec2 & position, glm::vec2 size, float & rotation, glm::vec2 & direct, float layer) : IGameActor(position, size, rotation, layer), current_target(position), rotation(rotation), direct(direct) {
     m_direction = direct;
 }
 
 
 void GameObjects::Bullet::Update(std::shared_ptr<Graphic::Sprite> sprite) {
     float currentFrame = glfwGetTime();
-    m_deltaTime = currentFrame - m_lastFrame;
-    m_lastFrame = currentFrame;
-    m_position += (m_direction * m_velocity * m_deltaTime);
+    _deltaTime = currentFrame - _lastFrame;
+    _lastFrame = currentFrame;
+    m_position += (m_direction * m_velocity *_deltaTime);
     sprite->GetCenter() = m_position;
     sprite->GetSize() = m_size;
     sprite->GetRotation() = m_rotation;
@@ -45,5 +45,5 @@ void GameObjects::Bullet::Render() {
 
 bool GameObjects::Bullet::die() {
     float m_curlifetime = glfwGetTime();
-    return m_curlifetime - m_lasttime >= 4.f;
+    return m_curlifetime - m_lasttime >= 3.f;
 }

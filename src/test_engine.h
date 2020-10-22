@@ -175,11 +175,14 @@ void processInput(GLFWwindow *window)
 
 void AnimeTest(GLFWwindow* window){
     Engine::Editor().SetPlayer({0.f, 0.f}, {0.13f, 0.2f}, 0.f, 0.f);
+    Engine::Editor().SetPlayer({0.f, 0.f}, {0.13f, 0.2f}, 0.f, 0.f);
+
     auto Resource_Path = (std::filesystem::current_path()).parent_path()/"res";
     auto Shaders_Path = (std::filesystem::current_path()).parent_path()/"shaders";
 
     Engine::Editor().SetShader(Shaders_Path/"vertex_shader.glsl", Shaders_Path/"fragment_shader.glsl");
     Engine::Editor().SetTexture("Survivor_Texture", (Resource_Path/"chars/survivor_sec.png"));
+    Engine::Editor().SetTexture("Survivor_Texture_Reloading", (Resource_Path/"chars/survivor-reload_rifle.png"));
     Engine::Editor().SetTexture("Zombie_Texture", (Resource_Path/"chars/zombie.png"));
     Engine::Editor().SetTexture("Bullet_Texture", (Resource_Path/"textures/bullet.png"));
     Engine::Editor().SetTexture("Tree_Texture", (Resource_Path/"textures/tree.png"));
@@ -188,6 +191,7 @@ void AnimeTest(GLFWwindow* window){
     Engine::Editor().SetSprite("Survivor_Walk", "Survivor_Texture");
     Engine::Editor().SetSprite("Survivor_Idle", "Survivor_Texture");
     Engine::Editor().SetSprite("Survivor_Shooting", "Survivor_Texture");
+    Engine::Editor().SetSprite("Survivor_Reload", "Survivor_Texture_Reloading");
     Engine::Editor().SetSprite("Zombie_Walk","Zombie_Texture");
     Engine::Editor().SetSprite("Zombie_Attack", "Zombie_Texture");
     Engine::Editor().SetSpritePack("Bullet", "Bullet_Texture", 100);
@@ -196,6 +200,8 @@ void AnimeTest(GLFWwindow* window){
 
     Engine::Editor().ConfigPlayerAnim(GameObjects::ACTION::WALK, "Survivor_Walk", {});
     Engine::Editor().GetPlayerController()->GetAnimator(GameObjects::ACTION::WALK)->SetSheetAtlas({0.027, 0.82}, {0.24, 0.99}, 0.25f, 0.1665f, 5, 4);
+    Engine::Editor().ConfigPlayerAnim(GameObjects::ACTION::RELOAD, "Survivor_Reload", {});
+    Engine::Editor().GetPlayerController()->GetAnimator(GameObjects::ACTION::RELOAD)->SetSheetAtlas({0.027, 0.82}, {0.24, 0.99}, 0.25f, 0.1665f, 5, 4);
     Engine::Editor().ConfigPlayerAnim(GameObjects::ACTION::IDLE, "Survivor_Idle", {std::vector<std::vector<float>>{{
                                                                                                                            0.24f, 0.99f,
                                                                                                                            0.24f, 0.82f,
@@ -205,8 +211,11 @@ void AnimeTest(GLFWwindow* window){
     Engine::Editor().ConfigPlayerParticles("Bullet");
 
     Engine::Editor().ConfigPlayerAnim(GameObjects::ACTION::SHOOTING, "Survivor_Shooting", {});
-    Engine::Editor().GetPlayerController()->GetAnimator(GameObjects::ACTION::SHOOTING)->SetSheetAtlas({0.03, 0.0001}, {0.24, 0.163}, 0.25f, 0.1665f, 1, 3);
+    Engine::Editor().GetPlayerController()->GetAnimator(GameObjects::ACTION::SHOOTING)->SetSheetAtlas({0.027, 0.f}, {0.24, 0.163}, 0.25f, 0.1665f, 1, 3);
     Engine::Editor().GetPlayerController()->GetAnimator(GameObjects::ACTION::SHOOTING)->SetSpeed(0.1);
+
+
+
 
 
     Engine::Editor().GetPlayerController()->setVelocity(0.2f);

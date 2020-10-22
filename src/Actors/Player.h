@@ -40,6 +40,7 @@ namespace GameObjects {
         size_t bullet_num = 0;
 
         float lastBullet = 0.f;
+        float reload_start = 0.f;
 
         void SetAction(ACTION act);
         ACTION m_action = ACTION::WALK;

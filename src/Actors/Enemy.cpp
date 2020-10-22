@@ -16,9 +16,18 @@ void GameObjects::Enemy::Update() {
     m_lastFrame = currentFrame;
     m_rotation = atan2f(current_target->y, current_target->x);
     m_direction = glm::normalize(*current_target);
+    for (auto & i : *bulls){
+        if (i.second->GetCurrentPosition().x <= m_position.x + m_size.x && i.second->GetCurrentPosition().x <= m_position.y + m_size.y){
+            this->die();
+        }
+    }
     if (m_position.x <= 0.2f || m_position.y <= 0.2f) {
         m_action = ACTION::SHOOTING;
-        *current_health -= 33.f;
+        if (reload_start >= 0.07f) {
+            *current_health -= 33.f;
+            reload_start = 0.f;
+        }
+        reload_start += m_deltaTime  * m_velocity;
     } else {
         m_action = ACTION::WALK;
         m_position += (m_direction * m_velocity * m_deltaTime);

@@ -9,7 +9,8 @@ void GameObjects::Player::Render() {
     UpdateSprite(it->GetSprite());
     it->AnimationUpdate();
     for (auto & i : bullets){
-        if (!i.second->die())
+        i.first = !i.second->die();
+        if (i.first)
             i.second->Render();
     }
 }
@@ -93,16 +94,27 @@ void GameObjects::Player::keyboard_controller(GLFWwindow *window, float & deltaT
         glm::vec2 right = glm::cross(glm::vec3(m_direction, 0.f), m_up);
         m_position += (right * CameraSpeed * 0.7f);
     }
-    if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS){
-        if (currentFrame - lastBullet >= 0.2f) {
-            bullets[bullet_num].first = true;
-            bullets[bullet_num++].second->Activate();
-            lastBullet = glfwGetTime();
+    if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS) {
+        if (bullet_num != 30) {
+            if (currentFrame - lastBullet >= 0.3f) {
+                bullets[bullet_num].first = true;
+                bullets[bullet_num++].second->Activate();
+                lastBullet = glfwGetTime();
+            }
+            m_action = ACTION::SHOOTING;
         }
-        m_action = ACTION::SHOOTING;
+    }
+    if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS) {
+        if (reload_start >= 0.5f) {
+            bullet_num = 0;
+            reload_start = 0.f;
+        }
+        reload_start += CameraSpeed;
+        m_action = ACTION::RELOAD;
     }
     if (glfwGetKey(window, GLFW_KEY_W) != GLFW_PRESS && glfwGetKey(window, GLFW_KEY_S) != GLFW_PRESS
-        && glfwGetKey(window, GLFW_KEY_A) != GLFW_PRESS && glfwGetKey(window, GLFW_KEY_D) != GLFW_PRESS && glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) != GLFW_PRESS) {
+        && glfwGetKey(window, GLFW_KEY_A) != GLFW_PRESS && glfwGetKey(window, GLFW_KEY_D) != GLFW_PRESS &&
+        glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) != GLFW_PRESS && glfwGetKey(window, GLFW_KEY_R) != GLFW_PRESS) {
         m_action = ACTION::IDLE;
     }
 
@@ -113,7 +125,7 @@ void GameObjects::Player::keyboard_controller(GLFWwindow *window, float & deltaT
 void GameObjects::Player::SetBullet(std::vector<std::shared_ptr<Graphic::Sprite>> vec) {
     bullets.reserve(vec.size());
     for (auto i : vec) {
-        bullets.emplace_back(false, std::make_shared<Bullet>(m_position, glm::vec2{0.1f, 0.1f}, m_rotation, m_direction));
+        bullets.emplace_back(false, std::make_shared<Bullet>(m_position, glm::vec2{0.02f, 0.02f}, m_rotation, m_direction));
         bullets.back().second->SetSprite(std::make_shared<Graphic::SpriteAnimator>(i, std::vector<std::vector<float>>{{1.f, 1.f, 1.f, 0.f, 0.f, 0.f, 0.f, 1.f}}));
     }
 }

@@ -32,8 +32,9 @@ public:
     void SetProp(glm::vec2 position, glm::vec2 size);
     void ConfigSpriteProp(const std::string & sprite_name);
 
-    void SetEnemiesSpawn();
-    void SetEnemies();
+    void SetEnemiesSpawns(std::vector<glm::vec2> spawn_pos);
+    void SetEnemies(const std::string & sprite_name);
+    void ConfigEnemies(GameObjects::ACTION act, const std::string & sprite_name, const std::vector<std::vector<float>> & sprite_frames);
 
     void SetSprite(const std::string & name,
                    const std::string & texture_name);
@@ -60,6 +61,8 @@ private:
     std::shared_ptr<GameObjects::Player> player_controller = nullptr;
     std::shared_ptr<GameObjects::Quad> map;
     std::vector<std::shared_ptr<GameObjects::Quad>> props ;
+
+    std::vector<glm::vec2> spawns;
     std::set<std::shared_ptr<GameObjects::Enemy>> enemies;
 
     std::map<std::string, std::shared_ptr<Graphic::Sprite>> pool_sprites;

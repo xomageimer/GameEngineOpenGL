@@ -2,6 +2,7 @@
 #define GAMEENGINE_ENEMY_H
 
 #include "IGameActor.h"
+#include "Bullet.h"
 
 namespace GameObjects {
 
@@ -13,9 +14,10 @@ namespace GameObjects {
         Enemy(Enemy&&) = default;
         Enemy& operator=(Enemy&&) = default;
 
-        inline void SetPlayerTarget(std::shared_ptr<glm::vec2> targ, std::shared_ptr<float> targ_health){
+        inline void SetPlayerTarget(std::shared_ptr<glm::vec2> targ, std::shared_ptr<float> targ_health, std::shared_ptr<std::vector<std::pair<bool, std::shared_ptr<Bullet>>>> bullets){
             current_health = targ_health;
             current_target = targ;
+            bulls = bullets;
         };
 
         void SetSpawn(glm::vec2 spawn);
@@ -38,8 +40,12 @@ namespace GameObjects {
         std::shared_ptr<const glm::vec2> current_target;
         std::shared_ptr<float> current_health;
 
+        std::shared_ptr<std::vector<std::pair<bool, std::shared_ptr<Bullet>>>> bulls;
+
         float m_deltaTime;
         float m_lastFrame = 0.f;
+
+        float reload_start = 0.f;
 
         void SetAction(ACTION act);
         ACTION m_action = ACTION::WALK;

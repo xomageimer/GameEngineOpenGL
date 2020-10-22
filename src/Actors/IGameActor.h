@@ -12,7 +12,7 @@
 
 namespace GameObjects {
     enum class ACTION {
-        IDLE, WALK, SHOOTING
+        IDLE, WALK, SHOOTING, RELOAD
     };
 
     struct IGameActor {
