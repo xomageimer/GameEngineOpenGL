@@ -57,8 +57,11 @@ int main()
     {
         processInput(window);
 
-        glClearColor(0.9f, 0.9f, 1.f, 1.0f);
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
+
+        if (Engine::Editor().GetPlayerController()->die())
+            glfwSetWindowShouldClose(window, true);
 
         Engine::Editor().Render();
 

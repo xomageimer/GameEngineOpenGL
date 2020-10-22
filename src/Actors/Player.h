@@ -4,6 +4,7 @@
 #include <set>
 
 #include "IGameActor.h"
+#include "Bullet.h"
 
 // TODO прикрепить также камеру и изменять ее матрицу перемещения в зависимости от перемещения плеера
 
@@ -21,10 +22,12 @@ namespace GameObjects {
 
         void SetAnimator(ACTION name_of_action, std::shared_ptr<Graphic::SpriteAnimator>) override;
 
+        void SetBullet(std::vector<std::shared_ptr<Graphic::Sprite>>);
+
         void SetAnimation(ACTION);
 
         void Render() override;
-        void die() override;
+        bool die() override;
 
         void UpdateSprite(std::shared_ptr<Graphic::Sprite>);
 
@@ -32,6 +35,12 @@ namespace GameObjects {
         void keyboard_controller(GLFWwindow *window, float & deltaTime, float & lastFrame);
 
     private:
+        std::shared_ptr<float> health;
+        std::vector<std::pair<bool, std::shared_ptr<Bullet>>> bullets;
+        size_t bullet_num = 0;
+
+        float lastBullet = 0.f;
+
         void SetAction(ACTION act);
         ACTION m_action = ACTION::WALK;
     };

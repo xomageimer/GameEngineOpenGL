@@ -22,6 +22,7 @@ add_executable(${PROJECT_NAME_}
         src/Actors/Player.cpp
         src/Actors/Quad.cpp
         src/Actors/Enemy.cpp
+        src/Actors/Bullet.cpp
 
         src/Graphic/Texture2D.cpp
         src/Graphic/Sprite.cpp
@@ -30,8 +31,6 @@ add_executable(${PROJECT_NAME_}
         src/Graphic/VertexArray.cpp
         src/Graphic/IndexBuffer.cpp
         src/Graphic/Shader.cpp
-
-        src/Physics/CollisionBox.cpp
 
         src/Engine/Engine.cpp
         src/Engine/Camera.cpp

@@ -1,11 +1,29 @@
 #ifndef GAMEENGINE_QUAD_H
 #define GAMEENGINE_QUAD_H
 
-// TODO структура кт будет представлять из себя объект карты (в виде квадрата) и может иметь коллизию или не иметь ее
+#include "IGameActor.h"
 
-class Quad {
 
-};
+namespace GameObjects {
+    struct Quad : public IGameActor {
+    public:
+        Quad(glm::vec2 position, glm::vec2 size, float rotation = 0.f, float layer = -1.f);
+
+        ~Quad() = default;
+
+        void SetSprite(std::shared_ptr<Graphic::SpriteAnimator>);
+
+        void SetPosition(glm::vec2 new_pose);
+
+        void Render() override;
+
+    private:
+      void SetAnimator(ACTION name_of_action, std::shared_ptr<Graphic::SpriteAnimator>) override;
+      bool die() override;
+      static inline const ACTION m_action = ACTION::IDLE;
+        // коллизия
+    };
+}
 
 
 #endif //GAMEENGINE_QUAD_H

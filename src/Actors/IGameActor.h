@@ -26,7 +26,7 @@ namespace GameObjects {
 
         virtual void Render() = 0;
 
-        virtual void die() = 0;
+        virtual bool die() = 0;
 
         virtual inline void setVelocity(float vel) {
             m_velocity = vel;
