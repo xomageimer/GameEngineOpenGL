@@ -7,19 +7,19 @@
 
 Скриншоты из игры:
 
-![alt tag](https://imgur.com/f9bwjWX)
+![скриншот проекта](https://github.com/xomageimer/GameEngineOpenGL/blob/master/doc/gitsimage/start.PNG)
 
-![alt tag](https://imgur.com/GRU6SGC)
+![скриншот проекта](https://github.com/xomageimer/GameEngineOpenGL/blob/master/doc/gitsimage/death1.PNG)
 
-![alt tag](https://imgur.com/nx3KZZH)
+![скриншот проекта](https://github.com/xomageimer/GameEngineOpenGL/blob/master/doc/gitsimage/z.PNG)
 
-![alt tag](https://imgur.com/hbgLrB4)
+![скриншот проекта](https://github.com/xomageimer/GameEngineOpenGL/blob/master/doc/gitsimage/zombies.PNG)
 
-![alt tag](https://imgur.com/g8ZSqTg)
+![скриншот проекта](https://github.com/xomageimer/GameEngineOpenGL/blob/master/doc/gitsimage/zombiesblood.PNG)
 
 Вывод в коносль в случае смерти:
 
-![alt tag](https://imgur.com/V2AzokP)
+![скриншот проекта](https://github.com/xomageimer/GameEngineOpenGL/blob/master/doc/gitsimage/died.PNG)
 
 Попробовать игру под windows (в игре отсутсвуют скримеры, всё что может вас напугать - баги и лаги, извиняюсь за них):
 
