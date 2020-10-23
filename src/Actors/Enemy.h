@@ -3,6 +3,10 @@
 
 #include "IGameActor.h"
 #include "Bullet.h"
+#include <random>
+
+extern std::random_device rd;
+
 
 namespace GameObjects {
 
@@ -14,13 +18,13 @@ namespace GameObjects {
         Enemy(Enemy&&) = default;
         Enemy& operator=(Enemy&&) = default;
 
-        inline void SetPlayerTarget(std::shared_ptr<glm::vec2> targ, std::shared_ptr<float> targ_health, std::shared_ptr<std::vector<std::pair<bool, std::shared_ptr<Bullet>>>> bullets){
+        inline void SetPlayerTarget(const glm::vec2 & targ, std::shared_ptr<float> targ_health, std::vector<std::pair<bool, std::shared_ptr<Bullet>>> & bullets){
             current_health = targ_health;
-            current_target = targ;
-            bulls = bullets;
+            current_target = &targ;
+            bulls = &bullets;
         };
 
-        void SetSpawn(glm::vec2 spawn);
+        void SetSpawn(std::vector<glm::vec2> spawn);
 
         void Render() override;
 
@@ -35,17 +39,20 @@ namespace GameObjects {
         bool die() override;
 
     private:
-        glm::vec2 my_spawn;
+        std::vector<glm::vec2> my_spawn;
 
-        std::shared_ptr<const glm::vec2> current_target;
+        const glm::vec2 * current_target;
         std::shared_ptr<float> current_health;
 
-        std::shared_ptr<std::vector<std::pair<bool, std::shared_ptr<Bullet>>>> bulls;
+        std::vector<std::pair<bool, std::shared_ptr<Bullet>>> * bulls;
 
         float m_deltaTime;
         float m_lastFrame = 0.f;
 
+        float health = 100.f;
+
         float reload_start = 0.f;
+        float reload_spawn = 0.f;
 
         void SetAction(ACTION act);
         ACTION m_action = ACTION::WALK;

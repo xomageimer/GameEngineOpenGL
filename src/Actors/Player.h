@@ -31,6 +31,9 @@ namespace GameObjects {
 
         void UpdateSprite(std::shared_ptr<Graphic::Sprite>);
 
+        std::shared_ptr<float> getHealth();
+        std::vector<std::pair<bool, std::shared_ptr<GameObjects::Bullet>>> & getBullets();
+
         void mouse_controller(GLFWwindow* window, double xpos, double ypos);
         void keyboard_controller(GLFWwindow *window, float & deltaTime, float & lastFrame);
 
@@ -38,6 +41,8 @@ namespace GameObjects {
         std::shared_ptr<float> health;
         std::vector<std::pair<bool, std::shared_ptr<Bullet>>> bullets;
         size_t bullet_num = 0;
+
+        bool is_reload = false;
 
         float lastBullet = 0.f;
         float reload_start = 0.f;

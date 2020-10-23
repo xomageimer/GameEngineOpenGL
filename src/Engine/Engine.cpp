@@ -1,5 +1,7 @@
 #include "Engine.h"
 
+#include <utility>
+
 Engine &Engine::Editor()  {
     static Engine engine = Engine();
     return engine;
@@ -22,6 +24,8 @@ void Engine::Render() {
     map->Render();
     m_cam->Render();
     player_controller->Render();
+    for (auto i : enemies)
+        i->Render();
     for (auto i : props)
         i->Render();
 }
@@ -82,4 +86,50 @@ void Engine::SetSpritePack(const std::string &name, const std::string &texture_n
 
 void Engine::ConfigPlayerParticles(const std::string & name) {
     player_controller->SetBullet(pool_pack_sprites[name]);
+}
+
+void Engine::SetEnemies(glm::vec2 size, float layer, size_t numbers) {
+    enemies.reserve(numbers);
+    for(size_t i = 0; i < numbers; i++){
+        enemies.emplace_back(std::make_shared<GameObjects::Enemy>(glm::vec2{0.f, 0.f}, size, 0.f, layer));
+        enemies.back()->SetPlayerTarget(player_controller->GetCurrentPosition(), player_controller->getHealth(), player_controller->getBullets());
+        enemies.back()->setVelocity(0.15f);
+    }
+}
+
+void Engine::ConfigEnemies(GameObjects::ACTION act, const std::string & sprite_name,
+                           glm::vec2 left_bottom,
+                           glm::vec2 right_top,
+                           float x,
+                           float y,
+                           size_t vertical,
+                           size_t horizontal) {
+    auto it = pool_pack_sprites.find(sprite_name);
+    size_t j = 0;
+    if (it == pool_pack_sprites.end()) return;
+    for (auto & i : enemies){
+        i->SetAnimator(act, std::make_shared<Graphic::SpriteAnimator>(it->second[j++], std::vector<std::vector<float>>{}));
+        i->GetAnimator(act)->SetSheetAtlas(left_bottom, right_top, x, y, vertical, horizontal);
+        i->GetAnimator(act)->SetSpeed(0.07f);
+    }
+}
+
+void Engine::SetEnemiesSpawns(std::vector<glm::vec2> spawn_pos) {
+    glm::vec2 spawns {1.f, 1.f};
+    float fract = 0.3f;
+    for (size_t i = 0; i < 4; i++){
+        spawn_pos.push_back({spawns.x + fract, spawns.y});
+        spawn_pos.push_back({spawns.x, spawns.y + fract});
+        spawn_pos.push_back({spawns.x - fract, spawns.y});
+        spawn_pos.push_back({spawns.x, spawns.y - fract});
+        spawn_pos.push_back({-spawns.x + fract, -spawns.y});
+        spawn_pos.push_back({-spawns.x, -spawns.y + fract});
+        spawn_pos.push_back({-spawns.x - fract, -spawns.y});
+        spawn_pos.push_back({-spawns.x, -spawns.y - fract});
+        fract += 0.3f;
+    }
+    for (auto & i : enemies){
+        i->SetSpawn(spawn_pos);
+        i->Respawn();
+    }
 }

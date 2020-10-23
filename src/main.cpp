@@ -60,8 +60,10 @@ int main()
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        if (Engine::Editor().GetPlayerController()->die())
+        if (Engine::Editor().GetPlayerController()->die()){
             glfwSetWindowShouldClose(window, true);
+            std::cerr << "you die!" << std::endl;
+        }
 
         Engine::Editor().Render();
 

@@ -45,5 +45,9 @@ void GameObjects::Bullet::Render() {
 
 bool GameObjects::Bullet::die() {
     float m_curlifetime = glfwGetTime();
-    return m_curlifetime - m_lasttime >= 3.f;
+    return m_curlifetime - m_lasttime >= 3.f || !active;
+}
+
+void GameObjects::Bullet::diactivate() {
+    active = false;
 }

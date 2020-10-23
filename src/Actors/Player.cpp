@@ -102,24 +102,29 @@ void GameObjects::Player::keyboard_controller(GLFWwindow *window, float & deltaT
                 lastBullet = glfwGetTime();
             }
             m_action = ACTION::SHOOTING;
+        } else {
+            is_reload = true;
         }
-    }
-    if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS) {
-        if (reload_start >= 0.5f) {
-            bullet_num = 0;
-            reload_start = 0.f;
-        }
-        reload_start += CameraSpeed;
-        m_action = ACTION::RELOAD;
     }
     if (glfwGetKey(window, GLFW_KEY_W) != GLFW_PRESS && glfwGetKey(window, GLFW_KEY_S) != GLFW_PRESS
         && glfwGetKey(window, GLFW_KEY_A) != GLFW_PRESS && glfwGetKey(window, GLFW_KEY_D) != GLFW_PRESS &&
         glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) != GLFW_PRESS && glfwGetKey(window, GLFW_KEY_R) != GLFW_PRESS) {
         m_action = ACTION::IDLE;
     }
+    if (is_reload || glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS) {
+        if (reload_start >= 0.8f) {
+            bullet_num = 0;
+            reload_start = 0.f;
+            is_reload = false;
+        }
+        reload_start += CameraSpeed;
+        m_action = ACTION::RELOAD;
+    }
 
     if (m_position.x >= 3.9f || m_position.y >= 3.9f || m_position.x <= -3.9f || m_position.y <= -3.9f)
         m_position = prev_pos;
+
+  //  std::cerr << "my position: " << m_position.x << ' ' << m_position.y << std::endl;
 }
 
 void GameObjects::Player::SetBullet(std::vector<std::shared_ptr<Graphic::Sprite>> vec) {
@@ -128,4 +133,12 @@ void GameObjects::Player::SetBullet(std::vector<std::shared_ptr<Graphic::Sprite>
         bullets.emplace_back(false, std::make_shared<Bullet>(m_position, glm::vec2{0.02f, 0.02f}, m_rotation, m_direction));
         bullets.back().second->SetSprite(std::make_shared<Graphic::SpriteAnimator>(i, std::vector<std::vector<float>>{{1.f, 1.f, 1.f, 0.f, 0.f, 0.f, 0.f, 1.f}}));
     }
+}
+
+std::shared_ptr<float> GameObjects::Player::getHealth() {
+    return std::shared_ptr<float>(this->health);
+}
+
+std::vector<std::pair<bool, std::shared_ptr<GameObjects::Bullet>>> & GameObjects::Player::getBullets() {
+    return bullets;
 }

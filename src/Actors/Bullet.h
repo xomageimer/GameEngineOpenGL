@@ -17,19 +17,24 @@ namespace GameObjects {
 
         void Update(std::shared_ptr<Graphic::Sprite> sprite);
 
+        void diactivate();
+
         inline void Activate(){
+            active = true;
             m_lasttime = glfwGetTime();
             _lastFrame = glfwGetTime();
             m_position = current_target;
             m_direction = glm::normalize(direct);
             m_rotation = rotation;
-            m_velocity = 0.8f;
+            m_velocity = 1.2f;
         }
 
     private:
         virtual void SetAnimator(ACTION name_of_action, std::shared_ptr<Graphic::SpriteAnimator>);
         float _deltaTime;
         float _lastFrame = 0.f;
+
+        bool active = true;
 
         float m_curlifetime = 0.f;
         float m_lasttime = 0.f;
