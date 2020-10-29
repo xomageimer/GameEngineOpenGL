@@ -21,10 +21,15 @@ public:
     inline void SetPlayer(glm::vec2 position, glm::vec2 size, float rotation, float layer){
         player_controller.reset();
         player_controller = std::make_shared<GameObjects::Player>(position, size, rotation, layer);
+        player_start_pos = position;
     };
     [[nodiscard]] inline std::shared_ptr<GameObjects::Player> & GetPlayerController() {
         return player_controller;
     }
+    void PlayerDeadChecker();
+
+    void SetDeadSign(glm::vec2 size = {1.f, 1.f}, float timer_to_restart = 3.f);
+    void ConfigSpriteDeadSign(const std::string & sprite_name);
 
     void SetMap(glm::vec2 position, glm::vec2 size);
     void ConfigSpriteMap(const std::string & sprite_name);
@@ -64,8 +69,14 @@ private:
     std::shared_ptr<Shader> m_shader;
 
     std::shared_ptr<GameObjects::Player> player_controller = nullptr;
+    glm::vec2 player_start_pos;
     std::shared_ptr<GameObjects::Quad> map;
-    std::vector<std::shared_ptr<GameObjects::Quad>> props ;
+    std::shared_ptr<GameObjects::Quad> DeadSign;
+    std::vector<std::shared_ptr<GameObjects::Quad>> props;
+
+    float StartDeathTime = 0.f;
+    bool is_Dead = false;
+    float deltaTime;
 
     std::vector<std::shared_ptr<GameObjects::Enemy>> enemies;
 

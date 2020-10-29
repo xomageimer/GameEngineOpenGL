@@ -53,6 +53,9 @@ void GameObjects::Player::SetAnimation(GameObjects::ACTION act) {
 }
 
 void GameObjects::Player::mouse_controller(GLFWwindow *window, double xpos, double ypos) {
+    if (die())
+        return;
+
     glm::vec3 pos_2D{ xpos, ypos, 0.0f };
 
     glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f));
@@ -69,6 +72,9 @@ void GameObjects::Player::mouse_controller(GLFWwindow *window, double xpos, doub
 }
 
 void GameObjects::Player::keyboard_controller(GLFWwindow *window, float & deltaTime, float & lastFrame) {
+    if (die())
+        return;
+
     float currentFrame = glfwGetTime();
     deltaTime = currentFrame - lastFrame;
     lastFrame = currentFrame;
@@ -142,3 +148,4 @@ std::shared_ptr<float> GameObjects::Player::getHealth() {
 std::vector<std::pair<bool, std::shared_ptr<GameObjects::Bullet>>> & GameObjects::Player::getBullets() {
     return bullets;
 }
+

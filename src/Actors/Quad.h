@@ -13,6 +13,8 @@ namespace GameObjects {
 
         void SetSprite(std::shared_ptr<Graphic::SpriteAnimator>);
 
+        void UpdateSprite(std::shared_ptr<Graphic::Sprite> sprite);
+
         void SetPosition(glm::vec2 new_pose);
 
         void Render() override;

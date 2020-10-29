@@ -36,20 +36,21 @@ void GameObjects::Enemy::Update() {
             reload_spawn = 0.f;
         }
         reload_spawn += m_deltaTime * m_velocity;
-        m_layer = -0.1f;
+        m_layer = -0.5f;
         m_action = ACTION::DIE;
     }
     else {
         m_rotation = atan2f(m_direction.y, m_direction.x) ;
         m_action = ACTION::WALK;
-        m_position += (m_direction * m_velocity * m_deltaTime);
         reload_start += m_deltaTime * m_velocity;
-        if (std::abs(current_target->x - m_position.x) <= 0.08f && std::abs(current_target->y - m_position.y) <= 0.08f) {
+        if (std::abs(current_target->x - m_position.x) <= 0.12f && std::abs(current_target->y - m_position.y) <= 0.12f) {
             m_action = ACTION::SHOOTING;
             if (reload_start >= 0.4f) {
                 *current_health -= 33.f;
                 reload_start = 0.f;
             }
+        } else {
+            m_position += (m_direction * m_velocity * m_deltaTime);
         }
     }
 }

@@ -28,6 +28,7 @@ void Engine::Render() {
         i->Render();
     for (auto i : props)
         i->Render();
+    PlayerDeadChecker();
 }
 
 void Engine::SetSprite(const std::string & name,
@@ -115,21 +116,63 @@ void Engine::ConfigEnemies(GameObjects::ACTION act, const std::string & sprite_n
 }
 
 void Engine::SetEnemiesSpawns(std::vector<glm::vec2> spawn_pos) {
-    glm::vec2 spawns {1.f, 1.f};
+    glm::vec2 spawns {2.3f, 2.3f};
     float fract = 0.3f;
     for (size_t i = 0; i < 4; i++){
-        spawn_pos.push_back({spawns.x + fract, spawns.y});
-        spawn_pos.push_back({spawns.x, spawns.y + fract});
-        spawn_pos.push_back({spawns.x - fract, spawns.y});
-        spawn_pos.push_back({spawns.x, spawns.y - fract});
-        spawn_pos.push_back({-spawns.x + fract, -spawns.y});
-        spawn_pos.push_back({-spawns.x, -spawns.y + fract});
-        spawn_pos.push_back({-spawns.x - fract, -spawns.y});
-        spawn_pos.push_back({-spawns.x, -spawns.y - fract});
+        spawn_pos.emplace_back(spawns.x + fract, spawns.y);
+        spawn_pos.emplace_back(spawns.x, spawns.y + fract);
+        spawn_pos.emplace_back(spawns.x - fract, spawns.y);
+        spawn_pos.emplace_back(spawns.x, spawns.y - fract);
+        spawn_pos.emplace_back(-spawns.x + fract, -spawns.y);
+        spawn_pos.emplace_back(-spawns.x, -spawns.y + fract);
+        spawn_pos.emplace_back(-spawns.x - fract, -spawns.y);
+        spawn_pos.emplace_back(-spawns.x, -spawns.y - fract);
         fract += 0.3f;
+    }
+    glm::vec2 spawns2 {-2.3f, 2.3f};
+    for (size_t i = 0; i < 4; i++){
+        fract -= 0.5f;
+        spawn_pos.emplace_back(spawns2.x + fract, spawns2.y);
+        spawn_pos.emplace_back(spawns2.x, spawns2.y + fract);
+        spawn_pos.emplace_back(spawns2.x - fract, spawns2.y);
+        spawn_pos.emplace_back(spawns2.x, spawns2.y - fract);
+        spawn_pos.emplace_back(-spawns2.x + fract, -spawns2.y);
+        spawn_pos.emplace_back(-spawns2.x, -spawns2.y + fract);
+        spawn_pos.emplace_back(-spawns2.x - fract, -spawns2.y);
+        spawn_pos.emplace_back(-spawns2.x, -spawns2.y - fract);
     }
     for (auto & i : enemies){
         i->SetSpawn(spawn_pos);
         i->Respawn();
     }
 }
+
+void Engine::PlayerDeadChecker() {
+    if (Engine::Editor().GetPlayerController()->die()) {
+        if (!is_Dead) {
+            StartDeathTime = glfwGetTime();
+            DeadSign->SetPosition(player_controller->GetCurrentPosition());
+            is_Dead = true;
+        }
+        if (glfwGetTime() - StartDeathTime <= deltaTime) {
+            DeadSign->Render();
+            std::cerr << DeadSign->GetCurrentPosition().x << ' ' << DeadSign->GetCurrentPosition().y << std::endl;
+        } else {
+            for (auto i : enemies)
+                i->Respawn();
+            this->player_controller->GetCurrentPosition() = player_start_pos;
+            *this->player_controller->getHealth() = 100.f;
+            is_Dead = false;
+        }
+    }
+}
+
+void Engine::SetDeadSign(glm::vec2 size, float timer) {
+    DeadSign = std::make_shared<GameObjects::Quad>(glm::vec2{0.f, 0.f}, size);
+    deltaTime = timer;
+}
+
+void Engine::ConfigSpriteDeadSign(const std::string &sprite_name) {
+    DeadSign->SetSprite(std::make_shared<Graphic::SpriteAnimator>(pool_sprites.find(sprite_name)->second, std::vector<std::vector<float>>{{0.999f, 0.999f, 0.999f, 0.011f, 0.011f, 0.011f, 0.011f, 0.999f}}));
+}
+

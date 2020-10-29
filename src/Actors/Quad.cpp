@@ -31,12 +31,23 @@ void GameObjects::Quad::SetPosition(glm::vec2 new_pose) {
     this->m_position = new_pose;
 }
 
+
+
 void GameObjects::Quad::Render() {
-    m_representative[m_action]->AnimationUpdate();
+    auto it = m_representative[m_action];
+    UpdateSprite(it->GetSprite());
+    it->AnimationUpdate();
 }
 
 bool GameObjects::Quad::die() {
     std::cerr << "NO IMPL" << std::endl;
     return false;
+}
+
+void GameObjects::Quad::UpdateSprite(std::shared_ptr<Graphic::Sprite> sprite) {
+    sprite->GetCenter() = m_position;
+    sprite->GetSize() = m_size;
+    sprite->GetRotation() = m_rotation;
+    sprite->GetLayer() = m_layer;
 }
 

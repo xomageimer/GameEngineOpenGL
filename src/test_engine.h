@@ -187,6 +187,7 @@ void AnimeTest(GLFWwindow* window){
     Engine::Editor().SetTexture("Zombie_Die_Texture", (Resource_Path/"textures/blood.png"));
     Engine::Editor().SetTexture("Bullet_Texture", (Resource_Path/"textures/bullet.png"));
     Engine::Editor().SetTexture("Tree_Texture", (Resource_Path/"textures/tree.png"));
+    Engine::Editor().SetTexture("You_Dead_Texture", (Resource_Path/"textures/died.png"));
     Engine::Editor().SetTexture("Map_Texture", (Resource_Path/"textures/map.jpg"), GL_RGB);
 
     Engine::Editor().SetSprite("Survivor_Walk", "Survivor_Texture");
@@ -198,6 +199,7 @@ void AnimeTest(GLFWwindow* window){
     Engine::Editor().SetSpritePack("Zombie_Die", "Zombie_Die_Texture", 100);
     Engine::Editor().SetSpritePack("Bullet", "Bullet_Texture", 50);
     Engine::Editor().SetSpritePack("Tree", "Tree_Texture", 10);
+    Engine::Editor().SetSprite("You_Dead", "You_Dead_Texture");
     Engine::Editor().SetSprite("Map", "Map_Texture");
 
     Engine::Editor().ConfigPlayerAnim(GameObjects::ACTION::WALK, "Survivor_Walk", {});
@@ -222,11 +224,14 @@ void AnimeTest(GLFWwindow* window){
     glfwSetCursorPosCallback(window, mouse_callback);
 
 
-    Engine::Editor().SetEnemies({0.16f, 0.3f}, 0.2f, 10);
+    Engine::Editor().SetEnemies({0.16f, 0.3f}, 0.2f, 20);
     Engine::Editor().ConfigEnemies(GameObjects::ACTION::WALK, "Zombie_Walk", {0.001, 0.8}, {0.20, 0.99}, 0.1999f, 0.2f, 3, 5);
     Engine::Editor().ConfigEnemies(GameObjects::ACTION::SHOOTING, "Zombie_Attack", {0.001, 0.2f}, {0.20, 0.4}, 0.1999f, 0.2f, 2, 5);
     Engine::Editor().ConfigEnemies(GameObjects::ACTION::DIE, "Zombie_Die", {0., 0.f}, {1.f, 1.f}, 0.f, 0.f, 1, 1);
     Engine::Editor().SetEnemiesSpawns({{2.0f, 2.0f}});
+
+    Engine::Editor().SetDeadSign({0.5f, 0.5f});
+    Engine::Editor().ConfigSpriteDeadSign("You_Dead");
 
     Engine::Editor().SetMap({0.f, 0.f}, {4.f, 4.f});
     Engine::Editor().ConfigSpriteMap("Map");
