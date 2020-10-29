@@ -50,10 +50,10 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/res)
 include_directories("glfw_repo/include")
 include_directories("dependencies/glad/include")
-include_directories("dependencies/image_reader")
+include_directories("dependencies")
 
 target_link_libraries(${PROJECT_NAME_} PRIVATE ${SOURCE_FILES})
-target_include_directories(${PROJECT_NAME_} PUBLIC dependencies/image_reader)
+target_include_directories(${PROJECT_NAME_} PUBLIC dependencies)
 
 find_package(OpenGL REQUIRED)
 

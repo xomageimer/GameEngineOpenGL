@@ -9,7 +9,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include "stb_image.h"
+#include "../../dependencies/stb_image.h"
 
 // TODO это класс конфигураций текстур (вершины будут задаваться в классах объектов, кт используют текстуры (а в спрайтах они будут изменяться)
 
