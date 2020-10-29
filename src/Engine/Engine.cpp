@@ -19,6 +19,10 @@ void Engine::ConfigPlayerAnim(GameObjects::ACTION act, const std::string & sprit
 }
 
 void Engine::Render() {
+    if (On_Pause) {
+        PauseSign->Render();
+        return;
+    }
     m_shader->use();
     SetCameraUpdatePosition();
     map->Render();
@@ -156,7 +160,6 @@ void Engine::PlayerDeadChecker() {
         }
         if (glfwGetTime() - StartDeathTime <= deltaTime) {
             DeadSign->Render();
-            std::cerr << DeadSign->GetCurrentPosition().x << ' ' << DeadSign->GetCurrentPosition().y << std::endl;
         } else {
             for (auto i : enemies)
                 i->Respawn();
@@ -174,5 +177,31 @@ void Engine::SetDeadSign(glm::vec2 size, float timer) {
 
 void Engine::ConfigSpriteDeadSign(const std::string &sprite_name) {
     DeadSign->SetSprite(std::make_shared<Graphic::SpriteAnimator>(pool_sprites.find(sprite_name)->second, std::vector<std::vector<float>>{{0.999f, 0.999f, 0.999f, 0.011f, 0.011f, 0.011f, 0.011f, 0.999f}}));
+}
+
+bool Engine::CheckPauseMode(GLFWwindow *window) {
+    PauseSign->SetPosition(player_controller->GetCurrentPosition());
+    if(glfwGetKey(window, GLFW_KEY_P) == GLFW_PRESS) {
+        On_Pause = true;
+    }
+    if (On_Pause) {
+        for (auto i : enemies)
+            i->Stop();
+    }
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS && On_Pause) {
+            glfwSetWindowShouldClose(window, true);
+    }
+    if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && On_Pause) {
+        On_Pause = false;
+    }
+    return On_Pause;
+}
+
+void Engine::SetPauseSign(glm::vec2 size) {
+    PauseSign = std::make_shared<GameObjects::Quad>(glm::vec2{0.f, 0.f}, size);
+}
+
+void Engine::ConfigSpritePauseSign(const std::string &sprite_name) {
+    PauseSign->SetSprite(std::make_shared<Graphic::SpriteAnimator>(pool_sprites.find(sprite_name)->second, std::vector<std::vector<float>>{{0.999f, 0.999f, 0.999f, 0.011f, 0.011f, 0.011f, 0.011f, 0.999f}}));
 }
 

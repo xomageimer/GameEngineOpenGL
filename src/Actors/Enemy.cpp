@@ -103,3 +103,7 @@ void GameObjects::Enemy::Respawn() {
 void GameObjects::Enemy::SetSpawn(std::vector<glm::vec2> spawn) {
     my_spawn = spawn;
 }
+
+void GameObjects::Enemy::Stop() {
+    m_lastFrame = glfwGetTime();
+}

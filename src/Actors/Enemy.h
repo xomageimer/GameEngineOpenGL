@@ -36,10 +36,14 @@ namespace GameObjects {
 
         void Respawn();
 
+        void Stop();
+
         bool die() override;
 
     private:
         std::vector<glm::vec2> my_spawn;
+
+        bool stop = false;
 
         const glm::vec2 * current_target;
         std::shared_ptr<float> current_health;

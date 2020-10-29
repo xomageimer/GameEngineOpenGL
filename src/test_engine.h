@@ -168,9 +168,8 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos){
 
 void processInput(GLFWwindow *window)
 {
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-    Engine::Editor().GetPlayerController()->keyboard_controller(window, deltaTime, lastFrame);
+    if (!Engine::Editor().CheckPauseMode(window))
+        Engine::Editor().GetPlayerController()->keyboard_controller(window, deltaTime, lastFrame);
 }
 
 void AnimeTest(GLFWwindow* window){
@@ -188,6 +187,7 @@ void AnimeTest(GLFWwindow* window){
     Engine::Editor().SetTexture("Bullet_Texture", (Resource_Path/"textures/bullet.png"));
     Engine::Editor().SetTexture("Tree_Texture", (Resource_Path/"textures/tree.png"));
     Engine::Editor().SetTexture("You_Dead_Texture", (Resource_Path/"textures/died.png"));
+    Engine::Editor().SetTexture("Pause_Texture", (Resource_Path/"textures/pause.png"));
     Engine::Editor().SetTexture("Map_Texture", (Resource_Path/"textures/map.jpg"), GL_RGB);
 
     Engine::Editor().SetSprite("Survivor_Walk", "Survivor_Texture");
@@ -200,6 +200,7 @@ void AnimeTest(GLFWwindow* window){
     Engine::Editor().SetSpritePack("Bullet", "Bullet_Texture", 50);
     Engine::Editor().SetSpritePack("Tree", "Tree_Texture", 10);
     Engine::Editor().SetSprite("You_Dead", "You_Dead_Texture");
+    Engine::Editor().SetSprite("Pause", "Pause_Texture");
     Engine::Editor().SetSprite("Map", "Map_Texture");
 
     Engine::Editor().ConfigPlayerAnim(GameObjects::ACTION::WALK, "Survivor_Walk", {});
@@ -229,6 +230,9 @@ void AnimeTest(GLFWwindow* window){
     Engine::Editor().ConfigEnemies(GameObjects::ACTION::SHOOTING, "Zombie_Attack", {0.001, 0.2f}, {0.20, 0.4}, 0.1999f, 0.2f, 2, 5);
     Engine::Editor().ConfigEnemies(GameObjects::ACTION::DIE, "Zombie_Die", {0., 0.f}, {1.f, 1.f}, 0.f, 0.f, 1, 1);
     Engine::Editor().SetEnemiesSpawns({{2.0f, 2.0f}});
+
+    Engine::Editor().SetPauseSign({0.9f, 0.9f});
+    Engine::Editor().ConfigSpritePauseSign("Pause");
 
     Engine::Editor().SetDeadSign({0.5f, 0.5f});
     Engine::Editor().ConfigSpriteDeadSign("You_Dead");

@@ -31,8 +31,6 @@ void GameObjects::Quad::SetPosition(glm::vec2 new_pose) {
     this->m_position = new_pose;
 }
 
-
-
 void GameObjects::Quad::Render() {
     auto it = m_representative[m_action];
     UpdateSprite(it->GetSprite());
@@ -50,4 +48,3 @@ void GameObjects::Quad::UpdateSprite(std::shared_ptr<Graphic::Sprite> sprite) {
     sprite->GetRotation() = m_rotation;
     sprite->GetLayer() = m_layer;
 }
-

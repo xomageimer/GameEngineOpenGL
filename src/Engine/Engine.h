@@ -31,6 +31,11 @@ public:
     void SetDeadSign(glm::vec2 size = {1.f, 1.f}, float timer_to_restart = 3.f);
     void ConfigSpriteDeadSign(const std::string & sprite_name);
 
+    void SetPauseSign(glm::vec2 size = {1.f, 1.f});
+    void ConfigSpritePauseSign(const std::string & sprite_name);
+
+    bool CheckPauseMode(GLFWwindow *window);
+
     void SetMap(glm::vec2 position, glm::vec2 size);
     void ConfigSpriteMap(const std::string & sprite_name);
 
@@ -72,11 +77,13 @@ private:
     glm::vec2 player_start_pos;
     std::shared_ptr<GameObjects::Quad> map;
     std::shared_ptr<GameObjects::Quad> DeadSign;
+    std::shared_ptr<GameObjects::Quad> PauseSign;
     std::vector<std::shared_ptr<GameObjects::Quad>> props;
 
     float StartDeathTime = 0.f;
     bool is_Dead = false;
     float deltaTime;
+    bool On_Pause = false;
 
     std::vector<std::shared_ptr<GameObjects::Enemy>> enemies;
 
