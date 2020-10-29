@@ -17,7 +17,7 @@
 
 ![скриншот проекта](https://github.com/xomageimer/GameEngineOpenGL/blob/master/doc/gitsimage/zombiesblood.PNG)
 
-Вывод в коносль в случае смерти:
+Вывод в случае смерти:
 
 ![скриншот проекта](https://github.com/xomageimer/GameEngineOpenGL/blob/master/doc/gitsimage/died.PNG)
 
