@@ -176,8 +176,8 @@ void AnimeTest(GLFWwindow* window){
     Engine::Editor().SetPlayer({0.f, 0.f}, {0.13f, 0.2f}, 0.f, 0.f);
     Engine::Editor().SetPlayer({0.f, 0.f}, {0.13f, 0.2f}, 0.f, 0.f);
 
-    auto Resource_Path = (std::filesystem::current_path()).parent_path()/"res";
-    auto Shaders_Path = (std::filesystem::current_path()).parent_path()/"shaders";
+    auto Resource_Path = (std::filesystem::current_path())/"res";
+    auto Shaders_Path = (std::filesystem::current_path())/"shaders";
 
     Engine::Editor().SetShader(Shaders_Path/"vertex_shader.glsl", Shaders_Path/"fragment_shader.glsl");
     Engine::Editor().SetTexture("Survivor_Texture", (Resource_Path/"chars/survivor_sec.png"));
@@ -221,7 +221,7 @@ void AnimeTest(GLFWwindow* window){
 
 
 
-    Engine::Editor().GetPlayerController()->setVelocity(0.2f);
+    Engine::Editor().GetPlayerController()->setVelocity(0.3f);
     glfwSetCursorPosCallback(window, mouse_callback);
 
 

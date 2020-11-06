@@ -98,7 +98,7 @@ void Engine::SetEnemies(glm::vec2 size, float layer, size_t numbers) {
     for(size_t i = 0; i < numbers; i++){
         enemies.emplace_back(std::make_shared<GameObjects::Enemy>(glm::vec2{0.f, 0.f}, size, 0.f, layer));
         enemies.back()->SetPlayerTarget(player_controller->GetCurrentPosition(), player_controller->getHealth(), player_controller->getBullets());
-        enemies.back()->setVelocity(0.15f);
+        enemies.back()->setVelocity(0.3f);
     }
 }
 

@@ -27,6 +27,7 @@
 *.lib
 
 # Executables
+*.txt
 *.exe
 *.out
 *.app
@@ -41,3 +42,6 @@
 /.idea
 /cmake-build-debug
 /contrib
+/cmake-build-release
+
+*!CMakeLists.txt
