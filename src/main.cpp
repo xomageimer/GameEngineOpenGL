@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 
+#include <chrono>
+#include <thread>
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -53,6 +56,11 @@ int main()
 
     AnimeTest(window);
 
+    auto clock = std::chrono::steady_clock::now();
+    std::chrono::milliseconds frameTimeMin(30);
+    float last_sec_ = 0.0f;
+    size_t frames_ = 0;
+
     while(!glfwWindowShouldClose(window))
     {
         processInput(window);
@@ -64,6 +72,19 @@ int main()
 
         glfwSwapBuffers(window);
         glfwPollEvents();
+
+        auto now = std::chrono::steady_clock::now();
+        auto frameTime = now - clock;
+        clock = now;
+        std::this_thread::sleep_for(frameTimeMin - frameTime);
+
+        auto x = (float)glfwGetTime();
+        frames_++;
+        if (x - last_sec_ >= 1.0f){
+            std::cout << frames_ << std::endl;
+            last_sec_ = x;
+            frames_ = 0;
+        }
     }
 
 

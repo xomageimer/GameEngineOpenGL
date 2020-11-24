@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
 
-set (PROJECT_NAME_ GameEngine)
+set(PROJECT_NAME_ GameEngine)
 
+set(CMAKE_CXX_FLAGS "-O3")
 set(CMAKE_C_FLAGS_RELEASE)
 set(CMAKE_CXX_FLAGS_RELEASE)
 
