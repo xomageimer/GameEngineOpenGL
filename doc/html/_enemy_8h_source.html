@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: Исходный файл C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Actors/Enemy.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8a33d3b699d590208ab642df13852d0f.html">Actors</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Enemy.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_enemy_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAMEENGINE_ENEMY_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAMEENGINE_ENEMY_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_game_actor_8h.html">IGameActor.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_bullet_8h.html">Bullet.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">extern</span> std::random_device <a class="code" href="_enemy_8h.html#a7071b0092ad8c5b57d6cc40c5f803df5">rd</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_game_objects.html">GameObjects</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html">   18</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_game_objects_1_1_enemy.html">Enemy</a> : <a class="code" href="struct_game_objects_1_1_i_game_actor.html">IGameActor</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a04bc1f2c534e8e9b7b741a63cb8643d0">   20</a></span>&#160;        <a class="code" href="struct_game_objects_1_1_enemy.html#a04bc1f2c534e8e9b7b741a63cb8643d0">Enemy</a>(glm::vec2 position, glm::vec2 size, <span class="keywordtype">float</span> rotation = 0.f, <span class="keywordtype">float</span> layer = 1.f);</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a2f963ed5574e293d15662b13c8634fe4">   21</a></span>&#160;        <a class="code" href="struct_game_objects_1_1_enemy.html#a2f963ed5574e293d15662b13c8634fe4">Enemy</a>(<span class="keyword">const</span> <a class="code" href="struct_game_objects_1_1_enemy.html">Enemy</a>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#ab9d3908f568a634834751e112b7fec94">   22</a></span>&#160;        <a class="code" href="struct_game_objects_1_1_enemy.html">Enemy</a>&amp; <a class="code" href="struct_game_objects_1_1_enemy.html#ab9d3908f568a634834751e112b7fec94">operator=</a>(<span class="keyword">const</span> <a class="code" href="struct_game_objects_1_1_enemy.html">Enemy</a>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#aa9f589be8b617df6c63d8edb03d326ef">   23</a></span>&#160;        <a class="code" href="struct_game_objects_1_1_enemy.html#aa9f589be8b617df6c63d8edb03d326ef">Enemy</a>(<a class="code" href="struct_game_objects_1_1_enemy.html">Enemy</a>&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#aa0258f9b281b48a266a58af368206fe5">   24</a></span>&#160;        <a class="code" href="struct_game_objects_1_1_enemy.html">Enemy</a>&amp; <a class="code" href="struct_game_objects_1_1_enemy.html#aa0258f9b281b48a266a58af368206fe5">operator=</a>(<a class="code" href="struct_game_objects_1_1_enemy.html">Enemy</a>&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a303c0199c43e77abfa62b97b9114223b">   31</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_enemy.html#a303c0199c43e77abfa62b97b9114223b">SetPlayerTarget</a>(<span class="keyword">const</span> glm::vec2 &amp; targ, std::shared_ptr&lt;float&gt; targ_health, std::vector&lt;std::pair&lt;<span class="keywordtype">bool</span>, std::shared_ptr&lt;Bullet&gt;&gt;&gt; &amp; bullets){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="struct_game_objects_1_1_enemy.html#a2b135d39fbb89c4670fcd4a59a534289">current_health</a> = targ_health;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="struct_game_objects_1_1_enemy.html#ab141c7780102b4d3473a4f1b97f777c7">current_target</a> = &amp;targ;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <a class="code" href="struct_game_objects_1_1_enemy.html#aaa25a66779f13ba790192ff6fedb4ebd">bulls</a> = &amp;bullets;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        };</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#aadfbe029feb1ac17a0fb450ea2aa4e0d">   40</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_enemy.html#aadfbe029feb1ac17a0fb450ea2aa4e0d">SetSpawn</a>(std::vector&lt;glm::vec2&gt; spawn);</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#ab2b53760673db110b451214a51435f62">   44</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_enemy.html#ab2b53760673db110b451214a51435f62">Render</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a9247dd284cac0814f8d38cc62e7be16f">   48</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_enemy.html#a9247dd284cac0814f8d38cc62e7be16f">UpdateSprite</a>(std::shared_ptr&lt;Graphic::Sprite&gt;);</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#af1953c0f3ef0b8a409e6fc635c2ac3ee">   52</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_enemy.html#af1953c0f3ef0b8a409e6fc635c2ac3ee">SetAnimator</a>(<a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> name_of_action, std::shared_ptr&lt;Graphic::SpriteAnimator&gt; anim) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a01544790889c834312c5f51de5e2c0f5">   56</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_enemy.html#a01544790889c834312c5f51de5e2c0f5">Update</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a1ac2817ea6d9c10fd6d822edc29ee450">   60</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_enemy.html#a1ac2817ea6d9c10fd6d822edc29ee450">Respawn</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a12d86d17043e6592b2ea23ab9f803ca4">   64</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_enemy.html#a12d86d17043e6592b2ea23ab9f803ca4">Stop</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a5bc2842dfcb268656da9835fe984487f">   68</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_game_objects_1_1_enemy.html#a5bc2842dfcb268656da9835fe984487f">die</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a00a56ccfdd2383b08a641ebf5d67d4d4">   71</a></span>&#160;        std::vector&lt;glm::vec2&gt; <a class="code" href="struct_game_objects_1_1_enemy.html#a00a56ccfdd2383b08a641ebf5d67d4d4">my_spawn</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a4e72128b5f84890acd235fad6f7b53ee">   73</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_game_objects_1_1_enemy.html#a4e72128b5f84890acd235fad6f7b53ee">stop</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#ab141c7780102b4d3473a4f1b97f777c7">   75</a></span>&#160;        <span class="keyword">const</span> glm::vec2 * <a class="code" href="struct_game_objects_1_1_enemy.html#ab141c7780102b4d3473a4f1b97f777c7">current_target</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a2b135d39fbb89c4670fcd4a59a534289">   76</a></span>&#160;        std::shared_ptr&lt;float&gt; <a class="code" href="struct_game_objects_1_1_enemy.html#a2b135d39fbb89c4670fcd4a59a534289">current_health</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#aaa25a66779f13ba790192ff6fedb4ebd">   78</a></span>&#160;        std::vector&lt;std::pair&lt;bool, std::shared_ptr&lt;Bullet&gt;&gt;&gt; * <a class="code" href="struct_game_objects_1_1_enemy.html#aaa25a66779f13ba790192ff6fedb4ebd">bulls</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#ad133099eb3cfe037b1d6fd90a62e7b80">   80</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_enemy.html#ad133099eb3cfe037b1d6fd90a62e7b80">m_deltaTime</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a8fa3831bd7c6e03e74c90fcb9690bb53">   81</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_enemy.html#a8fa3831bd7c6e03e74c90fcb9690bb53">m_lastFrame</a> = 0.f;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#ad5ddb5f9913821081b52fc06549c60f9">   83</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_enemy.html#ad5ddb5f9913821081b52fc06549c60f9">health</a> = 100.f;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a1c955b291e0dc017d5780e3b5d3b1321">   85</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_enemy.html#a1c955b291e0dc017d5780e3b5d3b1321">reload_start</a> = 0.f;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#ab750705213587a19f4ba4ad2ff1b1d82">   86</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_enemy.html#ab750705213587a19f4ba4ad2ff1b1d82">reload_spawn</a> = 0.f;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a5645d5e89ccd9cc3988e2ddbaf3d30f6">   88</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_enemy.html#a5645d5e89ccd9cc3988e2ddbaf3d30f6">SetAction</a>(<a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> act);</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_enemy.html#a864cff3a9b41ede98ec3df16254df8e9">   89</a></span>&#160;        <a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> <a class="code" href="struct_game_objects_1_1_enemy.html#a864cff3a9b41ede98ec3df16254df8e9">m_action</a> = <a class="code" href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a">ACTION::WALK</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    };</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif //GAMEENGINE_ENEMY_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a864cff3a9b41ede98ec3df16254df8e9"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a864cff3a9b41ede98ec3df16254df8e9">GameObjects::Enemy::m_action</a></div><div class="ttdeci">ACTION m_action</div><div class="ttdef"><b>Definition:</b> Enemy.h:89</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a9247dd284cac0814f8d38cc62e7be16f"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a9247dd284cac0814f8d38cc62e7be16f">GameObjects::Enemy::UpdateSprite</a></div><div class="ttdeci">void UpdateSprite(std::shared_ptr&lt; Graphic::Sprite &gt;)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a303c0199c43e77abfa62b97b9114223b"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a303c0199c43e77abfa62b97b9114223b">GameObjects::Enemy::SetPlayerTarget</a></div><div class="ttdeci">void SetPlayerTarget(const glm::vec2 &amp;targ, std::shared_ptr&lt; float &gt; targ_health, std::vector&lt; std::pair&lt; bool, std::shared_ptr&lt; Bullet &gt;&gt;&gt; &amp;bullets)</div><div class="ttdef"><b>Definition:</b> Enemy.h:31</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a5645d5e89ccd9cc3988e2ddbaf3d30f6"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a5645d5e89ccd9cc3988e2ddbaf3d30f6">GameObjects::Enemy::SetAction</a></div><div class="ttdeci">void SetAction(ACTION act)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a4e72128b5f84890acd235fad6f7b53ee"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a4e72128b5f84890acd235fad6f7b53ee">GameObjects::Enemy::stop</a></div><div class="ttdeci">bool stop</div><div class="ttdef"><b>Definition:</b> Enemy.h:73</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_ad5ddb5f9913821081b52fc06549c60f9"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#ad5ddb5f9913821081b52fc06549c60f9">GameObjects::Enemy::health</a></div><div class="ttdeci">float health</div><div class="ttdef"><b>Definition:</b> Enemy.h:83</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_ad133099eb3cfe037b1d6fd90a62e7b80"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#ad133099eb3cfe037b1d6fd90a62e7b80">GameObjects::Enemy::m_deltaTime</a></div><div class="ttdeci">float m_deltaTime</div><div class="ttdef"><b>Definition:</b> Enemy.h:80</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_ab9d3908f568a634834751e112b7fec94"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#ab9d3908f568a634834751e112b7fec94">GameObjects::Enemy::operator=</a></div><div class="ttdeci">Enemy &amp; operator=(const Enemy &amp;)=default</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a1ac2817ea6d9c10fd6d822edc29ee450"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a1ac2817ea6d9c10fd6d822edc29ee450">GameObjects::Enemy::Respawn</a></div><div class="ttdeci">void Respawn()</div></div>
+<div class="ttc" id="a_bullet_8h_html"><div class="ttname"><a href="_bullet_8h.html">Bullet.h</a></div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_ab750705213587a19f4ba4ad2ff1b1d82"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#ab750705213587a19f4ba4ad2ff1b1d82">GameObjects::Enemy::reload_spawn</a></div><div class="ttdeci">float reload_spawn</div><div class="ttdef"><b>Definition:</b> Enemy.h:86</div></div>
+<div class="ttc" id="anamespace_game_objects_html"><div class="ttname"><a href="namespace_game_objects.html">GameObjects</a></div><div class="ttdef"><b>Definition:</b> Bullet.h:8</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html">GameObjects::Enemy</a></div><div class="ttdef"><b>Definition:</b> Enemy.h:18</div></div>
+<div class="ttc" id="agroup___game___objects_html_gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a"><div class="ttname"><a href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a">GameObjects::ACTION::WALK</a></div><div class="ttdeci">@ WALK</div><div class="ttdoc">Анимация в режиме &quot;Идти&quot;.</div></div>
+<div class="ttc" id="a_enemy_8h_html_a7071b0092ad8c5b57d6cc40c5f803df5"><div class="ttname"><a href="_enemy_8h.html#a7071b0092ad8c5b57d6cc40c5f803df5">rd</a></div><div class="ttdeci">std::random_device rd</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a1c955b291e0dc017d5780e3b5d3b1321"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a1c955b291e0dc017d5780e3b5d3b1321">GameObjects::Enemy::reload_start</a></div><div class="ttdeci">float reload_start</div><div class="ttdef"><b>Definition:</b> Enemy.h:85</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a01544790889c834312c5f51de5e2c0f5"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a01544790889c834312c5f51de5e2c0f5">GameObjects::Enemy::Update</a></div><div class="ttdeci">void Update()</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a04bc1f2c534e8e9b7b741a63cb8643d0"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a04bc1f2c534e8e9b7b741a63cb8643d0">GameObjects::Enemy::Enemy</a></div><div class="ttdeci">Enemy(glm::vec2 position, glm::vec2 size, float rotation=0.f, float layer=1.f)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_aadfbe029feb1ac17a0fb450ea2aa4e0d"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#aadfbe029feb1ac17a0fb450ea2aa4e0d">GameObjects::Enemy::SetSpawn</a></div><div class="ttdeci">void SetSpawn(std::vector&lt; glm::vec2 &gt; spawn)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a5bc2842dfcb268656da9835fe984487f"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a5bc2842dfcb268656da9835fe984487f">GameObjects::Enemy::die</a></div><div class="ttdeci">bool die() override</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_ab141c7780102b4d3473a4f1b97f777c7"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#ab141c7780102b4d3473a4f1b97f777c7">GameObjects::Enemy::current_target</a></div><div class="ttdeci">const glm::vec2 * current_target</div><div class="ttdef"><b>Definition:</b> Enemy.h:75</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_aa9f589be8b617df6c63d8edb03d326ef"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#aa9f589be8b617df6c63d8edb03d326ef">GameObjects::Enemy::Enemy</a></div><div class="ttdeci">Enemy(Enemy &amp;&amp;)=default</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a12d86d17043e6592b2ea23ab9f803ca4"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a12d86d17043e6592b2ea23ab9f803ca4">GameObjects::Enemy::Stop</a></div><div class="ttdeci">void Stop()</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a2b135d39fbb89c4670fcd4a59a534289"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a2b135d39fbb89c4670fcd4a59a534289">GameObjects::Enemy::current_health</a></div><div class="ttdeci">std::shared_ptr&lt; float &gt; current_health</div><div class="ttdef"><b>Definition:</b> Enemy.h:76</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_aaa25a66779f13ba790192ff6fedb4ebd"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#aaa25a66779f13ba790192ff6fedb4ebd">GameObjects::Enemy::bulls</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; bool, std::shared_ptr&lt; Bullet &gt; &gt; &gt; * bulls</div><div class="ttdef"><b>Definition:</b> Enemy.h:78</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html">GameObjects::IGameActor</a></div><div class="ttdef"><b>Definition:</b> IGameActor.h:31</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a2f963ed5574e293d15662b13c8634fe4"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a2f963ed5574e293d15662b13c8634fe4">GameObjects::Enemy::Enemy</a></div><div class="ttdeci">Enemy(const Enemy &amp;)=default</div></div>
+<div class="ttc" id="agroup___game___objects_html_ga0072938dba3ccc8db4f127aad716aea6"><div class="ttname"><a href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">GameObjects::ACTION</a></div><div class="ttdeci">ACTION</div><div class="ttdef"><b>Definition:</b> IGameActor.h:23</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a8fa3831bd7c6e03e74c90fcb9690bb53"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a8fa3831bd7c6e03e74c90fcb9690bb53">GameObjects::Enemy::m_lastFrame</a></div><div class="ttdeci">float m_lastFrame</div><div class="ttdef"><b>Definition:</b> Enemy.h:81</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_ab2b53760673db110b451214a51435f62"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#ab2b53760673db110b451214a51435f62">GameObjects::Enemy::Render</a></div><div class="ttdeci">void Render() override</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_a00a56ccfdd2383b08a641ebf5d67d4d4"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#a00a56ccfdd2383b08a641ebf5d67d4d4">GameObjects::Enemy::my_spawn</a></div><div class="ttdeci">std::vector&lt; glm::vec2 &gt; my_spawn</div><div class="ttdef"><b>Definition:</b> Enemy.h:71</div></div>
+<div class="ttc" id="a_i_game_actor_8h_html"><div class="ttname"><a href="_i_game_actor_8h.html">IGameActor.h</a></div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_af1953c0f3ef0b8a409e6fc635c2ac3ee"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#af1953c0f3ef0b8a409e6fc635c2ac3ee">GameObjects::Enemy::SetAnimator</a></div><div class="ttdeci">void SetAnimator(ACTION name_of_action, std::shared_ptr&lt; Graphic::SpriteAnimator &gt; anim) override</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_enemy_html_aa0258f9b281b48a266a58af368206fe5"><div class="ttname"><a href="struct_game_objects_1_1_enemy.html#aa0258f9b281b48a266a58af368206fe5">GameObjects::Enemy::operator=</a></div><div class="ttdeci">Enemy &amp; operator=(Enemy &amp;&amp;)=default</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,865 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: Структура GameObjects::Enemy</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_game_objects.html">GameObjects</a></li><li class="navelem"><a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="struct_game_objects_1_1_enemy-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура GameObjects::Enemy<div class="ingroups"><a class="el" href="group___game___objects.html">logic of game objects</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_enemy_8h_source.html">Enemy.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:GameObjects::Enemy:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_game_objects_1_1_enemy__inherit__graph.png" border="0" usemap="#_game_objects_1_1_enemy_inherit__map" alt="Inheritance graph"/></div>
+<map name="_game_objects_1_1_enemy_inherit__map" id="_game_objects_1_1_enemy_inherit__map">
+<area shape="rect" title=" " alt="" coords="19,80,170,107"/>
+<area shape="rect" href="struct_game_objects_1_1_i_game_actor.html" title=" " alt="" coords="5,5,184,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса GameObjects::Enemy:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_game_objects_1_1_enemy__coll__graph.png" border="0" usemap="#_game_objects_1_1_enemy_coll__map" alt="Collaboration graph"/></div>
+<map name="_game_objects_1_1_enemy_coll__map" id="_game_objects_1_1_enemy_coll__map">
+<area shape="rect" title=" " alt="" coords="19,80,170,107"/>
+<area shape="rect" href="struct_game_objects_1_1_i_game_actor.html" title=" " alt="" coords="5,5,184,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a04bc1f2c534e8e9b7b741a63cb8643d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a04bc1f2c534e8e9b7b741a63cb8643d0">Enemy</a> (glm::vec2 position, glm::vec2 size, float rotation=0.f, float layer=1.f)</td></tr>
+<tr class="separator:a04bc1f2c534e8e9b7b741a63cb8643d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f963ed5574e293d15662b13c8634fe4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a2f963ed5574e293d15662b13c8634fe4">Enemy</a> (const <a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a> &amp;)=default</td></tr>
+<tr class="separator:a2f963ed5574e293d15662b13c8634fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d3908f568a634834751e112b7fec94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#ab9d3908f568a634834751e112b7fec94">operator=</a> (const <a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a> &amp;)=default</td></tr>
+<tr class="separator:ab9d3908f568a634834751e112b7fec94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f589be8b617df6c63d8edb03d326ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#aa9f589be8b617df6c63d8edb03d326ef">Enemy</a> (<a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:aa9f589be8b617df6c63d8edb03d326ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0258f9b281b48a266a58af368206fe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#aa0258f9b281b48a266a58af368206fe5">operator=</a> (<a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:aa0258f9b281b48a266a58af368206fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303c0199c43e77abfa62b97b9114223b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a303c0199c43e77abfa62b97b9114223b">SetPlayerTarget</a> (const glm::vec2 &amp;targ, std::shared_ptr&lt; float &gt; targ_health, std::vector&lt; std::pair&lt; bool, std::shared_ptr&lt; <a class="el" href="struct_game_objects_1_1_bullet.html">Bullet</a> &gt;&gt;&gt; &amp;bullets)</td></tr>
+<tr class="separator:a303c0199c43e77abfa62b97b9114223b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadfbe029feb1ac17a0fb450ea2aa4e0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#aadfbe029feb1ac17a0fb450ea2aa4e0d">SetSpawn</a> (std::vector&lt; glm::vec2 &gt; spawn)</td></tr>
+<tr class="separator:aadfbe029feb1ac17a0fb450ea2aa4e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b53760673db110b451214a51435f62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#ab2b53760673db110b451214a51435f62">Render</a> () override</td></tr>
+<tr class="separator:ab2b53760673db110b451214a51435f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9247dd284cac0814f8d38cc62e7be16f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a9247dd284cac0814f8d38cc62e7be16f">UpdateSprite</a> (std::shared_ptr&lt; <a class="el" href="class_graphic_1_1_sprite.html">Graphic::Sprite</a> &gt;)</td></tr>
+<tr class="separator:a9247dd284cac0814f8d38cc62e7be16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1953c0f3ef0b8a409e6fc635c2ac3ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#af1953c0f3ef0b8a409e6fc635c2ac3ee">SetAnimator</a> (<a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> name_of_action, std::shared_ptr&lt; <a class="el" href="struct_graphic_1_1_sprite_animator.html">Graphic::SpriteAnimator</a> &gt; anim) override</td></tr>
+<tr class="separator:af1953c0f3ef0b8a409e6fc635c2ac3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01544790889c834312c5f51de5e2c0f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a01544790889c834312c5f51de5e2c0f5">Update</a> ()</td></tr>
+<tr class="separator:a01544790889c834312c5f51de5e2c0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ac2817ea6d9c10fd6d822edc29ee450"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a1ac2817ea6d9c10fd6d822edc29ee450">Respawn</a> ()</td></tr>
+<tr class="separator:a1ac2817ea6d9c10fd6d822edc29ee450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d86d17043e6592b2ea23ab9f803ca4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a12d86d17043e6592b2ea23ab9f803ca4">Stop</a> ()</td></tr>
+<tr class="separator:a12d86d17043e6592b2ea23ab9f803ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc2842dfcb268656da9835fe984487f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a5bc2842dfcb268656da9835fe984487f">die</a> () override</td></tr>
+<tr class="separator:a5bc2842dfcb268656da9835fe984487f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_struct_game_objects_1_1_i_game_actor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_struct_game_objects_1_1_i_game_actor')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="struct_game_objects_1_1_i_game_actor.html">GameObjects::IGameActor</a></td></tr>
+<tr class="memitem:a0b97049a41b058b78d4f925f0878ad79 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a0b97049a41b058b78d4f925f0878ad79">IGameActor</a> (glm::vec2 position, glm::vec2 size, float rotation, float layer)</td></tr>
+<tr class="separator:a0b97049a41b058b78d4f925f0878ad79 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e75aa5ef95318485791e627c998900a inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a6e75aa5ef95318485791e627c998900a">~IGameActor</a> ()=default</td></tr>
+<tr class="separator:a6e75aa5ef95318485791e627c998900a inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e07139e7540e0ba5eee451e5b55e6ac inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="struct_graphic_1_1_sprite_animator.html">Graphic::SpriteAnimator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a5e07139e7540e0ba5eee451e5b55e6ac">GetAnimator</a> (<a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> action)</td></tr>
+<tr class="separator:a5e07139e7540e0ba5eee451e5b55e6ac inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9c7d812ac29b3a736e02d8804225d3 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#aff9c7d812ac29b3a736e02d8804225d3">setVelocity</a> (float vel)</td></tr>
+<tr class="separator:aff9c7d812ac29b3a736e02d8804225d3 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0636c5d094a730b69954ac25f0e23af inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#ad0636c5d094a730b69954ac25f0e23af">GetCurrentPosition</a> ()</td></tr>
+<tr class="separator:ad0636c5d094a730b69954ac25f0e23af inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaca3ea67fbb9175b0ccf12ef69e5204 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#acaca3ea67fbb9175b0ccf12ef69e5204">GetCurrentDirection</a> ()</td></tr>
+<tr class="separator:acaca3ea67fbb9175b0ccf12ef69e5204 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1f97b4b072212be71505483985a1ac3 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#ac1f97b4b072212be71505483985a1ac3">GetSize</a> ()</td></tr>
+<tr class="separator:ac1f97b4b072212be71505483985a1ac3 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46f80344a93e9482a1bf0ca0857f10b9 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a46f80344a93e9482a1bf0ca0857f10b9">velocity</a> ()</td></tr>
+<tr class="separator:a46f80344a93e9482a1bf0ca0857f10b9 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a5645d5e89ccd9cc3988e2ddbaf3d30f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a5645d5e89ccd9cc3988e2ddbaf3d30f6">SetAction</a> (<a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> act)</td></tr>
+<tr class="separator:a5645d5e89ccd9cc3988e2ddbaf3d30f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a00a56ccfdd2383b08a641ebf5d67d4d4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; glm::vec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a00a56ccfdd2383b08a641ebf5d67d4d4">my_spawn</a></td></tr>
+<tr class="separator:a00a56ccfdd2383b08a641ebf5d67d4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e72128b5f84890acd235fad6f7b53ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a4e72128b5f84890acd235fad6f7b53ee">stop</a> = false</td></tr>
+<tr class="separator:a4e72128b5f84890acd235fad6f7b53ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab141c7780102b4d3473a4f1b97f777c7"><td class="memItemLeft" align="right" valign="top">const glm::vec2 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#ab141c7780102b4d3473a4f1b97f777c7">current_target</a></td></tr>
+<tr class="separator:ab141c7780102b4d3473a4f1b97f777c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b135d39fbb89c4670fcd4a59a534289"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a2b135d39fbb89c4670fcd4a59a534289">current_health</a></td></tr>
+<tr class="separator:a2b135d39fbb89c4670fcd4a59a534289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa25a66779f13ba790192ff6fedb4ebd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; bool, std::shared_ptr&lt; <a class="el" href="struct_game_objects_1_1_bullet.html">Bullet</a> &gt; &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#aaa25a66779f13ba790192ff6fedb4ebd">bulls</a></td></tr>
+<tr class="separator:aaa25a66779f13ba790192ff6fedb4ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad133099eb3cfe037b1d6fd90a62e7b80"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#ad133099eb3cfe037b1d6fd90a62e7b80">m_deltaTime</a></td></tr>
+<tr class="separator:ad133099eb3cfe037b1d6fd90a62e7b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fa3831bd7c6e03e74c90fcb9690bb53"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a8fa3831bd7c6e03e74c90fcb9690bb53">m_lastFrame</a> = 0.f</td></tr>
+<tr class="separator:a8fa3831bd7c6e03e74c90fcb9690bb53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ddb5f9913821081b52fc06549c60f9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#ad5ddb5f9913821081b52fc06549c60f9">health</a> = 100.f</td></tr>
+<tr class="separator:ad5ddb5f9913821081b52fc06549c60f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c955b291e0dc017d5780e3b5d3b1321"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a1c955b291e0dc017d5780e3b5d3b1321">reload_start</a> = 0.f</td></tr>
+<tr class="separator:a1c955b291e0dc017d5780e3b5d3b1321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab750705213587a19f4ba4ad2ff1b1d82"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#ab750705213587a19f4ba4ad2ff1b1d82">reload_spawn</a> = 0.f</td></tr>
+<tr class="separator:ab750705213587a19f4ba4ad2ff1b1d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864cff3a9b41ede98ec3df16254df8e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_enemy.html#a864cff3a9b41ede98ec3df16254df8e9">m_action</a> = <a class="el" href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a">ACTION::WALK</a></td></tr>
+<tr class="separator:a864cff3a9b41ede98ec3df16254df8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_attribs_struct_game_objects_1_1_i_game_actor"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_struct_game_objects_1_1_i_game_actor')"><img src="closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="struct_game_objects_1_1_i_game_actor.html">GameObjects::IGameActor</a></td></tr>
+<tr class="memitem:a0d7424ecdf427d273e97771e319edaf4 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a>, std::shared_ptr&lt; <a class="el" href="struct_graphic_1_1_sprite_animator.html">Graphic::SpriteAnimator</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a0d7424ecdf427d273e97771e319edaf4">m_representative</a></td></tr>
+<tr class="separator:a0d7424ecdf427d273e97771e319edaf4 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eee72cd8bbe340f0642b83883a4d42e inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a1eee72cd8bbe340f0642b83883a4d42e">m_position</a></td></tr>
+<tr class="separator:a1eee72cd8bbe340f0642b83883a4d42e inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3452c4243ca2f4df75723a2d2884bf91 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a3452c4243ca2f4df75723a2d2884bf91">m_size</a></td></tr>
+<tr class="separator:a3452c4243ca2f4df75723a2d2884bf91 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa4ecd6e70e43b4855fca9e3427f686 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a1fa4ecd6e70e43b4855fca9e3427f686">m_rotation</a></td></tr>
+<tr class="separator:a1fa4ecd6e70e43b4855fca9e3427f686 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3073a1cb385f2f21bdbef5b4c5f0f1d6 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a3073a1cb385f2f21bdbef5b4c5f0f1d6">m_layer</a></td></tr>
+<tr class="separator:a3073a1cb385f2f21bdbef5b4c5f0f1d6 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49a37e034e58b48c3f72dc31a1a222c inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#af49a37e034e58b48c3f72dc31a1a222c">m_direction</a> {}</td></tr>
+<tr class="separator:af49a37e034e58b48c3f72dc31a1a222c inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52ee9747207aa8903766cbb7386a8f6 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#aa52ee9747207aa8903766cbb7386a8f6">m_up</a> {0.f, 0.f, 1.f}</td></tr>
+<tr class="separator:aa52ee9747207aa8903766cbb7386a8f6 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d183fa2c395e79ea0408ff5333457c inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a93d183fa2c395e79ea0408ff5333457c">m_velocity</a> {}</td></tr>
+<tr class="separator:a93d183fa2c395e79ea0408ff5333457c inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a04bc1f2c534e8e9b7b741a63cb8643d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04bc1f2c534e8e9b7b741a63cb8643d0">&#9670;&nbsp;</a></span>Enemy() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObjects::Enemy::Enemy </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rotation</em> = <code>0.f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>layer</em> = <code>1.f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f963ed5574e293d15662b13c8634fe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f963ed5574e293d15662b13c8634fe4">&#9670;&nbsp;</a></span>Enemy() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObjects::Enemy::Enemy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9f589be8b617df6c63d8edb03d326ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f589be8b617df6c63d8edb03d326ef">&#9670;&nbsp;</a></span>Enemy() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObjects::Enemy::Enemy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a5bc2842dfcb268656da9835fe984487f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bc2842dfcb268656da9835fe984487f">&#9670;&nbsp;</a></span>die()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameObjects::Enemy::die </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a9eca4dc37b7e9ecbf9f1a6b19815393f">GameObjects::IGameActor::die</a> </p>
+
+<p>Замещает <a class="el" href="struct_game_objects_1_1_i_game_actor.html#a9eca4dc37b7e9ecbf9f1a6b19815393f">GameObjects::IGameActor</a>.</p>
+
+</div>
+</div>
+<a id="ab9d3908f568a634834751e112b7fec94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d3908f568a634834751e112b7fec94">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a>&amp; GameObjects::Enemy::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0258f9b281b48a266a58af368206fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0258f9b281b48a266a58af368206fe5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a>&amp; GameObjects::Enemy::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_game_objects_1_1_enemy.html">Enemy</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2b53760673db110b451214a51435f62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b53760673db110b451214a51435f62">&#9670;&nbsp;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Enemy::Render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a548e53818f646bb56bea915d487350e8">GameObjects::IGameActor::Render</a> </p>
+
+<p>Замещает <a class="el" href="struct_game_objects_1_1_i_game_actor.html#a548e53818f646bb56bea915d487350e8">GameObjects::IGameActor</a>.</p>
+
+</div>
+</div>
+<a id="a1ac2817ea6d9c10fd6d822edc29ee450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ac2817ea6d9c10fd6d822edc29ee450">&#9670;&nbsp;</a></span>Respawn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Enemy::Respawn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Задать новый спавн </p>
+
+</div>
+</div>
+<a id="a5645d5e89ccd9cc3988e2ddbaf3d30f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5645d5e89ccd9cc3988e2ddbaf3d30f6">&#9670;&nbsp;</a></span>SetAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Enemy::SetAction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a>&#160;</td>
+          <td class="paramname"><em>act</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1953c0f3ef0b8a409e6fc635c2ac3ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1953c0f3ef0b8a409e6fc635c2ac3ee">&#9670;&nbsp;</a></span>SetAnimator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Enemy::SetAnimator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a>&#160;</td>
+          <td class="paramname"><em>name_of_action</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="struct_graphic_1_1_sprite_animator.html">Graphic::SpriteAnimator</a> &gt;&#160;</td>
+          <td class="paramname"><em>anim</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a18bf6f8bdb36e04dc86da6531a421d68">GameObjects::IGameActor::SetAnimator</a> </p>
+
+<p>Замещает <a class="el" href="struct_game_objects_1_1_i_game_actor.html#a18bf6f8bdb36e04dc86da6531a421d68">GameObjects::IGameActor</a>.</p>
+
+</div>
+</div>
+<a id="a303c0199c43e77abfa62b97b9114223b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a303c0199c43e77abfa62b97b9114223b">&#9670;&nbsp;</a></span>SetPlayerTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Enemy::SetPlayerTarget </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec2 &amp;&#160;</td>
+          <td class="paramname"><em>targ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>targ_health</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; bool, std::shared_ptr&lt; <a class="el" href="struct_game_objects_1_1_bullet.html">Bullet</a> &gt;&gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>bullets</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Привязать здоровье игрока, получить его позицию и пули </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targ</td><td>позиция игрока </td></tr>
+    <tr><td class="paramname">targ_health</td><td>здоровье игрока </td></tr>
+    <tr><td class="paramname">bullets</td><td>пули </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aadfbe029feb1ac17a0fb450ea2aa4e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadfbe029feb1ac17a0fb450ea2aa4e0d">&#9670;&nbsp;</a></span>SetSpawn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Enemy::SetSpawn </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; glm::vec2 &gt;&#160;</td>
+          <td class="paramname"><em>spawn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Задать массив спавнов врагов </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spawn</td><td>массив координат спавнов </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a12d86d17043e6592b2ea23ab9f803ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d86d17043e6592b2ea23ab9f803ca4">&#9670;&nbsp;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Enemy::Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>засечь время с момента остановки чтобы враг не переместился во время паузы </p>
+
+</div>
+</div>
+<a id="a01544790889c834312c5f51de5e2c0f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01544790889c834312c5f51de5e2c0f5">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Enemy::Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Обновить все состояния относительно других объектов </p>
+
+</div>
+</div>
+<a id="a9247dd284cac0814f8d38cc62e7be16f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9247dd284cac0814f8d38cc62e7be16f">&#9670;&nbsp;</a></span>UpdateSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Enemy::UpdateSprite </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_graphic_1_1_sprite.html">Graphic::Sprite</a> &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>обновить / заменить спрайт объекта </p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aaa25a66779f13ba790192ff6fedb4ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa25a66779f13ba790192ff6fedb4ebd">&#9670;&nbsp;</a></span>bulls</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::pair&lt;bool, std::shared_ptr&lt;<a class="el" href="struct_game_objects_1_1_bullet.html">Bullet</a>&gt; &gt; &gt;* GameObjects::Enemy::bulls</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b135d39fbb89c4670fcd4a59a534289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b135d39fbb89c4670fcd4a59a534289">&#9670;&nbsp;</a></span>current_health</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;float&gt; GameObjects::Enemy::current_health</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab141c7780102b4d3473a4f1b97f777c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab141c7780102b4d3473a4f1b97f777c7">&#9670;&nbsp;</a></span>current_target</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const glm::vec2* GameObjects::Enemy::current_target</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5ddb5f9913821081b52fc06549c60f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ddb5f9913821081b52fc06549c60f9">&#9670;&nbsp;</a></span>health</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObjects::Enemy::health = 100.f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a864cff3a9b41ede98ec3df16254df8e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a864cff3a9b41ede98ec3df16254df8e9">&#9670;&nbsp;</a></span>m_action</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> GameObjects::Enemy::m_action = <a class="el" href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a">ACTION::WALK</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad133099eb3cfe037b1d6fd90a62e7b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad133099eb3cfe037b1d6fd90a62e7b80">&#9670;&nbsp;</a></span>m_deltaTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObjects::Enemy::m_deltaTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8fa3831bd7c6e03e74c90fcb9690bb53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fa3831bd7c6e03e74c90fcb9690bb53">&#9670;&nbsp;</a></span>m_lastFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObjects::Enemy::m_lastFrame = 0.f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00a56ccfdd2383b08a641ebf5d67d4d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a56ccfdd2383b08a641ebf5d67d4d4">&#9670;&nbsp;</a></span>my_spawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;glm::vec2&gt; GameObjects::Enemy::my_spawn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab750705213587a19f4ba4ad2ff1b1d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab750705213587a19f4ba4ad2ff1b1d82">&#9670;&nbsp;</a></span>reload_spawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObjects::Enemy::reload_spawn = 0.f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c955b291e0dc017d5780e3b5d3b1321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c955b291e0dc017d5780e3b5d3b1321">&#9670;&nbsp;</a></span>reload_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObjects::Enemy::reload_start = 0.f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e72128b5f84890acd235fad6f7b53ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e72128b5f84890acd235fad6f7b53ee">&#9670;&nbsp;</a></span>stop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameObjects::Enemy::stop = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Actors/<a class="el" href="_enemy_8h_source.html">Enemy.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

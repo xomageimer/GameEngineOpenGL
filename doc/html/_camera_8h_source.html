@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: Исходный файл C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Engine/Camera.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3072bc1f55ed1280fe4fbe6b21c78379.html">Engine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Camera.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_camera_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAMEENGINE_CAMERA_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAMEENGINE_CAMERA_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;glm/gtc/matrix_transform.hpp&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_shader_8h.html">Graphic/Shader.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_camera.html">   14</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_camera.html">Camera</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_camera.html#a18cea16e830732cc106c27c7a840c3ac">   16</a></span>&#160;    <a class="code" href="struct_camera.html#a18cea16e830732cc106c27c7a840c3ac">Camera</a>(<span class="keyword">const</span> <a class="code" href="struct_camera.html">Camera</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_camera.html#aaa8ba4f5a95a179f86fc534a40af3766">   17</a></span>&#160;    <a class="code" href="struct_camera.html">Camera</a>&amp; <a class="code" href="struct_camera.html#aaa8ba4f5a95a179f86fc534a40af3766">operator=</a>(<span class="keyword">const</span> <a class="code" href="struct_camera.html">Camera</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_camera.html#acf3613432c3d044cfc28d49a90c3df2f">   18</a></span>&#160;    <a class="code" href="struct_camera.html#acf3613432c3d044cfc28d49a90c3df2f">Camera</a>(<a class="code" href="struct_camera.html">Camera</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_camera.html#a87580b1e0fbdfa39d97933fc1712670a">   19</a></span>&#160;    <a class="code" href="struct_camera.html">Camera</a>&amp; <a class="code" href="struct_camera.html#a87580b1e0fbdfa39d97933fc1712670a">operator=</a>(<a class="code" href="struct_camera.html">Camera</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_camera.html#a85c5523d20f9723e44e1d1ffcbcab9b8">   21</a></span>&#160;    <a class="code" href="struct_camera.html#a85c5523d20f9723e44e1d1ffcbcab9b8">Camera</a>(std::shared_ptr&lt;Shader&gt; shrd);</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_camera.html#a54b7168e23910bd565b31aa9736559dd">   26</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_camera.html#a54b7168e23910bd565b31aa9736559dd">SetPos</a> (<span class="keyword">const</span> glm::vec2 &amp; NewCameraPos);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_camera.html#ab99417d5df5a3126910d9b027a9af24b">   31</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_camera.html#ab99417d5df5a3126910d9b027a9af24b">Render</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_camera.html#a6224727c5f9fd66dfe27cbd30993fb1e">   34</a></span>&#160;    glm::vec3 <a class="code" href="struct_camera.html#a6224727c5f9fd66dfe27cbd30993fb1e">CameraPos</a> = {0.f, 0.f, 3.f};</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_camera.html#a5c1d18ac9886362e79dcf59a38beb675">   35</a></span>&#160;    glm::vec3 <a class="code" href="struct_camera.html#a5c1d18ac9886362e79dcf59a38beb675">CameraFront</a> = glm::vec3(0.0f, 0.0f, -1.0f);;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="struct_camera.html#af399fcbb1500f4a21239173df709016e">   37</a></span>&#160;    std::shared_ptr&lt;Shader&gt; <a class="code" href="struct_camera.html#af399fcbb1500f4a21239173df709016e">m_shader</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif //GAMEENGINE_CAMERA_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_camera_html_a6224727c5f9fd66dfe27cbd30993fb1e"><div class="ttname"><a href="struct_camera.html#a6224727c5f9fd66dfe27cbd30993fb1e">Camera::CameraPos</a></div><div class="ttdeci">glm::vec3 CameraPos</div><div class="ttdef"><b>Definition:</b> Camera.h:34</div></div>
+<div class="ttc" id="astruct_camera_html_a5c1d18ac9886362e79dcf59a38beb675"><div class="ttname"><a href="struct_camera.html#a5c1d18ac9886362e79dcf59a38beb675">Camera::CameraFront</a></div><div class="ttdeci">glm::vec3 CameraFront</div><div class="ttdef"><b>Definition:</b> Camera.h:35</div></div>
+<div class="ttc" id="astruct_camera_html_aaa8ba4f5a95a179f86fc534a40af3766"><div class="ttname"><a href="struct_camera.html#aaa8ba4f5a95a179f86fc534a40af3766">Camera::operator=</a></div><div class="ttdeci">Camera &amp; operator=(const Camera &amp;)=delete</div></div>
+<div class="ttc" id="astruct_camera_html"><div class="ttname"><a href="struct_camera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> Camera.h:14</div></div>
+<div class="ttc" id="astruct_camera_html_a85c5523d20f9723e44e1d1ffcbcab9b8"><div class="ttname"><a href="struct_camera.html#a85c5523d20f9723e44e1d1ffcbcab9b8">Camera::Camera</a></div><div class="ttdeci">Camera(std::shared_ptr&lt; Shader &gt; shrd)</div></div>
+<div class="ttc" id="astruct_camera_html_acf3613432c3d044cfc28d49a90c3df2f"><div class="ttname"><a href="struct_camera.html#acf3613432c3d044cfc28d49a90c3df2f">Camera::Camera</a></div><div class="ttdeci">Camera(Camera &amp;&amp;)=delete</div></div>
+<div class="ttc" id="a_shader_8h_html"><div class="ttname"><a href="_shader_8h.html">Shader.h</a></div></div>
+<div class="ttc" id="astruct_camera_html_a87580b1e0fbdfa39d97933fc1712670a"><div class="ttname"><a href="struct_camera.html#a87580b1e0fbdfa39d97933fc1712670a">Camera::operator=</a></div><div class="ttdeci">Camera &amp; operator=(Camera &amp;)=delete</div></div>
+<div class="ttc" id="astruct_camera_html_af399fcbb1500f4a21239173df709016e"><div class="ttname"><a href="struct_camera.html#af399fcbb1500f4a21239173df709016e">Camera::m_shader</a></div><div class="ttdeci">std::shared_ptr&lt; Shader &gt; m_shader</div><div class="ttdef"><b>Definition:</b> Camera.h:35</div></div>
+<div class="ttc" id="astruct_camera_html_ab99417d5df5a3126910d9b027a9af24b"><div class="ttname"><a href="struct_camera.html#ab99417d5df5a3126910d9b027a9af24b">Camera::Render</a></div><div class="ttdeci">void Render()</div></div>
+<div class="ttc" id="astruct_camera_html_a54b7168e23910bd565b31aa9736559dd"><div class="ttname"><a href="struct_camera.html#a54b7168e23910bd565b31aa9736559dd">Camera::SetPos</a></div><div class="ttdeci">void SetPos(const glm::vec2 &amp;NewCameraPos)</div></div>
+<div class="ttc" id="astruct_camera_html_a18cea16e830732cc106c27c7a840c3ac"><div class="ttname"><a href="struct_camera.html#a18cea16e830732cc106c27c7a840c3ac">Camera::Camera</a></div><div class="ttdeci">Camera(const Camera &amp;)=delete</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

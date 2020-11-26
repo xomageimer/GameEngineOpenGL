@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: Исходный файл C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Graphic/Sprite.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3350c4b2a8bfebf286552b4ce0c2b6d0.html">Graphic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Sprite.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_sprite_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAMEENGINE_SPRITE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAMEENGINE_SPRITE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;glad/glad.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;GLFW/glfw3.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;glm/gtc/matrix_transform.hpp&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;glm/gtc/type_ptr.hpp&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_texture2_d_8h.html">Texture2D.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_shader_8h.html">Shader.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_buffers_8h.html">Buffers.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// TODO все данные должны быть тут, в акторах можно реализовать логику/управление/рендер всего прочего</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// TODO может быть получиться вытащить маттрицу модели наружу а тут лишь отдавать ее в шейдер</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// TODO придумать как задавать размер</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_graphic.html">Graphic</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html">   31</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_graphic_1_1_sprite.html">Sprite</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#abd38825641c2382151e1ebd69755ab29">   36</a></span>&#160;        <a class="code" href="class_graphic_1_1_sprite.html#abd38825641c2382151e1ebd69755ab29">Sprite</a>(std::shared_ptr&lt;Texture2D&gt;, std::shared_ptr&lt;Shader&gt;);</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a6c690656938698437157633fcd1d4aaa">   37</a></span>&#160;        <a class="code" href="class_graphic_1_1_sprite.html#a6c690656938698437157633fcd1d4aaa">~Sprite</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a5f72d718286f7b791b7092fc911e2380">   39</a></span>&#160;        <a class="code" href="class_graphic_1_1_sprite.html#a5f72d718286f7b791b7092fc911e2380">Sprite</a>(<span class="keyword">const</span> <a class="code" href="class_graphic_1_1_sprite.html">Sprite</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a9329b7d3e7f58f6a20995d68b3cd3773">   40</a></span>&#160;        <a class="code" href="class_graphic_1_1_sprite.html">Sprite</a>&amp; <a class="code" href="class_graphic_1_1_sprite.html#a9329b7d3e7f58f6a20995d68b3cd3773">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_graphic_1_1_sprite.html">Sprite</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#af614cd0b895f4ce42013b338b06721e8">   42</a></span>&#160;        <a class="code" href="class_graphic_1_1_sprite.html#af614cd0b895f4ce42013b338b06721e8">Sprite</a>(<a class="code" href="class_graphic_1_1_sprite.html">Sprite</a> &amp;&amp;) noexcept;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a6a69d48b8d89d30531de7db5443be397">   43</a></span>&#160;        <a class="code" href="class_graphic_1_1_sprite.html">Sprite</a>&amp; operator=(<a class="code" href="class_graphic_1_1_sprite.html">Sprite</a>&amp;&amp;) noexcept;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a0578ca3a74b965653d28ec33022684a6">   48</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_graphic_1_1_sprite.html#a0578ca3a74b965653d28ec33022684a6">Init</a>(const <span class="keywordtype">void</span> *data_vert,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                          <span class="keywordtype">size_t</span> size_vert,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> usage_vert,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                          const <span class="keywordtype">void</span> *data_indic,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                          <span class="keywordtype">size_t</span> size_indic,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                          <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> usage_indic);</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#aee461cf585fcf737c7f3ca53063d1c72">   58</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_graphic_1_1_sprite.html#aee461cf585fcf737c7f3ca53063d1c72">SetSpriteSheet</a>(const std::vector&lt;<span class="keywordtype">float</span>&gt; &amp; vec);</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a3c9ef4a3b0deadc8f5b183c4675c418b">   63</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_graphic_1_1_sprite.html#a3c9ef4a3b0deadc8f5b183c4675c418b">draw</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#ad6f71e76ece28e71142328a4214bc383">   65</a></span>&#160;        [[nodiscard]] inline std::shared_ptr&lt;<a class="code" href="struct_graphic_1_1_texture2_d.html">Texture2D</a>&gt; <a class="code" href="class_graphic_1_1_sprite.html#ad6f71e76ece28e71142328a4214bc383">GetTexture</a>(){</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_graphic_1_1_sprite.html#a8c8d07d3647e9c7b0258e2209238ab30">m_texture</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#ac8f2ff87146dbe8af27a12c4e95a6574">   68</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> std::shared_ptr&lt;Shader&gt; <a class="code" href="class_graphic_1_1_sprite.html#ac8f2ff87146dbe8af27a12c4e95a6574">GetShader</a>(){</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_graphic_1_1_sprite.html#a73dbce055a27adbd54e99c8328a880d4">m_shader</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#abad051c654e9d0c3d914d985a7787df6">   71</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt;float&gt; &amp; <a class="code" href="class_graphic_1_1_sprite.html#abad051c654e9d0c3d914d985a7787df6">GetCoords</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">return</span> *<a class="code" href="class_graphic_1_1_sprite.html#a4ac76318a9ab2d0dee7cb730dec8f59f">textureCoords</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a4a5cc775df30bad1e29ba20526de6383">   74</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> glm::vec2 &amp; <a class="code" href="class_graphic_1_1_sprite.html#a4a5cc775df30bad1e29ba20526de6383">GetCenter</a>(){</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_graphic_1_1_sprite.html#ac9dc964b4b06957c634ff952e8bb11dd">m_center</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a46c4ad554ad6e1670be9237c40a4ce2d">   77</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> glm::vec2 &amp; <a class="code" href="class_graphic_1_1_sprite.html#a46c4ad554ad6e1670be9237c40a4ce2d">GetSize</a>(){</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_graphic_1_1_sprite.html#a8cea1d7c677398fac062ae5512d18bff">m_size</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a196213cf25012504c0d2412fcf1e4bfb">   80</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">float</span> &amp; <a class="code" href="class_graphic_1_1_sprite.html#a196213cf25012504c0d2412fcf1e4bfb">GetRotation</a>(){</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_graphic_1_1_sprite.html#ab287530bb369de74d36ff657e73cab35">m_rotation</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a1fe8614ab603156807f8a06a0d469548">   83</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">float</span> &amp; <a class="code" href="class_graphic_1_1_sprite.html#a1fe8614ab603156807f8a06a0d469548">GetLayer</a>(){</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_graphic_1_1_sprite.html#a521d347ddfa0e447fa0d4cb9fced40e4">m_layer</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#ac9dc964b4b06957c634ff952e8bb11dd">   88</a></span>&#160;        glm::vec2 <a class="code" href="class_graphic_1_1_sprite.html#ac9dc964b4b06957c634ff952e8bb11dd">m_center</a> {0.f, 0.f};</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a8cea1d7c677398fac062ae5512d18bff">   89</a></span>&#160;        glm::vec2 <a class="code" href="class_graphic_1_1_sprite.html#a8cea1d7c677398fac062ae5512d18bff">m_size</a> {1.0f, 1.0f};</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#ab287530bb369de74d36ff657e73cab35">   90</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_graphic_1_1_sprite.html#ab287530bb369de74d36ff657e73cab35">m_rotation</a> = 90.f;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a521d347ddfa0e447fa0d4cb9fced40e4">   91</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="class_graphic_1_1_sprite.html#a521d347ddfa0e447fa0d4cb9fced40e4">m_layer</a> = 0.0f;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a8c8d07d3647e9c7b0258e2209238ab30">   93</a></span>&#160;        std::shared_ptr&lt;Texture2D&gt; <a class="code" href="class_graphic_1_1_sprite.html#a8c8d07d3647e9c7b0258e2209238ab30">m_texture</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a73dbce055a27adbd54e99c8328a880d4">   94</a></span>&#160;        std::shared_ptr&lt;Shader&gt; <a class="code" href="class_graphic_1_1_sprite.html#a73dbce055a27adbd54e99c8328a880d4">m_shader</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a6ebd9386bac983844e083f6f6c91279b">   96</a></span>&#160;        std::optional&lt;VertexArray&gt; <a class="code" href="class_graphic_1_1_sprite.html#a6ebd9386bac983844e083f6f6c91279b">m_vao</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a014102421c5337cea8b670934e6796c4">   97</a></span>&#160;        std::optional&lt;VertexBuffer&gt; <a class="code" href="class_graphic_1_1_sprite.html#a014102421c5337cea8b670934e6796c4">m_vertices_bo</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a46061cb236ec14abc84b74940e381d31">   98</a></span>&#160;        std::optional&lt;VertexBuffer&gt; <a class="code" href="class_graphic_1_1_sprite.html#a46061cb236ec14abc84b74940e381d31">m_textures_bo</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a9c5e45c87c4e70aa933c375968b7cc4d">   99</a></span>&#160;        std::optional&lt;IndexBuffer&gt; <a class="code" href="class_graphic_1_1_sprite.html#a9c5e45c87c4e70aa933c375968b7cc4d">m_ebo</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_graphic_1_1_sprite.html#a4ac76318a9ab2d0dee7cb730dec8f59f">  101</a></span>&#160;        <span class="keyword">const</span> std::vector&lt;float&gt; * <a class="code" href="class_graphic_1_1_sprite.html#a4ac76318a9ab2d0dee7cb730dec8f59f">textureCoords</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    };</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif //GAMEENGINE_SPRITE_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a73dbce055a27adbd54e99c8328a880d4"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a73dbce055a27adbd54e99c8328a880d4">Graphic::Sprite::m_shader</a></div><div class="ttdeci">std::shared_ptr&lt; Shader &gt; m_shader</div><div class="ttdef"><b>Definition:</b> Sprite.h:94</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_ad6f71e76ece28e71142328a4214bc383"><div class="ttname"><a href="class_graphic_1_1_sprite.html#ad6f71e76ece28e71142328a4214bc383">Graphic::Sprite::GetTexture</a></div><div class="ttdeci">std::shared_ptr&lt; Texture2D &gt; GetTexture()</div><div class="ttdef"><b>Definition:</b> Sprite.h:65</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a6c690656938698437157633fcd1d4aaa"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a6c690656938698437157633fcd1d4aaa">Graphic::Sprite::~Sprite</a></div><div class="ttdeci">~Sprite()=default</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html"><div class="ttname"><a href="class_graphic_1_1_sprite.html">Graphic::Sprite</a></div><div class="ttdef"><b>Definition:</b> Sprite.h:31</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a014102421c5337cea8b670934e6796c4"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a014102421c5337cea8b670934e6796c4">Graphic::Sprite::m_vertices_bo</a></div><div class="ttdeci">std::optional&lt; VertexBuffer &gt; m_vertices_bo</div><div class="ttdef"><b>Definition:</b> Sprite.h:97</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a521d347ddfa0e447fa0d4cb9fced40e4"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a521d347ddfa0e447fa0d4cb9fced40e4">Graphic::Sprite::m_layer</a></div><div class="ttdeci">float m_layer</div><div class="ttdef"><b>Definition:</b> Sprite.h:91</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a5f72d718286f7b791b7092fc911e2380"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a5f72d718286f7b791b7092fc911e2380">Graphic::Sprite::Sprite</a></div><div class="ttdeci">Sprite(const Sprite &amp;)=delete</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a8c8d07d3647e9c7b0258e2209238ab30"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a8c8d07d3647e9c7b0258e2209238ab30">Graphic::Sprite::m_texture</a></div><div class="ttdeci">std::shared_ptr&lt; Texture2D &gt; m_texture</div><div class="ttdef"><b>Definition:</b> Sprite.h:93</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a196213cf25012504c0d2412fcf1e4bfb"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a196213cf25012504c0d2412fcf1e4bfb">Graphic::Sprite::GetRotation</a></div><div class="ttdeci">float &amp; GetRotation()</div><div class="ttdef"><b>Definition:</b> Sprite.h:80</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_aee461cf585fcf737c7f3ca53063d1c72"><div class="ttname"><a href="class_graphic_1_1_sprite.html#aee461cf585fcf737c7f3ca53063d1c72">Graphic::Sprite::SetSpriteSheet</a></div><div class="ttdeci">void SetSpriteSheet(const std::vector&lt; float &gt; &amp;vec)</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a9329b7d3e7f58f6a20995d68b3cd3773"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a9329b7d3e7f58f6a20995d68b3cd3773">Graphic::Sprite::operator=</a></div><div class="ttdeci">Sprite &amp; operator=(const Sprite &amp;)=delete</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_ab287530bb369de74d36ff657e73cab35"><div class="ttname"><a href="class_graphic_1_1_sprite.html#ab287530bb369de74d36ff657e73cab35">Graphic::Sprite::m_rotation</a></div><div class="ttdeci">float m_rotation</div><div class="ttdef"><b>Definition:</b> Sprite.h:90</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_ac9dc964b4b06957c634ff952e8bb11dd"><div class="ttname"><a href="class_graphic_1_1_sprite.html#ac9dc964b4b06957c634ff952e8bb11dd">Graphic::Sprite::m_center</a></div><div class="ttdeci">glm::vec2 m_center</div><div class="ttdef"><b>Definition:</b> Sprite.h:88</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a8cea1d7c677398fac062ae5512d18bff"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a8cea1d7c677398fac062ae5512d18bff">Graphic::Sprite::m_size</a></div><div class="ttdeci">glm::vec2 m_size</div><div class="ttdef"><b>Definition:</b> Sprite.h:89</div></div>
+<div class="ttc" id="a_shader_8h_html"><div class="ttname"><a href="_shader_8h.html">Shader.h</a></div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a1fe8614ab603156807f8a06a0d469548"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a1fe8614ab603156807f8a06a0d469548">Graphic::Sprite::GetLayer</a></div><div class="ttdeci">float &amp; GetLayer()</div><div class="ttdef"><b>Definition:</b> Sprite.h:83</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a6ebd9386bac983844e083f6f6c91279b"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a6ebd9386bac983844e083f6f6c91279b">Graphic::Sprite::m_vao</a></div><div class="ttdeci">std::optional&lt; VertexArray &gt; m_vao</div><div class="ttdef"><b>Definition:</b> Sprite.h:96</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a0578ca3a74b965653d28ec33022684a6"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a0578ca3a74b965653d28ec33022684a6">Graphic::Sprite::Init</a></div><div class="ttdeci">void Init(const void *data_vert, size_t size_vert, unsigned int usage_vert, const void *data_indic, size_t size_indic, unsigned int usage_indic)</div></div>
+<div class="ttc" id="a_buffers_8h_html"><div class="ttname"><a href="_buffers_8h.html">Buffers.h</a></div><div class="ttdoc">Файл для подключения всех заголовков обслуживающшиъ графический интерфейс приложения</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a46061cb236ec14abc84b74940e381d31"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a46061cb236ec14abc84b74940e381d31">Graphic::Sprite::m_textures_bo</a></div><div class="ttdeci">std::optional&lt; VertexBuffer &gt; m_textures_bo</div><div class="ttdef"><b>Definition:</b> Sprite.h:98</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_ac8f2ff87146dbe8af27a12c4e95a6574"><div class="ttname"><a href="class_graphic_1_1_sprite.html#ac8f2ff87146dbe8af27a12c4e95a6574">Graphic::Sprite::GetShader</a></div><div class="ttdeci">std::shared_ptr&lt; Shader &gt; GetShader()</div><div class="ttdef"><b>Definition:</b> Sprite.h:68</div></div>
+<div class="ttc" id="anamespace_graphic_html"><div class="ttname"><a href="namespace_graphic.html">Graphic</a></div><div class="ttdef"><b>Definition:</b> IndexBuffer.h:12</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a4a5cc775df30bad1e29ba20526de6383"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a4a5cc775df30bad1e29ba20526de6383">Graphic::Sprite::GetCenter</a></div><div class="ttdeci">glm::vec2 &amp; GetCenter()</div><div class="ttdef"><b>Definition:</b> Sprite.h:74</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_af614cd0b895f4ce42013b338b06721e8"><div class="ttname"><a href="class_graphic_1_1_sprite.html#af614cd0b895f4ce42013b338b06721e8">Graphic::Sprite::Sprite</a></div><div class="ttdeci">Sprite(Sprite &amp;&amp;) noexcept</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a4ac76318a9ab2d0dee7cb730dec8f59f"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a4ac76318a9ab2d0dee7cb730dec8f59f">Graphic::Sprite::textureCoords</a></div><div class="ttdeci">const std::vector&lt; float &gt; * textureCoords</div><div class="ttdef"><b>Definition:</b> Sprite.h:101</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a9c5e45c87c4e70aa933c375968b7cc4d"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a9c5e45c87c4e70aa933c375968b7cc4d">Graphic::Sprite::m_ebo</a></div><div class="ttdeci">std::optional&lt; IndexBuffer &gt; m_ebo</div><div class="ttdef"><b>Definition:</b> Sprite.h:99</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_abd38825641c2382151e1ebd69755ab29"><div class="ttname"><a href="class_graphic_1_1_sprite.html#abd38825641c2382151e1ebd69755ab29">Graphic::Sprite::Sprite</a></div><div class="ttdeci">Sprite(std::shared_ptr&lt; Texture2D &gt;, std::shared_ptr&lt; Shader &gt;)</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a46c4ad554ad6e1670be9237c40a4ce2d"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a46c4ad554ad6e1670be9237c40a4ce2d">Graphic::Sprite::GetSize</a></div><div class="ttdeci">glm::vec2 &amp; GetSize()</div><div class="ttdef"><b>Definition:</b> Sprite.h:77</div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_a3c9ef4a3b0deadc8f5b183c4675c418b"><div class="ttname"><a href="class_graphic_1_1_sprite.html#a3c9ef4a3b0deadc8f5b183c4675c418b">Graphic::Sprite::draw</a></div><div class="ttdeci">void draw()</div></div>
+<div class="ttc" id="astruct_graphic_1_1_texture2_d_html"><div class="ttname"><a href="struct_graphic_1_1_texture2_d.html">Graphic::Texture2D</a></div><div class="ttdef"><b>Definition:</b> Texture2D.h:23</div></div>
+<div class="ttc" id="a_texture2_d_8h_html"><div class="ttname"><a href="_texture2_d_8h.html">Texture2D.h</a></div></div>
+<div class="ttc" id="aclass_graphic_1_1_sprite_html_abad051c654e9d0c3d914d985a7787df6"><div class="ttname"><a href="class_graphic_1_1_sprite.html#abad051c654e9d0c3d914d985a7787df6">Graphic::Sprite::GetCoords</a></div><div class="ttdeci">const std::vector&lt; float &gt; &amp; GetCoords() const</div><div class="ttdef"><b>Definition:</b> Sprite.h:71</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

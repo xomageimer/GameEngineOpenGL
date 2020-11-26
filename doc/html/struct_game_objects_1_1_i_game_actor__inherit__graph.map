@@ -1,0 +1,7 @@
+<map id="GameObjects::IGameActor" name="GameObjects::IGameActor">
+<area shape="rect" id="node1" title=" " alt="" coords="245,5,423,32"/>
+<area shape="rect" id="node2" href="$struct_game_objects_1_1_bullet.html" title=" " alt="" coords="5,80,148,107"/>
+<area shape="rect" id="node3" href="$struct_game_objects_1_1_enemy.html" title=" " alt="" coords="172,80,323,107"/>
+<area shape="rect" id="node4" href="$struct_game_objects_1_1_player.html" title=" " alt="" coords="347,80,494,107"/>
+<area shape="rect" id="node5" href="$struct_game_objects_1_1_quad.html" title=" " alt="" coords="518,80,659,107"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Graphic/Buffers.h" name="C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Graphic/Buffers.h">
+<area shape="rect" id="node1" title="Файл для подключения всех заголовков обслуживающшиъ графический интерфейс приложения" alt="" coords="218,5,438,61"/>
+<area shape="rect" id="node2" href="$_sprite_8h.html" title=" " alt="" coords="218,109,438,165"/>
+<area shape="rect" id="node3" href="$_sprite_animator_8h.html" title=" " alt="" coords="218,213,438,269"/>
+<area shape="rect" id="node4" href="$_i_game_actor_8h.html" title=" " alt="" coords="221,317,435,373"/>
+<area shape="rect" id="node5" href="$_bullet_8h.html" title=" " alt="" coords="149,421,363,477"/>
+<area shape="rect" id="node7" href="$_enemy_8h.html" title=" " alt="" coords="5,525,219,581"/>
+<area shape="rect" id="node8" href="$_player_8h.html" title=" " alt="" coords="293,525,507,581"/>
+<area shape="rect" id="node9" href="$_quad_8h.html" title=" " alt="" coords="437,429,696,470"/>
+<area shape="rect" id="node6" href="$_engine_8h.html" title="Основное представление интерфейса движка TOP DOWN шутера" alt="" coords="221,629,435,685"/>
+</map>

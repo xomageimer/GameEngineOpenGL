@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: Исходный файл C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Actors/Player.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8a33d3b699d590208ab642df13852d0f.html">Actors</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Player.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_player_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAMEENGINE_PLAYER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAMEENGINE_PLAYER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_game_actor_8h.html">IGameActor.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_bullet_8h.html">Bullet.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// TODO прикрепить также камеру и изменять ее матрицу перемещения в зависимости от перемещения плеера</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// TODO присобачить сюда sprite и инициализировать им анимации</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// TODO хранить значение текущей позиции мышки, получать новую позицию мышку =&gt; находить вектор между ними и находить угол между этим вектором и вектором направления персонажа, делать поворот!</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_game_objects.html">GameObjects</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html">   23</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_game_objects_1_1_player.html">Player</a> : <span class="keyword">public</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html">IGameActor</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#ae8f80aea83c1cf4d2f71122d3e85351e">   25</a></span>&#160;        <a class="code" href="struct_game_objects_1_1_player.html#ae8f80aea83c1cf4d2f71122d3e85351e">Player</a>(glm::vec2 position, glm::vec2 size, <span class="keywordtype">float</span> rotation, <span class="keywordtype">float</span> layer);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#a865164333946c0aae7b15fea79b11fb6">   27</a></span>&#160;        <a class="code" href="struct_game_objects_1_1_player.html#a865164333946c0aae7b15fea79b11fb6">~Player</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#a4fcce7b206aeed4d3368fa04a30db566">   31</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_player.html#a4fcce7b206aeed4d3368fa04a30db566">SetAnimator</a>(<a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> name_of_action, std::shared_ptr&lt;Graphic::SpriteAnimator&gt;) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#a45ec30c9d1d9eaafd183e976482f0d5b">   35</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_player.html#a45ec30c9d1d9eaafd183e976482f0d5b">SetBullet</a>(std::vector&lt;std::shared_ptr&lt;Graphic::Sprite&gt;&gt;);</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#a5880580983b1239503cddd7e9ba02ba6">   36</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_player.html#a5880580983b1239503cddd7e9ba02ba6">SetAnimation</a>(<a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> act);</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#a1f7d707a380f14969da5ea4228e4cbf0">   40</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_player.html#a1f7d707a380f14969da5ea4228e4cbf0">Render</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#a8750a729709606dd24e23e9332017fc0">   44</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_game_objects_1_1_player.html#a8750a729709606dd24e23e9332017fc0">die</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#add43f76c8d61de169dac007d5059eeff">   48</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_player.html#add43f76c8d61de169dac007d5059eeff">UpdateSprite</a>(std::shared_ptr&lt;Graphic::Sprite&gt;);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#a064060ce4752e0386b84bc6fdefa620e">   54</a></span>&#160;        std::shared_ptr&lt;float&gt; <a class="code" href="struct_game_objects_1_1_player.html#a064060ce4752e0386b84bc6fdefa620e">getHealth</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#a3735cb15d6a8b1e0a9146e7cd626cabe">   59</a></span>&#160;        std::vector&lt;std::pair&lt;bool, std::shared_ptr&lt;GameObjects::Bullet&gt;&gt;&gt; &amp; <a class="code" href="struct_game_objects_1_1_player.html#a3735cb15d6a8b1e0a9146e7cd626cabe">getBullets</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#a2c053546ba86da83af5a6da6521731eb">   66</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_player.html#a2c053546ba86da83af5a6da6521731eb">mouse_controller</a>(GLFWwindow* window, <span class="keywordtype">double</span> xpos, <span class="keywordtype">double</span> ypos);</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#a1e4b47aa7d887532fcee59ea400fb334">   71</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_player.html#a1e4b47aa7d887532fcee59ea400fb334">keyboard_controller</a>(GLFWwindow *window, <span class="keywordtype">float</span> &amp; deltaTime, <span class="keywordtype">float</span> &amp; lastFrame);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#aa86049858722b7ecdd16e701e7c0b73d">   74</a></span>&#160;        std::shared_ptr&lt;float&gt; <a class="code" href="struct_game_objects_1_1_player.html#aa86049858722b7ecdd16e701e7c0b73d">health</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#aa0d86a93caa37f640788377db41cd809">   75</a></span>&#160;        std::vector&lt;std::pair&lt;bool, std::shared_ptr&lt;Bullet&gt;&gt;&gt; <a class="code" href="struct_game_objects_1_1_player.html#aa0d86a93caa37f640788377db41cd809">bullets</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#ae278c2d842ddee7d04cff0c2b81fe00a">   76</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="struct_game_objects_1_1_player.html#ae278c2d842ddee7d04cff0c2b81fe00a">bullet_num</a> = 0;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#ad3a26032a67b58d58497614b852ba7a6">   78</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_game_objects_1_1_player.html#ad3a26032a67b58d58497614b852ba7a6">is_reload</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#a26451c6c2f5be76c3f0ec369b7c64aa3">   80</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_player.html#a26451c6c2f5be76c3f0ec369b7c64aa3">lastBullet</a> = 0.f;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#a0da0d3af0d148cd871e641e5bbb8d480">   81</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_player.html#a0da0d3af0d148cd871e641e5bbb8d480">reload_start</a> = 0.f;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#afbefcafca11309c2ee271621aa8a1fd8">   83</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_player.html#afbefcafca11309c2ee271621aa8a1fd8">SetAction</a>(<a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> act);</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_player.html#abacb972dc70bb30e72c29aa51173d0b2">   84</a></span>&#160;        <a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> <a class="code" href="struct_game_objects_1_1_player.html#abacb972dc70bb30e72c29aa51173d0b2">m_action</a> = <a class="code" href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a">ACTION::WALK</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    };</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif //GAMEENGINE_PLAYER_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_game_objects_1_1_player_html_ad3a26032a67b58d58497614b852ba7a6"><div class="ttname"><a href="struct_game_objects_1_1_player.html#ad3a26032a67b58d58497614b852ba7a6">GameObjects::Player::is_reload</a></div><div class="ttdeci">bool is_reload</div><div class="ttdef"><b>Definition:</b> Player.h:78</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_a3735cb15d6a8b1e0a9146e7cd626cabe"><div class="ttname"><a href="struct_game_objects_1_1_player.html#a3735cb15d6a8b1e0a9146e7cd626cabe">GameObjects::Player::getBullets</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; bool, std::shared_ptr&lt; GameObjects::Bullet &gt; &gt; &gt; &amp; getBullets()</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html"><div class="ttname"><a href="struct_game_objects_1_1_player.html">GameObjects::Player</a></div><div class="ttdef"><b>Definition:</b> Player.h:23</div></div>
+<div class="ttc" id="a_bullet_8h_html"><div class="ttname"><a href="_bullet_8h.html">Bullet.h</a></div></div>
+<div class="ttc" id="anamespace_game_objects_html"><div class="ttname"><a href="namespace_game_objects.html">GameObjects</a></div><div class="ttdef"><b>Definition:</b> Bullet.h:8</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_abacb972dc70bb30e72c29aa51173d0b2"><div class="ttname"><a href="struct_game_objects_1_1_player.html#abacb972dc70bb30e72c29aa51173d0b2">GameObjects::Player::m_action</a></div><div class="ttdeci">ACTION m_action</div><div class="ttdef"><b>Definition:</b> Player.h:84</div></div>
+<div class="ttc" id="agroup___game___objects_html_gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a"><div class="ttname"><a href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a">GameObjects::ACTION::WALK</a></div><div class="ttdeci">@ WALK</div><div class="ttdoc">Анимация в режиме &quot;Идти&quot;.</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_afbefcafca11309c2ee271621aa8a1fd8"><div class="ttname"><a href="struct_game_objects_1_1_player.html#afbefcafca11309c2ee271621aa8a1fd8">GameObjects::Player::SetAction</a></div><div class="ttdeci">void SetAction(ACTION act)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_a26451c6c2f5be76c3f0ec369b7c64aa3"><div class="ttname"><a href="struct_game_objects_1_1_player.html#a26451c6c2f5be76c3f0ec369b7c64aa3">GameObjects::Player::lastBullet</a></div><div class="ttdeci">float lastBullet</div><div class="ttdef"><b>Definition:</b> Player.h:80</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_ae278c2d842ddee7d04cff0c2b81fe00a"><div class="ttname"><a href="struct_game_objects_1_1_player.html#ae278c2d842ddee7d04cff0c2b81fe00a">GameObjects::Player::bullet_num</a></div><div class="ttdeci">size_t bullet_num</div><div class="ttdef"><b>Definition:</b> Player.h:76</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_a5880580983b1239503cddd7e9ba02ba6"><div class="ttname"><a href="struct_game_objects_1_1_player.html#a5880580983b1239503cddd7e9ba02ba6">GameObjects::Player::SetAnimation</a></div><div class="ttdeci">void SetAnimation(ACTION act)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html">GameObjects::IGameActor</a></div><div class="ttdef"><b>Definition:</b> IGameActor.h:31</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_add43f76c8d61de169dac007d5059eeff"><div class="ttname"><a href="struct_game_objects_1_1_player.html#add43f76c8d61de169dac007d5059eeff">GameObjects::Player::UpdateSprite</a></div><div class="ttdeci">void UpdateSprite(std::shared_ptr&lt; Graphic::Sprite &gt;)</div></div>
+<div class="ttc" id="agroup___game___objects_html_ga0072938dba3ccc8db4f127aad716aea6"><div class="ttname"><a href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">GameObjects::ACTION</a></div><div class="ttdeci">ACTION</div><div class="ttdef"><b>Definition:</b> IGameActor.h:23</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_aa86049858722b7ecdd16e701e7c0b73d"><div class="ttname"><a href="struct_game_objects_1_1_player.html#aa86049858722b7ecdd16e701e7c0b73d">GameObjects::Player::health</a></div><div class="ttdeci">std::shared_ptr&lt; float &gt; health</div><div class="ttdef"><b>Definition:</b> Player.h:74</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_aa0d86a93caa37f640788377db41cd809"><div class="ttname"><a href="struct_game_objects_1_1_player.html#aa0d86a93caa37f640788377db41cd809">GameObjects::Player::bullets</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; bool, std::shared_ptr&lt; Bullet &gt; &gt; &gt; bullets</div><div class="ttdef"><b>Definition:</b> Player.h:75</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_a1e4b47aa7d887532fcee59ea400fb334"><div class="ttname"><a href="struct_game_objects_1_1_player.html#a1e4b47aa7d887532fcee59ea400fb334">GameObjects::Player::keyboard_controller</a></div><div class="ttdeci">void keyboard_controller(GLFWwindow *window, float &amp;deltaTime, float &amp;lastFrame)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_a2c053546ba86da83af5a6da6521731eb"><div class="ttname"><a href="struct_game_objects_1_1_player.html#a2c053546ba86da83af5a6da6521731eb">GameObjects::Player::mouse_controller</a></div><div class="ttdeci">void mouse_controller(GLFWwindow *window, double xpos, double ypos)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_a0da0d3af0d148cd871e641e5bbb8d480"><div class="ttname"><a href="struct_game_objects_1_1_player.html#a0da0d3af0d148cd871e641e5bbb8d480">GameObjects::Player::reload_start</a></div><div class="ttdeci">float reload_start</div><div class="ttdef"><b>Definition:</b> Player.h:81</div></div>
+<div class="ttc" id="a_i_game_actor_8h_html"><div class="ttname"><a href="_i_game_actor_8h.html">IGameActor.h</a></div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_a45ec30c9d1d9eaafd183e976482f0d5b"><div class="ttname"><a href="struct_game_objects_1_1_player.html#a45ec30c9d1d9eaafd183e976482f0d5b">GameObjects::Player::SetBullet</a></div><div class="ttdeci">void SetBullet(std::vector&lt; std::shared_ptr&lt; Graphic::Sprite &gt;&gt;)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_a1f7d707a380f14969da5ea4228e4cbf0"><div class="ttname"><a href="struct_game_objects_1_1_player.html#a1f7d707a380f14969da5ea4228e4cbf0">GameObjects::Player::Render</a></div><div class="ttdeci">void Render() override</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_a8750a729709606dd24e23e9332017fc0"><div class="ttname"><a href="struct_game_objects_1_1_player.html#a8750a729709606dd24e23e9332017fc0">GameObjects::Player::die</a></div><div class="ttdeci">bool die() override</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_a4fcce7b206aeed4d3368fa04a30db566"><div class="ttname"><a href="struct_game_objects_1_1_player.html#a4fcce7b206aeed4d3368fa04a30db566">GameObjects::Player::SetAnimator</a></div><div class="ttdeci">void SetAnimator(ACTION name_of_action, std::shared_ptr&lt; Graphic::SpriteAnimator &gt;) override</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_a064060ce4752e0386b84bc6fdefa620e"><div class="ttname"><a href="struct_game_objects_1_1_player.html#a064060ce4752e0386b84bc6fdefa620e">GameObjects::Player::getHealth</a></div><div class="ttdeci">std::shared_ptr&lt; float &gt; getHealth()</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_ae8f80aea83c1cf4d2f71122d3e85351e"><div class="ttname"><a href="struct_game_objects_1_1_player.html#ae8f80aea83c1cf4d2f71122d3e85351e">GameObjects::Player::Player</a></div><div class="ttdeci">Player(glm::vec2 position, glm::vec2 size, float rotation, float layer)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_player_html_a865164333946c0aae7b15fea79b11fb6"><div class="ttname"><a href="struct_game_objects_1_1_player.html#a865164333946c0aae7b15fea79b11fb6">GameObjects::Player::~Player</a></div><div class="ttdeci">~Player() override=default</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

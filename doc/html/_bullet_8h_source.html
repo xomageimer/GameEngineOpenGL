@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: Исходный файл C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Actors/Bullet.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8a33d3b699d590208ab642df13852d0f.html">Actors</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Bullet.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_bullet_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAMEENGINE_BULLET_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAMEENGINE_BULLET_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_game_actor_8h.html">IGameActor.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="namespace_game_objects.html">    8</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_game_objects.html">GameObjects</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html">   14</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_game_objects_1_1_bullet.html">Bullet</a> : <span class="keyword">public</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html">IGameActor</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#add2c9747c1299fba89671c33c91a745e">   16</a></span>&#160;        <a class="code" href="struct_game_objects_1_1_bullet.html#add2c9747c1299fba89671c33c91a745e">Bullet</a>(glm::vec2 &amp; position, glm::vec2 size, <span class="keywordtype">float</span> &amp; <a class="code" href="struct_game_objects_1_1_bullet.html#a9abebf9e46461372daea5ce36dc0a0c7">rotation</a>, glm::vec2 &amp; <a class="code" href="struct_game_objects_1_1_bullet.html#a0d515bfcccd1dcee143fd2b4c4bb6693">direct</a>, <span class="keywordtype">float</span> layer = 0.2f);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a3662cd9818656ab995b26d3445a9a41c">   22</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_bullet.html#a3662cd9818656ab995b26d3445a9a41c">SetSprite</a>(std::shared_ptr&lt;Graphic::SpriteAnimator&gt; sprite_animator);</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a7187f715f15c96508f1d1843f258deea">   26</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_bullet.html#a7187f715f15c96508f1d1843f258deea">Render</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a2517a7741b8d7331840783800ad5c846">   30</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_game_objects_1_1_bullet.html#a2517a7741b8d7331840783800ad5c846">die</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a2068ecbfdb9114b87a6083f1b740b100">   34</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_bullet.html#a2068ecbfdb9114b87a6083f1b740b100">Update</a>(std::shared_ptr&lt;Graphic::Sprite&gt; sprite);</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#af60e7c5da6195472d562640e394e2207">   38</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_bullet.html#af60e7c5da6195472d562640e394e2207">diactivate</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#ae60f6a7187b48ee3bd4ed070f33d6fef">   42</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_bullet.html#ae60f6a7187b48ee3bd4ed070f33d6fef">Activate</a>(){</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="struct_game_objects_1_1_bullet.html#a13f31ef569d2efad018ff6392ff74cc2">active</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="struct_game_objects_1_1_bullet.html#a90800a6893034cdfca7048f65a8535fa">m_lasttime</a> = glfwGetTime();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="struct_game_objects_1_1_bullet.html#a2ab26a84d0e0159f090198d9a2f7f367">_lastFrame</a> = glfwGetTime();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a1eee72cd8bbe340f0642b83883a4d42e">m_position</a> = <a class="code" href="struct_game_objects_1_1_bullet.html#a11a68696096adcbb171f6ba1a5193d5b">current_target</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="struct_game_objects_1_1_i_game_actor.html#af49a37e034e58b48c3f72dc31a1a222c">m_direction</a> = glm::normalize(<a class="code" href="struct_game_objects_1_1_bullet.html#a0d515bfcccd1dcee143fd2b4c4bb6693">direct</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a1fa4ecd6e70e43b4855fca9e3427f686">m_rotation</a> = <a class="code" href="struct_game_objects_1_1_bullet.html#a9abebf9e46461372daea5ce36dc0a0c7">rotation</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a93d183fa2c395e79ea0408ff5333457c">m_velocity</a> = 1.2f;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a22d4885ea24e6f169ab746c82c045816">   56</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_bullet.html#a22d4885ea24e6f169ab746c82c045816">SetAnimator</a>(<a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> name_of_action, std::shared_ptr&lt;Graphic::SpriteAnimator&gt;);</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#ac000018400ce300e17b09ba90f6df625">   57</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_bullet.html#ac000018400ce300e17b09ba90f6df625">_deltaTime</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a2ab26a84d0e0159f090198d9a2f7f367">   58</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_bullet.html#a2ab26a84d0e0159f090198d9a2f7f367">_lastFrame</a> = 0.f;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a13f31ef569d2efad018ff6392ff74cc2">   60</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_game_objects_1_1_bullet.html#a13f31ef569d2efad018ff6392ff74cc2">active</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a57cd0988019ed1f4acad2baf7017c656">   62</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_bullet.html#a57cd0988019ed1f4acad2baf7017c656">m_curlifetime</a> = 0.f;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a90800a6893034cdfca7048f65a8535fa">   63</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_bullet.html#a90800a6893034cdfca7048f65a8535fa">m_lasttime</a> = 0.f;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a11a68696096adcbb171f6ba1a5193d5b">   65</a></span>&#160;        <span class="keyword">const</span> glm::vec2 &amp; <a class="code" href="struct_game_objects_1_1_bullet.html#a11a68696096adcbb171f6ba1a5193d5b">current_target</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a9abebf9e46461372daea5ce36dc0a0c7">   66</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span> &amp; <a class="code" href="struct_game_objects_1_1_bullet.html#a9abebf9e46461372daea5ce36dc0a0c7">rotation</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a0d515bfcccd1dcee143fd2b4c4bb6693">   67</a></span>&#160;        <span class="keyword">const</span> glm::vec2 &amp; <a class="code" href="struct_game_objects_1_1_bullet.html#a0d515bfcccd1dcee143fd2b4c4bb6693">direct</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_bullet.html#a2da39fcf14eef6df038a137f49989d5f">   69</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> <a class="code" href="struct_game_objects_1_1_bullet.html#a2da39fcf14eef6df038a137f49989d5f">m_action</a> = <a class="code" href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6aa5daf7f2ebbba4975d61dab1c40188c7">ACTION::IDLE</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif //GAMEENGINE_BULLET_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a2da39fcf14eef6df038a137f49989d5f"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a2da39fcf14eef6df038a137f49989d5f">GameObjects::Bullet::m_action</a></div><div class="ttdeci">const ACTION m_action</div><div class="ttdef"><b>Definition:</b> Bullet.h:69</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_af60e7c5da6195472d562640e394e2207"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#af60e7c5da6195472d562640e394e2207">GameObjects::Bullet::diactivate</a></div><div class="ttdeci">void diactivate()</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a9abebf9e46461372daea5ce36dc0a0c7"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a9abebf9e46461372daea5ce36dc0a0c7">GameObjects::Bullet::rotation</a></div><div class="ttdeci">const float &amp; rotation</div><div class="ttdef"><b>Definition:</b> Bullet.h:66</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a7187f715f15c96508f1d1843f258deea"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a7187f715f15c96508f1d1843f258deea">GameObjects::Bullet::Render</a></div><div class="ttdeci">void Render() override</div></div>
+<div class="ttc" id="agroup___game___objects_html_gga0072938dba3ccc8db4f127aad716aea6aa5daf7f2ebbba4975d61dab1c40188c7"><div class="ttname"><a href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6aa5daf7f2ebbba4975d61dab1c40188c7">GameObjects::ACTION::IDLE</a></div><div class="ttdeci">@ IDLE</div><div class="ttdoc">Анимация в режиме &quot;Стоять&quot;.</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html">GameObjects::Bullet</a></div><div class="ttdef"><b>Definition:</b> Bullet.h:14</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a1eee72cd8bbe340f0642b83883a4d42e"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a1eee72cd8bbe340f0642b83883a4d42e">GameObjects::IGameActor::m_position</a></div><div class="ttdeci">glm::vec2 m_position</div><div class="ttdef"><b>Definition:</b> IGameActor.h:81</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a3662cd9818656ab995b26d3445a9a41c"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a3662cd9818656ab995b26d3445a9a41c">GameObjects::Bullet::SetSprite</a></div><div class="ttdeci">void SetSprite(std::shared_ptr&lt; Graphic::SpriteAnimator &gt; sprite_animator)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a2517a7741b8d7331840783800ad5c846"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a2517a7741b8d7331840783800ad5c846">GameObjects::Bullet::die</a></div><div class="ttdeci">bool die() override</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a0d515bfcccd1dcee143fd2b4c4bb6693"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a0d515bfcccd1dcee143fd2b4c4bb6693">GameObjects::Bullet::direct</a></div><div class="ttdeci">const glm::vec2 &amp; direct</div><div class="ttdef"><b>Definition:</b> Bullet.h:67</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_add2c9747c1299fba89671c33c91a745e"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#add2c9747c1299fba89671c33c91a745e">GameObjects::Bullet::Bullet</a></div><div class="ttdeci">Bullet(glm::vec2 &amp;position, glm::vec2 size, float &amp;rotation, glm::vec2 &amp;direct, float layer=0.2f)</div></div>
+<div class="ttc" id="anamespace_game_objects_html"><div class="ttname"><a href="namespace_game_objects.html">GameObjects</a></div><div class="ttdef"><b>Definition:</b> Bullet.h:8</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a11a68696096adcbb171f6ba1a5193d5b"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a11a68696096adcbb171f6ba1a5193d5b">GameObjects::Bullet::current_target</a></div><div class="ttdeci">const glm::vec2 &amp; current_target</div><div class="ttdef"><b>Definition:</b> Bullet.h:65</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_ae60f6a7187b48ee3bd4ed070f33d6fef"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#ae60f6a7187b48ee3bd4ed070f33d6fef">GameObjects::Bullet::Activate</a></div><div class="ttdeci">void Activate()</div><div class="ttdef"><b>Definition:</b> Bullet.h:42</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html">GameObjects::IGameActor</a></div><div class="ttdef"><b>Definition:</b> IGameActor.h:31</div></div>
+<div class="ttc" id="agroup___game___objects_html_ga0072938dba3ccc8db4f127aad716aea6"><div class="ttname"><a href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">GameObjects::ACTION</a></div><div class="ttdeci">ACTION</div><div class="ttdef"><b>Definition:</b> IGameActor.h:23</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_ac000018400ce300e17b09ba90f6df625"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#ac000018400ce300e17b09ba90f6df625">GameObjects::Bullet::_deltaTime</a></div><div class="ttdeci">float _deltaTime</div><div class="ttdef"><b>Definition:</b> Bullet.h:57</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a13f31ef569d2efad018ff6392ff74cc2"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a13f31ef569d2efad018ff6392ff74cc2">GameObjects::Bullet::active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition:</b> Bullet.h:60</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a90800a6893034cdfca7048f65a8535fa"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a90800a6893034cdfca7048f65a8535fa">GameObjects::Bullet::m_lasttime</a></div><div class="ttdeci">float m_lasttime</div><div class="ttdef"><b>Definition:</b> Bullet.h:63</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a93d183fa2c395e79ea0408ff5333457c"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a93d183fa2c395e79ea0408ff5333457c">GameObjects::IGameActor::m_velocity</a></div><div class="ttdeci">float m_velocity</div><div class="ttdef"><b>Definition:</b> IGameActor.h:88</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a22d4885ea24e6f169ab746c82c045816"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a22d4885ea24e6f169ab746c82c045816">GameObjects::Bullet::SetAnimator</a></div><div class="ttdeci">virtual void SetAnimator(ACTION name_of_action, std::shared_ptr&lt; Graphic::SpriteAnimator &gt;)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_af49a37e034e58b48c3f72dc31a1a222c"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#af49a37e034e58b48c3f72dc31a1a222c">GameObjects::IGameActor::m_direction</a></div><div class="ttdeci">glm::vec2 m_direction</div><div class="ttdef"><b>Definition:</b> IGameActor.h:86</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a2ab26a84d0e0159f090198d9a2f7f367"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a2ab26a84d0e0159f090198d9a2f7f367">GameObjects::Bullet::_lastFrame</a></div><div class="ttdeci">float _lastFrame</div><div class="ttdef"><b>Definition:</b> Bullet.h:58</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a1fa4ecd6e70e43b4855fca9e3427f686"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a1fa4ecd6e70e43b4855fca9e3427f686">GameObjects::IGameActor::m_rotation</a></div><div class="ttdeci">float m_rotation</div><div class="ttdef"><b>Definition:</b> IGameActor.h:83</div></div>
+<div class="ttc" id="a_i_game_actor_8h_html"><div class="ttname"><a href="_i_game_actor_8h.html">IGameActor.h</a></div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a57cd0988019ed1f4acad2baf7017c656"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a57cd0988019ed1f4acad2baf7017c656">GameObjects::Bullet::m_curlifetime</a></div><div class="ttdeci">float m_curlifetime</div><div class="ttdef"><b>Definition:</b> Bullet.h:62</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_bullet_html_a2068ecbfdb9114b87a6083f1b740b100"><div class="ttname"><a href="struct_game_objects_1_1_bullet.html#a2068ecbfdb9114b87a6083f1b740b100">GameObjects::Bullet::Update</a></div><div class="ttdeci">void Update(std::shared_ptr&lt; Graphic::Sprite &gt; sprite)</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

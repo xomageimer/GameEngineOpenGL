@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: Исходный файл C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Actors/IGameActor.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8a33d3b699d590208ab642df13852d0f.html">Actors</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">IGameActor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_i_game_actor_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAMEENGINE_IGAMEACTOR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAMEENGINE_IGAMEACTOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;glm/gtc/matrix_transform.hpp&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_sprite_animator_8h.html">Graphic/SpriteAnimator.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// TODO класс для представления интерфейсов всех акторов движка</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_game_objects.html">GameObjects</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">   23</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6aa5daf7f2ebbba4975d61dab1c40188c7">IDLE</a>,       </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a">WALK</a>,       </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6adb737af467b5e9432fae403dbe57fce6">SHOOTING</a>,   </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6a07d14e40a82f0a38be9b2d0e4f5f8278">RELOAD</a>,    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6a83ebd7c89f4cc1a85396fba7d6f7e900">DIE</a>         </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html">   31</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_game_objects_1_1_i_game_actor.html">IGameActor</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a0b97049a41b058b78d4f925f0878ad79">   33</a></span>&#160;        <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a0b97049a41b058b78d4f925f0878ad79">IGameActor</a>(glm::vec2 position, glm::vec2 size, <span class="keywordtype">float</span> rotation, <span class="keywordtype">float</span> layer);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a6e75aa5ef95318485791e627c998900a">   35</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a6e75aa5ef95318485791e627c998900a">~IGameActor</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a18bf6f8bdb36e04dc86da6531a421d68">   41</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a18bf6f8bdb36e04dc86da6531a421d68">SetAnimator</a>(<a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> name_of_action, std::shared_ptr&lt;Graphic::SpriteAnimator&gt; anim) = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a5e07139e7540e0ba5eee451e5b55e6ac">   47</a></span>&#160;        <span class="keyword">virtual</span> std::shared_ptr&lt;Graphic::SpriteAnimator&gt; <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a5e07139e7540e0ba5eee451e5b55e6ac">GetAnimator</a>(<a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> action);</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a548e53818f646bb56bea915d487350e8">   51</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a548e53818f646bb56bea915d487350e8">Render</a>() = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a9eca4dc37b7e9ecbf9f1a6b19815393f">   56</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a9eca4dc37b7e9ecbf9f1a6b19815393f">die</a>() = 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#aff9c7d812ac29b3a736e02d8804225d3">   58</a></span>&#160;        <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html#aff9c7d812ac29b3a736e02d8804225d3">setVelocity</a>(<span class="keywordtype">float</span> vel) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a93d183fa2c395e79ea0408ff5333457c">m_velocity</a> = vel;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#ad0636c5d094a730b69954ac25f0e23af">   62</a></span>&#160;        [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">inline</span> glm::vec2 &amp;<a class="code" href="struct_game_objects_1_1_i_game_actor.html#ad0636c5d094a730b69954ac25f0e23af">GetCurrentPosition</a>() {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a1eee72cd8bbe340f0642b83883a4d42e">m_position</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        };</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#acaca3ea67fbb9175b0ccf12ef69e5204">   66</a></span>&#160;        [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">inline</span> glm::vec2 &amp;<a class="code" href="struct_game_objects_1_1_i_game_actor.html#acaca3ea67fbb9175b0ccf12ef69e5204">GetCurrentDirection</a>() {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html#af49a37e034e58b48c3f72dc31a1a222c">m_direction</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#ac1f97b4b072212be71505483985a1ac3">   70</a></span>&#160;        [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">inline</span> glm::vec2 &amp;<a class="code" href="struct_game_objects_1_1_i_game_actor.html#ac1f97b4b072212be71505483985a1ac3">GetSize</a>() {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a3452c4243ca2f4df75723a2d2884bf91">m_size</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a46f80344a93e9482a1bf0ca0857f10b9">   74</a></span>&#160;        [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> &amp;<a class="code" href="struct_game_objects_1_1_i_game_actor.html#a46f80344a93e9482a1bf0ca0857f10b9">velocity</a>() {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a93d183fa2c395e79ea0408ff5333457c">m_velocity</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a0d7424ecdf427d273e97771e319edaf4">   79</a></span>&#160;        std::map&lt;ACTION, std::shared_ptr&lt;Graphic::SpriteAnimator&gt;&gt; <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a0d7424ecdf427d273e97771e319edaf4">m_representative</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a1eee72cd8bbe340f0642b83883a4d42e">   81</a></span>&#160;        glm::vec2 <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a1eee72cd8bbe340f0642b83883a4d42e">m_position</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a3452c4243ca2f4df75723a2d2884bf91">   82</a></span>&#160;        glm::vec2 <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a3452c4243ca2f4df75723a2d2884bf91">m_size</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a1fa4ecd6e70e43b4855fca9e3427f686">   83</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a1fa4ecd6e70e43b4855fca9e3427f686">m_rotation</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a3073a1cb385f2f21bdbef5b4c5f0f1d6">   84</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a3073a1cb385f2f21bdbef5b4c5f0f1d6">m_layer</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#af49a37e034e58b48c3f72dc31a1a222c">   86</a></span>&#160;        glm::vec2 <a class="code" href="struct_game_objects_1_1_i_game_actor.html#af49a37e034e58b48c3f72dc31a1a222c">m_direction</a>{};</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#aa52ee9747207aa8903766cbb7386a8f6">   87</a></span>&#160;        glm::vec3 <a class="code" href="struct_game_objects_1_1_i_game_actor.html#aa52ee9747207aa8903766cbb7386a8f6">m_up</a>{0.f, 0.f, 1.f};</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="struct_game_objects_1_1_i_game_actor.html#a93d183fa2c395e79ea0408ff5333457c">   88</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_game_objects_1_1_i_game_actor.html#a93d183fa2c395e79ea0408ff5333457c">m_velocity</a>{};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    };</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif //GAMEENGINE_IGAMEACTOR_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a3073a1cb385f2f21bdbef5b4c5f0f1d6"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a3073a1cb385f2f21bdbef5b4c5f0f1d6">GameObjects::IGameActor::m_layer</a></div><div class="ttdeci">float m_layer</div><div class="ttdef"><b>Definition:</b> IGameActor.h:84</div></div>
+<div class="ttc" id="a_sprite_animator_8h_html"><div class="ttname"><a href="_sprite_animator_8h.html">SpriteAnimator.h</a></div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_ad0636c5d094a730b69954ac25f0e23af"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#ad0636c5d094a730b69954ac25f0e23af">GameObjects::IGameActor::GetCurrentPosition</a></div><div class="ttdeci">virtual glm::vec2 &amp; GetCurrentPosition()</div><div class="ttdef"><b>Definition:</b> IGameActor.h:62</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a5e07139e7540e0ba5eee451e5b55e6ac"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a5e07139e7540e0ba5eee451e5b55e6ac">GameObjects::IGameActor::GetAnimator</a></div><div class="ttdeci">virtual std::shared_ptr&lt; Graphic::SpriteAnimator &gt; GetAnimator(ACTION action)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a0d7424ecdf427d273e97771e319edaf4"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a0d7424ecdf427d273e97771e319edaf4">GameObjects::IGameActor::m_representative</a></div><div class="ttdeci">std::map&lt; ACTION, std::shared_ptr&lt; Graphic::SpriteAnimator &gt; &gt; m_representative</div><div class="ttdef"><b>Definition:</b> IGameActor.h:79</div></div>
+<div class="ttc" id="agroup___game___objects_html_gga0072938dba3ccc8db4f127aad716aea6aa5daf7f2ebbba4975d61dab1c40188c7"><div class="ttname"><a href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6aa5daf7f2ebbba4975d61dab1c40188c7">GameObjects::ACTION::IDLE</a></div><div class="ttdeci">@ IDLE</div><div class="ttdoc">Анимация в режиме &quot;Стоять&quot;.</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a6e75aa5ef95318485791e627c998900a"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a6e75aa5ef95318485791e627c998900a">GameObjects::IGameActor::~IGameActor</a></div><div class="ttdeci">virtual ~IGameActor()=default</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a1eee72cd8bbe340f0642b83883a4d42e"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a1eee72cd8bbe340f0642b83883a4d42e">GameObjects::IGameActor::m_position</a></div><div class="ttdeci">glm::vec2 m_position</div><div class="ttdef"><b>Definition:</b> IGameActor.h:81</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a46f80344a93e9482a1bf0ca0857f10b9"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a46f80344a93e9482a1bf0ca0857f10b9">GameObjects::IGameActor::velocity</a></div><div class="ttdeci">virtual float &amp; velocity()</div><div class="ttdef"><b>Definition:</b> IGameActor.h:74</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a9eca4dc37b7e9ecbf9f1a6b19815393f"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a9eca4dc37b7e9ecbf9f1a6b19815393f">GameObjects::IGameActor::die</a></div><div class="ttdeci">virtual bool die()=0</div></div>
+<div class="ttc" id="anamespace_game_objects_html"><div class="ttname"><a href="namespace_game_objects.html">GameObjects</a></div><div class="ttdef"><b>Definition:</b> Bullet.h:8</div></div>
+<div class="ttc" id="agroup___game___objects_html_gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a"><div class="ttname"><a href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a">GameObjects::ACTION::WALK</a></div><div class="ttdeci">@ WALK</div><div class="ttdoc">Анимация в режиме &quot;Идти&quot;.</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_aff9c7d812ac29b3a736e02d8804225d3"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#aff9c7d812ac29b3a736e02d8804225d3">GameObjects::IGameActor::setVelocity</a></div><div class="ttdeci">virtual void setVelocity(float vel)</div><div class="ttdef"><b>Definition:</b> IGameActor.h:58</div></div>
+<div class="ttc" id="agroup___game___objects_html_gga0072938dba3ccc8db4f127aad716aea6adb737af467b5e9432fae403dbe57fce6"><div class="ttname"><a href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6adb737af467b5e9432fae403dbe57fce6">GameObjects::ACTION::SHOOTING</a></div><div class="ttdeci">@ SHOOTING</div><div class="ttdoc">Анимация в режиме &quot;Стрельба&quot;.</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a0b97049a41b058b78d4f925f0878ad79"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a0b97049a41b058b78d4f925f0878ad79">GameObjects::IGameActor::IGameActor</a></div><div class="ttdeci">IGameActor(glm::vec2 position, glm::vec2 size, float rotation, float layer)</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html">GameObjects::IGameActor</a></div><div class="ttdef"><b>Definition:</b> IGameActor.h:31</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_aa52ee9747207aa8903766cbb7386a8f6"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#aa52ee9747207aa8903766cbb7386a8f6">GameObjects::IGameActor::m_up</a></div><div class="ttdeci">glm::vec3 m_up</div><div class="ttdef"><b>Definition:</b> IGameActor.h:87</div></div>
+<div class="ttc" id="agroup___game___objects_html_ga0072938dba3ccc8db4f127aad716aea6"><div class="ttname"><a href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">GameObjects::ACTION</a></div><div class="ttdeci">ACTION</div><div class="ttdef"><b>Definition:</b> IGameActor.h:23</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_acaca3ea67fbb9175b0ccf12ef69e5204"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#acaca3ea67fbb9175b0ccf12ef69e5204">GameObjects::IGameActor::GetCurrentDirection</a></div><div class="ttdeci">virtual glm::vec2 &amp; GetCurrentDirection()</div><div class="ttdef"><b>Definition:</b> IGameActor.h:66</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a93d183fa2c395e79ea0408ff5333457c"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a93d183fa2c395e79ea0408ff5333457c">GameObjects::IGameActor::m_velocity</a></div><div class="ttdeci">float m_velocity</div><div class="ttdef"><b>Definition:</b> IGameActor.h:88</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_af49a37e034e58b48c3f72dc31a1a222c"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#af49a37e034e58b48c3f72dc31a1a222c">GameObjects::IGameActor::m_direction</a></div><div class="ttdeci">glm::vec2 m_direction</div><div class="ttdef"><b>Definition:</b> IGameActor.h:86</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a18bf6f8bdb36e04dc86da6531a421d68"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a18bf6f8bdb36e04dc86da6531a421d68">GameObjects::IGameActor::SetAnimator</a></div><div class="ttdeci">virtual void SetAnimator(ACTION name_of_action, std::shared_ptr&lt; Graphic::SpriteAnimator &gt; anim)=0</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a1fa4ecd6e70e43b4855fca9e3427f686"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a1fa4ecd6e70e43b4855fca9e3427f686">GameObjects::IGameActor::m_rotation</a></div><div class="ttdeci">float m_rotation</div><div class="ttdef"><b>Definition:</b> IGameActor.h:83</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_ac1f97b4b072212be71505483985a1ac3"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#ac1f97b4b072212be71505483985a1ac3">GameObjects::IGameActor::GetSize</a></div><div class="ttdeci">virtual glm::vec2 &amp; GetSize()</div><div class="ttdef"><b>Definition:</b> IGameActor.h:70</div></div>
+<div class="ttc" id="agroup___game___objects_html_gga0072938dba3ccc8db4f127aad716aea6a07d14e40a82f0a38be9b2d0e4f5f8278"><div class="ttname"><a href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6a07d14e40a82f0a38be9b2d0e4f5f8278">GameObjects::ACTION::RELOAD</a></div><div class="ttdeci">@ RELOAD</div><div class="ttdoc">Анимация в режиме &quot;Перезарядка&quot;.</div></div>
+<div class="ttc" id="agroup___game___objects_html_gga0072938dba3ccc8db4f127aad716aea6a83ebd7c89f4cc1a85396fba7d6f7e900"><div class="ttname"><a href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6a83ebd7c89f4cc1a85396fba7d6f7e900">GameObjects::ACTION::DIE</a></div><div class="ttdeci">@ DIE</div><div class="ttdoc">Анимация в режиме &quot;Смерть&quot;.</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a3452c4243ca2f4df75723a2d2884bf91"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a3452c4243ca2f4df75723a2d2884bf91">GameObjects::IGameActor::m_size</a></div><div class="ttdeci">glm::vec2 m_size</div><div class="ttdef"><b>Definition:</b> IGameActor.h:82</div></div>
+<div class="ttc" id="astruct_game_objects_1_1_i_game_actor_html_a548e53818f646bb56bea915d487350e8"><div class="ttname"><a href="struct_game_objects_1_1_i_game_actor.html#a548e53818f646bb56bea915d487350e8">GameObjects::IGameActor::Render</a></div><div class="ttdeci">virtual void Render()=0</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

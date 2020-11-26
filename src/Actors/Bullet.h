@@ -3,22 +3,42 @@
 
 #include "IGameActor.h"
 
+
+
 namespace GameObjects {
+    /*!
+               * \addtogroup Game_Objects
+               * @{ \details Класс для представления логики пули (сокет игрока)
+               */
 
     struct Bullet : public IGameActor {
     public:
         Bullet(glm::vec2 & position, glm::vec2 size, float & rotation, glm::vec2 & direct, float layer = 0.2f);
 
+                    /*!
+                     * Задает спрайт пуле
+                     * @param sprite_animator спрайт
+                     */
         void SetSprite(std::shared_ptr<Graphic::SpriteAnimator> sprite_animator);
-
+                /*!
+              * @ref GameObjects::IGameActor::Render
+              */
         void Render() override;
-
+            /*!
+            * @ref GameObjects::IGameActor::die
+            */
         bool die() override;
-
+                /*!
+                * @ref GameObjects::Enemy::Update
+                */
         void Update(std::shared_ptr<Graphic::Sprite> sprite);
-
+                /*!
+                 * диактивация текущей пули
+                 */
         void diactivate();
-
+                /*!
+                 * активация текущей пули
+                 */
         inline void Activate(){
             active = true;
             m_lasttime = glfwGetTime();
@@ -30,6 +50,9 @@ namespace GameObjects {
         }
 
     private:
+            /*!
+          * @ref GameObjects::IGameActor::SetAnimator
+          */
         virtual void SetAnimator(ACTION name_of_action, std::shared_ptr<Graphic::SpriteAnimator>);
         float _deltaTime;
         float _lastFrame = 0.f;
@@ -45,6 +68,8 @@ namespace GameObjects {
 
         const ACTION m_action = ACTION::IDLE;
     };
-
+    /*! @} */
 }
+
+
 #endif //GAMEENGINE_BULLET_H

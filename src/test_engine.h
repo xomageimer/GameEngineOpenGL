@@ -173,7 +173,7 @@ void processInput(GLFWwindow *window)
 }
 
 void AnimeTest(GLFWwindow* window){
-    Engine::Editor().SetPlayer({0.f, 0.f}, {0.13f, 0.2f}, 0.f, 0.f);
+    //Engine::Editor().SetPlayer({0.f, 0.f}, {0.13f, 0.2f}, 0.f, 0.f);
     Engine::Editor().SetPlayer({0.f, 0.f}, {0.13f, 0.2f}, 0.f, 0.f);
 
     auto Resource_Path = (std::filesystem::current_path())/"res";

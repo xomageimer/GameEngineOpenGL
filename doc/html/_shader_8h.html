@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: Файл C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Graphic/Shader.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3350c4b2a8bfebf286552b4ce0c2b6d0.html">Graphic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл Shader.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;glad/glad.h&gt;</code><br />
+<code>#include &lt;GLFW/glfw3.h&gt;</code><br />
+<code>#include &lt;glm/glm.hpp&gt;</code><br />
+<code>#include &lt;glm/gtc/matrix_transform.hpp&gt;</code><br />
+<code>#include &lt;glm/gtc/type_ptr.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для Shader.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="_shader_8h__incl.png" border="0" usemap="#_c_1_2_users_2xomaq_2_c_lion_projects_2_game_engine_open_g_l_2src_2_graphic_2_shader_8h" alt=""/></div>
+<map name="_c_1_2_users_2xomaq_2_c_lion_projects_2_game_engine_open_g_l_2src_2_graphic_2_shader_8h" id="_c_1_2_users_2xomaq_2_c_lion_projects_2_game_engine_open_g_l_2src_2_graphic_2_shader_8h">
+<area shape="rect" title=" " alt="" coords="399,5,619,61"/>
+<area shape="rect" title=" " alt="" coords="5,109,87,136"/>
+<area shape="rect" title=" " alt="" coords="111,109,181,136"/>
+<area shape="rect" title=" " alt="" coords="205,109,260,136"/>
+<area shape="rect" title=" " alt="" coords="284,109,349,136"/>
+<area shape="rect" title=" " alt="" coords="374,109,446,136"/>
+<area shape="rect" title=" " alt="" coords="470,109,547,136"/>
+<area shape="rect" title=" " alt="" coords="571,109,657,136"/>
+<area shape="rect" title=" " alt="" coords="681,109,785,136"/>
+<area shape="rect" title=" " alt="" coords="809,109,902,136"/>
+<area shape="rect" title=" " alt="" coords="927,109,1117,136"/>
+<area shape="rect" title=" " alt="" coords="1142,109,1283,136"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="_shader_8h__dep__incl.png" border="0" usemap="#_c_1_2_users_2xomaq_2_c_lion_projects_2_game_engine_open_g_l_2src_2_graphic_2_shader_8hdep" alt=""/></div>
+<map name="_c_1_2_users_2xomaq_2_c_lion_projects_2_game_engine_open_g_l_2src_2_graphic_2_shader_8hdep" id="_c_1_2_users_2xomaq_2_c_lion_projects_2_game_engine_open_g_l_2src_2_graphic_2_shader_8hdep">
+<area shape="rect" title=" " alt="" coords="123,5,343,61"/>
+<area shape="rect" href="_camera_8h.html" title=" " alt="" coords="5,213,220,269"/>
+<area shape="rect" href="_sprite_8h.html" title=" " alt="" coords="220,109,440,165"/>
+<area shape="rect" href="_engine_8h.html" title="Основное представление интерфейса движка TOP DOWN шутера" alt="" coords="281,629,496,685"/>
+<area shape="rect" href="_sprite_animator_8h.html" title=" " alt="" coords="267,213,487,269"/>
+<area shape="rect" href="_i_game_actor_8h.html" title=" " alt="" coords="282,317,495,373"/>
+<area shape="rect" href="_bullet_8h.html" title=" " alt="" coords="282,421,495,477"/>
+<area shape="rect" href="_enemy_8h.html" title=" " alt="" coords="138,525,351,581"/>
+<area shape="rect" href="_player_8h.html" title=" " alt="" coords="426,525,639,581"/>
+<area shape="rect" href="_quad_8h.html" title=" " alt="" coords="570,429,829,470"/>
+</map>
+</div>
+</div>
+<p><a href="_shader_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_shader.html">Shader</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:gae0b6aa9204ea6da441975846d13d6c73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_____metaprogramming___macroprogramming.html#gae0b6aa9204ea6da441975846d13d6c73">UNIFORMTAG</a>(ph_1,  ph_2)&#160;&#160;&#160;glUniform ## ph_1 ## ph_2</td></tr>
+<tr class="memdesc:gae0b6aa9204ea6da441975846d13d6c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Макрос для вызова glUniform функции glfw на основе ее постфиксов  <a href="group_____metaprogramming___macroprogramming.html#gae0b6aa9204ea6da441975846d13d6c73">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae0b6aa9204ea6da441975846d13d6c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf2ce909bebc46ac242a6250efa17febc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_____metaprogramming___macroprogramming.html#gaf2ce909bebc46ac242a6250efa17febc">CallFuncs</a>(type,  separate)</td></tr>
+<tr class="separator:gaf2ce909bebc46ac242a6250efa17febc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae85c94a0710f0c9743059bfbef9a9fa1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_____metaprogramming___macroprogramming.html#gae85c94a0710f0c9743059bfbef9a9fa1">CallFuncsForMatrix</a>(type,  separate)</td></tr>
+<tr class="separator:gae85c94a0710f0c9743059bfbef9a9fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gad20826c02757b844a744c3a932574b0a"><td class="memTemplParams" colspan="2">template&lt;typename F , typename... S&gt; </td></tr>
+<tr class="memitem:gad20826c02757b844a744c3a932574b0a"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">CallIfCallable</a> (F &amp;&amp;func, S &amp;&amp;...args)</td></tr>
+<tr class="separator:gad20826c02757b844a744c3a932574b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: Исходный файл C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Engine/Engine.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3072bc1f55ed1280fe4fbe6b21c78379.html">Engine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Engine.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_engine_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAMEENGINE_ENGINE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAMEENGINE_ENGINE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_quad_8h.html">Actors/Quad.h</a>&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_player_8h.html">Actors/Player.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_enemy_8h.html">Actors/Enemy.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_bullet_8h.html">Actors/Bullet.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_camera_8h.html">Camera.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_engine.html">   23</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_engine.html">Engine</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_engine.html#ad079c7bdba10b698dcccfe5e8fdb1a55">   29</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="struct_engine.html">Engine</a>&amp; <a class="code" href="struct_engine.html#ad079c7bdba10b698dcccfe5e8fdb1a55">Editor</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="struct_engine.html#acde70aed0043e2e2091d0bb6cce8e3c1">   30</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#acde70aed0043e2e2091d0bb6cce8e3c1">Render</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_engine.html#aca88486672f60638ab79b149b4bb2492">   31</a></span>&#160;    <a class="code" href="struct_engine.html#aca88486672f60638ab79b149b4bb2492">Engine</a>(<a class="code" href="struct_engine.html">Engine</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_engine.html#a3dacf470027de366f973e7fee7dd8be2">   32</a></span>&#160;    <a class="code" href="struct_engine.html">Engine</a>&amp; <a class="code" href="struct_engine.html#a3dacf470027de366f973e7fee7dd8be2">operator=</a>(<a class="code" href="struct_engine.html">Engine</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_engine.html#acdd695a858f59e8a12ff4baa52f93bc6">   33</a></span>&#160;    <a class="code" href="struct_engine.html#acdd695a858f59e8a12ff4baa52f93bc6">Engine</a>(<a class="code" href="struct_engine.html">Engine</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_engine.html#a7d3c851d846727126488e280ed05e40b">   34</a></span>&#160;    <a class="code" href="struct_engine.html">Engine</a>&amp; <a class="code" href="struct_engine.html#a7d3c851d846727126488e280ed05e40b">operator=</a>(<a class="code" href="struct_engine.html">Engine</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_engine.html#a8e2ba4d36fd71330d8719154974c104d">   43</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a8e2ba4d36fd71330d8719154974c104d">ConfigPlayerAnim</a>(<a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">GameObjects::ACTION</a> act, <span class="keyword">const</span> std::string &amp; sprite_name, <span class="keyword">const</span> std::vector&lt;std::vector&lt;float&gt;&gt; &amp; sprite_frames);</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_engine.html#a9ad860abb5fe3d785ca62e59652b9ba5">   48</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a9ad860abb5fe3d785ca62e59652b9ba5">ConfigPlayerParticles</a>(<span class="keyword">const</span> std::string &amp; sprite_name);</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="struct_engine.html#a36c54f2f9f0c6f01085935140a7e2b6e">   56</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a36c54f2f9f0c6f01085935140a7e2b6e">SetPlayer</a>(glm::vec2 position, glm::vec2 size, <span class="keywordtype">float</span> rotation, <span class="keywordtype">float</span> layer){</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="struct_engine.html#ade32c97ac8bb2963fcf4852f582b18ce">player_controller</a>.reset();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="struct_engine.html#ade32c97ac8bb2963fcf4852f582b18ce">player_controller</a> = std::make_shared&lt;GameObjects::Player&gt;(position, size, rotation, layer);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="struct_engine.html#a60f0f640b00c7dc26cda96400b845b33">player_start_pos</a> = position;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    };</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="struct_engine.html#a2f182b2e8aa9ab6a7c7e81fc914d8b54">   65</a></span>&#160;    [[nodiscard]] <span class="keyword">inline</span> std::shared_ptr&lt;GameObjects::Player&gt; &amp; <a class="code" href="struct_engine.html#a2f182b2e8aa9ab6a7c7e81fc914d8b54">GetPlayerController</a>() {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="struct_engine.html#ade32c97ac8bb2963fcf4852f582b18ce">player_controller</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="struct_engine.html#a528b18767e9e09a0f65432a95e0f00d2">   72</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a528b18767e9e09a0f65432a95e0f00d2">PlayerDeadChecker</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="struct_engine.html#a16ce8ca07d9fdae3152094e335ab6bf8">   79</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a16ce8ca07d9fdae3152094e335ab6bf8">SetDeadSign</a>(glm::vec2 size = {1.f, 1.f}, <span class="keywordtype">float</span> timer_to_restart = 3.f);</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="struct_engine.html#af7913d7e06fba431a3b2ae95e8748681">   84</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#af7913d7e06fba431a3b2ae95e8748681">ConfigSpriteDeadSign</a>(<span class="keyword">const</span> std::string &amp; sprite_name);</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="struct_engine.html#abd4fea5a267ad23c5990c089af3ebd21">   89</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#abd4fea5a267ad23c5990c089af3ebd21">SetPauseSign</a>(glm::vec2 size = {1.f, 1.f});</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="struct_engine.html#af4bca0ddfad288774a6686fd97d1fbbc">   94</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#af4bca0ddfad288774a6686fd97d1fbbc">ConfigSpritePauseSign</a>(<span class="keyword">const</span> std::string &amp; sprite_name);</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="struct_engine.html#a67cfd28d20609c43db51508005996841">  100</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="struct_engine.html#a67cfd28d20609c43db51508005996841">CheckPauseMode</a>(GLFWwindow *window);</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="struct_engine.html#aa852cd6438b7374f696ea9c7ff3ef966">  106</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#aa852cd6438b7374f696ea9c7ff3ef966">SetMap</a>(glm::vec2 position, glm::vec2 size);</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="struct_engine.html#aec5ccc29213bd5dd27c28707dca5188b">  111</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#aec5ccc29213bd5dd27c28707dca5188b">ConfigSpriteMap</a>(<span class="keyword">const</span> std::string &amp; sprite_name);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="struct_engine.html#a9c89a58700d2490081d504a2cb75f69d">  118</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a9c89a58700d2490081d504a2cb75f69d">SetProp</a>(glm::vec2 position, glm::vec2 size);</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="struct_engine.html#a765db6925202d238de58c206acb497f1">  123</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a765db6925202d238de58c206acb497f1">ConfigSpriteProp</a>(<span class="keyword">const</span> std::string &amp; sprite_name);</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="struct_engine.html#a096abcaeac9675b03ac67cbec38fa970">  128</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a096abcaeac9675b03ac67cbec38fa970">SetEnemiesSpawns</a>(std::vector&lt;glm::vec2&gt; spawn_pos);</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="struct_engine.html#acf198f0d8fff6292f3f3b579a1e8d0c0">  132</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#acf198f0d8fff6292f3f3b579a1e8d0c0">SetEnemies</a>(glm::vec2 size, <span class="keywordtype">float</span> layer, <span class="keywordtype">size_t</span> numbers);</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="struct_engine.html#a552394c1a35cea724e38a1577e14c057">  144</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a552394c1a35cea724e38a1577e14c057">ConfigEnemies</a>(<a class="code" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">GameObjects::ACTION</a> act, <span class="keyword">const</span> std::string &amp; sprite_name, glm::vec2 left_bottom,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                       glm::vec2 right_top,</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                       <span class="keywordtype">float</span> x,</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                       <span class="keywordtype">float</span> y,</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                       <span class="keywordtype">size_t</span> vertical,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                       <span class="keywordtype">size_t</span> horizontal);</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="struct_engine.html#afa30d5787ab13ad503ff01d9fe4a20c3">  155</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#afa30d5787ab13ad503ff01d9fe4a20c3">SetSprite</a>(<span class="keyword">const</span> std::string &amp; name,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                   <span class="keyword">const</span> std::string &amp; texture_name);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="struct_engine.html#a68b95c17976ff682daad1f79e37e96fc">  158</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a68b95c17976ff682daad1f79e37e96fc">SetSpritePack</a>(<span class="keyword">const</span> std::string &amp; name,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                   <span class="keyword">const</span> std::string &amp; texture_name, <span class="keywordtype">size_t</span> max_count);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="struct_engine.html#a97374264808013165ed3ccfdbc6fa8ac">  168</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a97374264808013165ed3ccfdbc6fa8ac">SetTexture</a>(<span class="keyword">const</span> std::string&amp; name,</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                    <span class="keyword">const</span> std::filesystem::path &amp;,</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> type = GL_RGBA,</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> format = GL_RGBA,</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                    <span class="keywordtype">bool</span> flip_vertically = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="struct_engine.html#a0ab0eae89b4e4872a1ccb20a9b08f67f">  180</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a0ab0eae89b4e4872a1ccb20a9b08f67f">SetShader</a>(<span class="keyword">const</span> std::filesystem::path &amp; vertex_shader, <span class="keyword">const</span> std::filesystem::path &amp; fragment_shader);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="struct_engine.html#a30ca45a188d2faa259772546ec253ec5">  185</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_engine.html#a30ca45a188d2faa259772546ec253ec5">SetCameraUpdatePosition</a>();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="struct_engine.html#acc713c22e0940be92b1251a916849077">  188</a></span>&#160;    <a class="code" href="struct_engine.html#acc713c22e0940be92b1251a916849077">Engine</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="struct_engine.html#a0f3471ab4c000ebe6e3f6c3c202365c3">  190</a></span>&#160;    std::shared_ptr&lt;Shader&gt; <a class="code" href="struct_engine.html#a0f3471ab4c000ebe6e3f6c3c202365c3">m_shader</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="struct_engine.html#ade32c97ac8bb2963fcf4852f582b18ce">  192</a></span>&#160;    std::shared_ptr&lt;GameObjects::Player&gt; <a class="code" href="struct_engine.html#ade32c97ac8bb2963fcf4852f582b18ce">player_controller</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="struct_engine.html#a60f0f640b00c7dc26cda96400b845b33">  193</a></span>&#160;    glm::vec2 <a class="code" href="struct_engine.html#a60f0f640b00c7dc26cda96400b845b33">player_start_pos</a>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="struct_engine.html#a1f8df2a31aab12780923b5e9d42a150e">  194</a></span>&#160;    std::shared_ptr&lt;GameObjects::Quad&gt; <a class="code" href="struct_engine.html#a1f8df2a31aab12780923b5e9d42a150e">map</a>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="struct_engine.html#a3771b00ba85c79621a72c4bcdb7ac670">  195</a></span>&#160;    std::shared_ptr&lt;GameObjects::Quad&gt; <a class="code" href="struct_engine.html#a3771b00ba85c79621a72c4bcdb7ac670">DeadSign</a>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="struct_engine.html#aec2c592f33d3b623b0d6db86547fb8d7">  196</a></span>&#160;    std::shared_ptr&lt;GameObjects::Quad&gt; <a class="code" href="struct_engine.html#aec2c592f33d3b623b0d6db86547fb8d7">PauseSign</a>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="struct_engine.html#a00c71d1478a29bcc261e44bc5bad7120">  197</a></span>&#160;    std::vector&lt;std::shared_ptr&lt;GameObjects::Quad&gt;&gt; <a class="code" href="struct_engine.html#a00c71d1478a29bcc261e44bc5bad7120">props</a>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="struct_engine.html#a89d878371ee5d2a495b7cb4331947b9d">  199</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_engine.html#a89d878371ee5d2a495b7cb4331947b9d">StartDeathTime</a> = 0.f;</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="struct_engine.html#a91a6b1805cf08c0d725ea16911866c11">  200</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="struct_engine.html#a91a6b1805cf08c0d725ea16911866c11">is_Dead</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="struct_engine.html#a767c164560c26f7f096506a9c2b95b03">  201</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_engine.html#a767c164560c26f7f096506a9c2b95b03">deltaTime</a>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="struct_engine.html#a12bf362e8742ba05586ed8f9bda4c44e">  202</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="struct_engine.html#a12bf362e8742ba05586ed8f9bda4c44e">On_Pause</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="struct_engine.html#ac064235b669a8ca080d561a8e5b96af1">  204</a></span>&#160;    std::vector&lt;std::shared_ptr&lt;GameObjects::Enemy&gt;&gt; <a class="code" href="struct_engine.html#ac064235b669a8ca080d561a8e5b96af1">enemies</a>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="struct_engine.html#a1e043c79b63231e15a290e4a70319906">  206</a></span>&#160;    std::map&lt;std::string, std::shared_ptr&lt;Graphic::Sprite&gt;&gt; <a class="code" href="struct_engine.html#a1e043c79b63231e15a290e4a70319906">pool_sprites</a>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="struct_engine.html#a785bc82f3b9d0274de2c915dae32a8ad">  207</a></span>&#160;    std::map&lt;std::string, std::vector&lt;std::shared_ptr&lt;Graphic::Sprite&gt;&gt;&gt; <a class="code" href="struct_engine.html#a785bc82f3b9d0274de2c915dae32a8ad">pool_pack_sprites</a>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="struct_engine.html#af0aaea281fcc4af8614b9cfd2d5bad6e">  208</a></span>&#160;    std::map&lt;std::string, std::shared_ptr&lt;Graphic::Texture2D&gt;&gt; <a class="code" href="struct_engine.html#af0aaea281fcc4af8614b9cfd2d5bad6e">pool_textures</a>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="struct_engine.html#a3c6f5ad1e8f0f3ec68a885cdd169400a">  210</a></span>&#160;    std::shared_ptr&lt;Camera&gt; <a class="code" href="struct_engine.html#a3c6f5ad1e8f0f3ec68a885cdd169400a">m_cam</a>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;};</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor">#endif //GAMEENGINE_ENGINE_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_engine_html_a91a6b1805cf08c0d725ea16911866c11"><div class="ttname"><a href="struct_engine.html#a91a6b1805cf08c0d725ea16911866c11">Engine::is_Dead</a></div><div class="ttdeci">bool is_Dead</div><div class="ttdef"><b>Definition:</b> Engine.h:200</div></div>
+<div class="ttc" id="astruct_engine_html_a68b95c17976ff682daad1f79e37e96fc"><div class="ttname"><a href="struct_engine.html#a68b95c17976ff682daad1f79e37e96fc">Engine::SetSpritePack</a></div><div class="ttdeci">void SetSpritePack(const std::string &amp;name, const std::string &amp;texture_name, size_t max_count)</div></div>
+<div class="ttc" id="astruct_engine_html_aec2c592f33d3b623b0d6db86547fb8d7"><div class="ttname"><a href="struct_engine.html#aec2c592f33d3b623b0d6db86547fb8d7">Engine::PauseSign</a></div><div class="ttdeci">std::shared_ptr&lt; GameObjects::Quad &gt; PauseSign</div><div class="ttdef"><b>Definition:</b> Engine.h:196</div></div>
+<div class="ttc" id="astruct_engine_html_a552394c1a35cea724e38a1577e14c057"><div class="ttname"><a href="struct_engine.html#a552394c1a35cea724e38a1577e14c057">Engine::ConfigEnemies</a></div><div class="ttdeci">void ConfigEnemies(GameObjects::ACTION act, const std::string &amp;sprite_name, glm::vec2 left_bottom, glm::vec2 right_top, float x, float y, size_t vertical, size_t horizontal)</div></div>
+<div class="ttc" id="astruct_engine_html_a3771b00ba85c79621a72c4bcdb7ac670"><div class="ttname"><a href="struct_engine.html#a3771b00ba85c79621a72c4bcdb7ac670">Engine::DeadSign</a></div><div class="ttdeci">std::shared_ptr&lt; GameObjects::Quad &gt; DeadSign</div><div class="ttdef"><b>Definition:</b> Engine.h:195</div></div>
+<div class="ttc" id="astruct_engine_html_af7913d7e06fba431a3b2ae95e8748681"><div class="ttname"><a href="struct_engine.html#af7913d7e06fba431a3b2ae95e8748681">Engine::ConfigSpriteDeadSign</a></div><div class="ttdeci">void ConfigSpriteDeadSign(const std::string &amp;sprite_name)</div></div>
+<div class="ttc" id="astruct_engine_html_a9ad860abb5fe3d785ca62e59652b9ba5"><div class="ttname"><a href="struct_engine.html#a9ad860abb5fe3d785ca62e59652b9ba5">Engine::ConfigPlayerParticles</a></div><div class="ttdeci">void ConfigPlayerParticles(const std::string &amp;sprite_name)</div></div>
+<div class="ttc" id="astruct_engine_html_aa852cd6438b7374f696ea9c7ff3ef966"><div class="ttname"><a href="struct_engine.html#aa852cd6438b7374f696ea9c7ff3ef966">Engine::SetMap</a></div><div class="ttdeci">void SetMap(glm::vec2 position, glm::vec2 size)</div></div>
+<div class="ttc" id="astruct_engine_html_a1f8df2a31aab12780923b5e9d42a150e"><div class="ttname"><a href="struct_engine.html#a1f8df2a31aab12780923b5e9d42a150e">Engine::map</a></div><div class="ttdeci">std::shared_ptr&lt; GameObjects::Quad &gt; map</div><div class="ttdef"><b>Definition:</b> Engine.h:194</div></div>
+<div class="ttc" id="astruct_engine_html_af4bca0ddfad288774a6686fd97d1fbbc"><div class="ttname"><a href="struct_engine.html#af4bca0ddfad288774a6686fd97d1fbbc">Engine::ConfigSpritePauseSign</a></div><div class="ttdeci">void ConfigSpritePauseSign(const std::string &amp;sprite_name)</div></div>
+<div class="ttc" id="astruct_engine_html_acf198f0d8fff6292f3f3b579a1e8d0c0"><div class="ttname"><a href="struct_engine.html#acf198f0d8fff6292f3f3b579a1e8d0c0">Engine::SetEnemies</a></div><div class="ttdeci">void SetEnemies(glm::vec2 size, float layer, size_t numbers)</div></div>
+<div class="ttc" id="astruct_engine_html_a89d878371ee5d2a495b7cb4331947b9d"><div class="ttname"><a href="struct_engine.html#a89d878371ee5d2a495b7cb4331947b9d">Engine::StartDeathTime</a></div><div class="ttdeci">float StartDeathTime</div><div class="ttdef"><b>Definition:</b> Engine.h:199</div></div>
+<div class="ttc" id="astruct_engine_html_a9c89a58700d2490081d504a2cb75f69d"><div class="ttname"><a href="struct_engine.html#a9c89a58700d2490081d504a2cb75f69d">Engine::SetProp</a></div><div class="ttdeci">void SetProp(glm::vec2 position, glm::vec2 size)</div></div>
+<div class="ttc" id="a_enemy_8h_html"><div class="ttname"><a href="_enemy_8h.html">Enemy.h</a></div></div>
+<div class="ttc" id="a_bullet_8h_html"><div class="ttname"><a href="_bullet_8h.html">Bullet.h</a></div></div>
+<div class="ttc" id="astruct_engine_html_a30ca45a188d2faa259772546ec253ec5"><div class="ttname"><a href="struct_engine.html#a30ca45a188d2faa259772546ec253ec5">Engine::SetCameraUpdatePosition</a></div><div class="ttdeci">void SetCameraUpdatePosition()</div></div>
+<div class="ttc" id="astruct_engine_html_a36c54f2f9f0c6f01085935140a7e2b6e"><div class="ttname"><a href="struct_engine.html#a36c54f2f9f0c6f01085935140a7e2b6e">Engine::SetPlayer</a></div><div class="ttdeci">void SetPlayer(glm::vec2 position, glm::vec2 size, float rotation, float layer)</div><div class="ttdef"><b>Definition:</b> Engine.h:56</div></div>
+<div class="ttc" id="astruct_engine_html_a1e043c79b63231e15a290e4a70319906"><div class="ttname"><a href="struct_engine.html#a1e043c79b63231e15a290e4a70319906">Engine::pool_sprites</a></div><div class="ttdeci">std::map&lt; std::string, std::shared_ptr&lt; Graphic::Sprite &gt; &gt; pool_sprites</div><div class="ttdef"><b>Definition:</b> Engine.h:206</div></div>
+<div class="ttc" id="astruct_engine_html_a7d3c851d846727126488e280ed05e40b"><div class="ttname"><a href="struct_engine.html#a7d3c851d846727126488e280ed05e40b">Engine::operator=</a></div><div class="ttdeci">Engine &amp; operator=(Engine &amp;&amp;)=delete</div></div>
+<div class="ttc" id="astruct_engine_html_acde70aed0043e2e2091d0bb6cce8e3c1"><div class="ttname"><a href="struct_engine.html#acde70aed0043e2e2091d0bb6cce8e3c1">Engine::Render</a></div><div class="ttdeci">void Render()</div></div>
+<div class="ttc" id="astruct_engine_html_a00c71d1478a29bcc261e44bc5bad7120"><div class="ttname"><a href="struct_engine.html#a00c71d1478a29bcc261e44bc5bad7120">Engine::props</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; GameObjects::Quad &gt; &gt; props</div><div class="ttdef"><b>Definition:</b> Engine.h:197</div></div>
+<div class="ttc" id="astruct_engine_html"><div class="ttname"><a href="struct_engine.html">Engine</a></div><div class="ttdef"><b>Definition:</b> Engine.h:23</div></div>
+<div class="ttc" id="astruct_engine_html_a97374264808013165ed3ccfdbc6fa8ac"><div class="ttname"><a href="struct_engine.html#a97374264808013165ed3ccfdbc6fa8ac">Engine::SetTexture</a></div><div class="ttdeci">void SetTexture(const std::string &amp;name, const std::filesystem::path &amp;, unsigned int type=GL_RGBA, unsigned int format=GL_RGBA, bool flip_vertically=true)</div></div>
+<div class="ttc" id="astruct_engine_html_a767c164560c26f7f096506a9c2b95b03"><div class="ttname"><a href="struct_engine.html#a767c164560c26f7f096506a9c2b95b03">Engine::deltaTime</a></div><div class="ttdeci">float deltaTime</div><div class="ttdef"><b>Definition:</b> Engine.h:201</div></div>
+<div class="ttc" id="astruct_engine_html_a60f0f640b00c7dc26cda96400b845b33"><div class="ttname"><a href="struct_engine.html#a60f0f640b00c7dc26cda96400b845b33">Engine::player_start_pos</a></div><div class="ttdeci">glm::vec2 player_start_pos</div><div class="ttdef"><b>Definition:</b> Engine.h:193</div></div>
+<div class="ttc" id="astruct_engine_html_abd4fea5a267ad23c5990c089af3ebd21"><div class="ttname"><a href="struct_engine.html#abd4fea5a267ad23c5990c089af3ebd21">Engine::SetPauseSign</a></div><div class="ttdeci">void SetPauseSign(glm::vec2 size={1.f, 1.f})</div></div>
+<div class="ttc" id="astruct_engine_html_a0ab0eae89b4e4872a1ccb20a9b08f67f"><div class="ttname"><a href="struct_engine.html#a0ab0eae89b4e4872a1ccb20a9b08f67f">Engine::SetShader</a></div><div class="ttdeci">void SetShader(const std::filesystem::path &amp;vertex_shader, const std::filesystem::path &amp;fragment_shader)</div></div>
+<div class="ttc" id="astruct_engine_html_a16ce8ca07d9fdae3152094e335ab6bf8"><div class="ttname"><a href="struct_engine.html#a16ce8ca07d9fdae3152094e335ab6bf8">Engine::SetDeadSign</a></div><div class="ttdeci">void SetDeadSign(glm::vec2 size={1.f, 1.f}, float timer_to_restart=3.f)</div></div>
+<div class="ttc" id="astruct_engine_html_a67cfd28d20609c43db51508005996841"><div class="ttname"><a href="struct_engine.html#a67cfd28d20609c43db51508005996841">Engine::CheckPauseMode</a></div><div class="ttdeci">bool CheckPauseMode(GLFWwindow *window)</div></div>
+<div class="ttc" id="agroup___game___objects_html_ga0072938dba3ccc8db4f127aad716aea6"><div class="ttname"><a href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">GameObjects::ACTION</a></div><div class="ttdeci">ACTION</div><div class="ttdef"><b>Definition:</b> IGameActor.h:23</div></div>
+<div class="ttc" id="astruct_engine_html_ade32c97ac8bb2963fcf4852f582b18ce"><div class="ttname"><a href="struct_engine.html#ade32c97ac8bb2963fcf4852f582b18ce">Engine::player_controller</a></div><div class="ttdeci">std::shared_ptr&lt; GameObjects::Player &gt; player_controller</div><div class="ttdef"><b>Definition:</b> Engine.h:192</div></div>
+<div class="ttc" id="astruct_engine_html_ad079c7bdba10b698dcccfe5e8fdb1a55"><div class="ttname"><a href="struct_engine.html#ad079c7bdba10b698dcccfe5e8fdb1a55">Engine::Editor</a></div><div class="ttdeci">static Engine &amp; Editor()</div></div>
+<div class="ttc" id="astruct_engine_html_a096abcaeac9675b03ac67cbec38fa970"><div class="ttname"><a href="struct_engine.html#a096abcaeac9675b03ac67cbec38fa970">Engine::SetEnemiesSpawns</a></div><div class="ttdeci">void SetEnemiesSpawns(std::vector&lt; glm::vec2 &gt; spawn_pos)</div></div>
+<div class="ttc" id="a_camera_8h_html"><div class="ttname"><a href="_camera_8h.html">Camera.h</a></div></div>
+<div class="ttc" id="astruct_engine_html_ac064235b669a8ca080d561a8e5b96af1"><div class="ttname"><a href="struct_engine.html#ac064235b669a8ca080d561a8e5b96af1">Engine::enemies</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; GameObjects::Enemy &gt; &gt; enemies</div><div class="ttdef"><b>Definition:</b> Engine.h:204</div></div>
+<div class="ttc" id="astruct_engine_html_a3c6f5ad1e8f0f3ec68a885cdd169400a"><div class="ttname"><a href="struct_engine.html#a3c6f5ad1e8f0f3ec68a885cdd169400a">Engine::m_cam</a></div><div class="ttdeci">std::shared_ptr&lt; Camera &gt; m_cam</div><div class="ttdef"><b>Definition:</b> Engine.h:210</div></div>
+<div class="ttc" id="astruct_engine_html_a8e2ba4d36fd71330d8719154974c104d"><div class="ttname"><a href="struct_engine.html#a8e2ba4d36fd71330d8719154974c104d">Engine::ConfigPlayerAnim</a></div><div class="ttdeci">void ConfigPlayerAnim(GameObjects::ACTION act, const std::string &amp;sprite_name, const std::vector&lt; std::vector&lt; float &gt;&gt; &amp;sprite_frames)</div></div>
+<div class="ttc" id="a_player_8h_html"><div class="ttname"><a href="_player_8h.html">Player.h</a></div></div>
+<div class="ttc" id="astruct_engine_html_acdd695a858f59e8a12ff4baa52f93bc6"><div class="ttname"><a href="struct_engine.html#acdd695a858f59e8a12ff4baa52f93bc6">Engine::Engine</a></div><div class="ttdeci">Engine(Engine &amp;&amp;)=delete</div></div>
+<div class="ttc" id="astruct_engine_html_a785bc82f3b9d0274de2c915dae32a8ad"><div class="ttname"><a href="struct_engine.html#a785bc82f3b9d0274de2c915dae32a8ad">Engine::pool_pack_sprites</a></div><div class="ttdeci">std::map&lt; std::string, std::vector&lt; std::shared_ptr&lt; Graphic::Sprite &gt; &gt; &gt; pool_pack_sprites</div><div class="ttdef"><b>Definition:</b> Engine.h:207</div></div>
+<div class="ttc" id="astruct_engine_html_a3dacf470027de366f973e7fee7dd8be2"><div class="ttname"><a href="struct_engine.html#a3dacf470027de366f973e7fee7dd8be2">Engine::operator=</a></div><div class="ttdeci">Engine &amp; operator=(Engine &amp;)=delete</div></div>
+<div class="ttc" id="astruct_engine_html_a765db6925202d238de58c206acb497f1"><div class="ttname"><a href="struct_engine.html#a765db6925202d238de58c206acb497f1">Engine::ConfigSpriteProp</a></div><div class="ttdeci">void ConfigSpriteProp(const std::string &amp;sprite_name)</div></div>
+<div class="ttc" id="astruct_engine_html_a528b18767e9e09a0f65432a95e0f00d2"><div class="ttname"><a href="struct_engine.html#a528b18767e9e09a0f65432a95e0f00d2">Engine::PlayerDeadChecker</a></div><div class="ttdeci">void PlayerDeadChecker()</div></div>
+<div class="ttc" id="astruct_engine_html_afa30d5787ab13ad503ff01d9fe4a20c3"><div class="ttname"><a href="struct_engine.html#afa30d5787ab13ad503ff01d9fe4a20c3">Engine::SetSprite</a></div><div class="ttdeci">void SetSprite(const std::string &amp;name, const std::string &amp;texture_name)</div></div>
+<div class="ttc" id="astruct_engine_html_a2f182b2e8aa9ab6a7c7e81fc914d8b54"><div class="ttname"><a href="struct_engine.html#a2f182b2e8aa9ab6a7c7e81fc914d8b54">Engine::GetPlayerController</a></div><div class="ttdeci">std::shared_ptr&lt; GameObjects::Player &gt; &amp; GetPlayerController()</div><div class="ttdef"><b>Definition:</b> Engine.h:65</div></div>
+<div class="ttc" id="astruct_engine_html_aca88486672f60638ab79b149b4bb2492"><div class="ttname"><a href="struct_engine.html#aca88486672f60638ab79b149b4bb2492">Engine::Engine</a></div><div class="ttdeci">Engine(Engine &amp;)=delete</div></div>
+<div class="ttc" id="astruct_engine_html_aec5ccc29213bd5dd27c28707dca5188b"><div class="ttname"><a href="struct_engine.html#aec5ccc29213bd5dd27c28707dca5188b">Engine::ConfigSpriteMap</a></div><div class="ttdeci">void ConfigSpriteMap(const std::string &amp;sprite_name)</div></div>
+<div class="ttc" id="astruct_engine_html_acc713c22e0940be92b1251a916849077"><div class="ttname"><a href="struct_engine.html#acc713c22e0940be92b1251a916849077">Engine::Engine</a></div><div class="ttdeci">Engine()=default</div></div>
+<div class="ttc" id="a_quad_8h_html"><div class="ttname"><a href="_quad_8h.html">Quad.h</a></div></div>
+<div class="ttc" id="astruct_engine_html_a12bf362e8742ba05586ed8f9bda4c44e"><div class="ttname"><a href="struct_engine.html#a12bf362e8742ba05586ed8f9bda4c44e">Engine::On_Pause</a></div><div class="ttdeci">bool On_Pause</div><div class="ttdef"><b>Definition:</b> Engine.h:202</div></div>
+<div class="ttc" id="astruct_engine_html_af0aaea281fcc4af8614b9cfd2d5bad6e"><div class="ttname"><a href="struct_engine.html#af0aaea281fcc4af8614b9cfd2d5bad6e">Engine::pool_textures</a></div><div class="ttdeci">std::map&lt; std::string, std::shared_ptr&lt; Graphic::Texture2D &gt; &gt; pool_textures</div><div class="ttdef"><b>Definition:</b> Engine.h:208</div></div>
+<div class="ttc" id="astruct_engine_html_a0f3471ab4c000ebe6e3f6c3c202365c3"><div class="ttname"><a href="struct_engine.html#a0f3471ab4c000ebe6e3f6c3c202365c3">Engine::m_shader</a></div><div class="ttdeci">std::shared_ptr&lt; Shader &gt; m_shader</div><div class="ttdef"><b>Definition:</b> Engine.h:190</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

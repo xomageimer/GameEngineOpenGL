@@ -1,0 +1,713 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: Структура GameObjects::Player</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_game_objects.html">GameObjects</a></li><li class="navelem"><a class="el" href="struct_game_objects_1_1_player.html">Player</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="struct_game_objects_1_1_player-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура GameObjects::Player<div class="ingroups"><a class="el" href="group___game___objects.html">logic of game objects</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_player_8h_source.html">Player.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:GameObjects::Player:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_game_objects_1_1_player__inherit__graph.png" border="0" usemap="#_game_objects_1_1_player_inherit__map" alt="Inheritance graph"/></div>
+<map name="_game_objects_1_1_player_inherit__map" id="_game_objects_1_1_player_inherit__map">
+<area shape="rect" title=" " alt="" coords="21,80,168,107"/>
+<area shape="rect" href="struct_game_objects_1_1_i_game_actor.html" title=" " alt="" coords="5,5,184,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса GameObjects::Player:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_game_objects_1_1_player__coll__graph.png" border="0" usemap="#_game_objects_1_1_player_coll__map" alt="Collaboration graph"/></div>
+<map name="_game_objects_1_1_player_coll__map" id="_game_objects_1_1_player_coll__map">
+<area shape="rect" title=" " alt="" coords="21,80,168,107"/>
+<area shape="rect" href="struct_game_objects_1_1_i_game_actor.html" title=" " alt="" coords="5,5,184,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ae8f80aea83c1cf4d2f71122d3e85351e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#ae8f80aea83c1cf4d2f71122d3e85351e">Player</a> (glm::vec2 position, glm::vec2 size, float rotation, float layer)</td></tr>
+<tr class="separator:ae8f80aea83c1cf4d2f71122d3e85351e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865164333946c0aae7b15fea79b11fb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#a865164333946c0aae7b15fea79b11fb6">~Player</a> () override=default</td></tr>
+<tr class="separator:a865164333946c0aae7b15fea79b11fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fcce7b206aeed4d3368fa04a30db566"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#a4fcce7b206aeed4d3368fa04a30db566">SetAnimator</a> (<a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> name_of_action, std::shared_ptr&lt; <a class="el" href="struct_graphic_1_1_sprite_animator.html">Graphic::SpriteAnimator</a> &gt;) override</td></tr>
+<tr class="separator:a4fcce7b206aeed4d3368fa04a30db566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ec30c9d1d9eaafd183e976482f0d5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#a45ec30c9d1d9eaafd183e976482f0d5b">SetBullet</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_graphic_1_1_sprite.html">Graphic::Sprite</a> &gt;&gt;)</td></tr>
+<tr class="separator:a45ec30c9d1d9eaafd183e976482f0d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5880580983b1239503cddd7e9ba02ba6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#a5880580983b1239503cddd7e9ba02ba6">SetAnimation</a> (<a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> act)</td></tr>
+<tr class="separator:a5880580983b1239503cddd7e9ba02ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f7d707a380f14969da5ea4228e4cbf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#a1f7d707a380f14969da5ea4228e4cbf0">Render</a> () override</td></tr>
+<tr class="separator:a1f7d707a380f14969da5ea4228e4cbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8750a729709606dd24e23e9332017fc0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#a8750a729709606dd24e23e9332017fc0">die</a> () override</td></tr>
+<tr class="separator:a8750a729709606dd24e23e9332017fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add43f76c8d61de169dac007d5059eeff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#add43f76c8d61de169dac007d5059eeff">UpdateSprite</a> (std::shared_ptr&lt; <a class="el" href="class_graphic_1_1_sprite.html">Graphic::Sprite</a> &gt;)</td></tr>
+<tr class="separator:add43f76c8d61de169dac007d5059eeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064060ce4752e0386b84bc6fdefa620e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#a064060ce4752e0386b84bc6fdefa620e">getHealth</a> ()</td></tr>
+<tr class="separator:a064060ce4752e0386b84bc6fdefa620e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3735cb15d6a8b1e0a9146e7cd626cabe"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; bool, std::shared_ptr&lt; <a class="el" href="struct_game_objects_1_1_bullet.html">GameObjects::Bullet</a> &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#a3735cb15d6a8b1e0a9146e7cd626cabe">getBullets</a> ()</td></tr>
+<tr class="separator:a3735cb15d6a8b1e0a9146e7cd626cabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c053546ba86da83af5a6da6521731eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#a2c053546ba86da83af5a6da6521731eb">mouse_controller</a> (GLFWwindow *window, double xpos, double ypos)</td></tr>
+<tr class="separator:a2c053546ba86da83af5a6da6521731eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e4b47aa7d887532fcee59ea400fb334"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#a1e4b47aa7d887532fcee59ea400fb334">keyboard_controller</a> (GLFWwindow *window, float &amp;deltaTime, float &amp;lastFrame)</td></tr>
+<tr class="separator:a1e4b47aa7d887532fcee59ea400fb334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_struct_game_objects_1_1_i_game_actor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_struct_game_objects_1_1_i_game_actor')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="struct_game_objects_1_1_i_game_actor.html">GameObjects::IGameActor</a></td></tr>
+<tr class="memitem:a0b97049a41b058b78d4f925f0878ad79 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a0b97049a41b058b78d4f925f0878ad79">IGameActor</a> (glm::vec2 position, glm::vec2 size, float rotation, float layer)</td></tr>
+<tr class="separator:a0b97049a41b058b78d4f925f0878ad79 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e75aa5ef95318485791e627c998900a inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a6e75aa5ef95318485791e627c998900a">~IGameActor</a> ()=default</td></tr>
+<tr class="separator:a6e75aa5ef95318485791e627c998900a inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e07139e7540e0ba5eee451e5b55e6ac inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="struct_graphic_1_1_sprite_animator.html">Graphic::SpriteAnimator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a5e07139e7540e0ba5eee451e5b55e6ac">GetAnimator</a> (<a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> action)</td></tr>
+<tr class="separator:a5e07139e7540e0ba5eee451e5b55e6ac inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9c7d812ac29b3a736e02d8804225d3 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#aff9c7d812ac29b3a736e02d8804225d3">setVelocity</a> (float vel)</td></tr>
+<tr class="separator:aff9c7d812ac29b3a736e02d8804225d3 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0636c5d094a730b69954ac25f0e23af inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#ad0636c5d094a730b69954ac25f0e23af">GetCurrentPosition</a> ()</td></tr>
+<tr class="separator:ad0636c5d094a730b69954ac25f0e23af inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaca3ea67fbb9175b0ccf12ef69e5204 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#acaca3ea67fbb9175b0ccf12ef69e5204">GetCurrentDirection</a> ()</td></tr>
+<tr class="separator:acaca3ea67fbb9175b0ccf12ef69e5204 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1f97b4b072212be71505483985a1ac3 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual glm::vec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#ac1f97b4b072212be71505483985a1ac3">GetSize</a> ()</td></tr>
+<tr class="separator:ac1f97b4b072212be71505483985a1ac3 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46f80344a93e9482a1bf0ca0857f10b9 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">virtual float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a46f80344a93e9482a1bf0ca0857f10b9">velocity</a> ()</td></tr>
+<tr class="separator:a46f80344a93e9482a1bf0ca0857f10b9 inherit pub_methods_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:afbefcafca11309c2ee271621aa8a1fd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#afbefcafca11309c2ee271621aa8a1fd8">SetAction</a> (<a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> act)</td></tr>
+<tr class="separator:afbefcafca11309c2ee271621aa8a1fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:aa86049858722b7ecdd16e701e7c0b73d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#aa86049858722b7ecdd16e701e7c0b73d">health</a></td></tr>
+<tr class="separator:aa86049858722b7ecdd16e701e7c0b73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0d86a93caa37f640788377db41cd809"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; bool, std::shared_ptr&lt; <a class="el" href="struct_game_objects_1_1_bullet.html">Bullet</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#aa0d86a93caa37f640788377db41cd809">bullets</a></td></tr>
+<tr class="separator:aa0d86a93caa37f640788377db41cd809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae278c2d842ddee7d04cff0c2b81fe00a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#ae278c2d842ddee7d04cff0c2b81fe00a">bullet_num</a> = 0</td></tr>
+<tr class="separator:ae278c2d842ddee7d04cff0c2b81fe00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3a26032a67b58d58497614b852ba7a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#ad3a26032a67b58d58497614b852ba7a6">is_reload</a> = false</td></tr>
+<tr class="separator:ad3a26032a67b58d58497614b852ba7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26451c6c2f5be76c3f0ec369b7c64aa3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#a26451c6c2f5be76c3f0ec369b7c64aa3">lastBullet</a> = 0.f</td></tr>
+<tr class="separator:a26451c6c2f5be76c3f0ec369b7c64aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0da0d3af0d148cd871e641e5bbb8d480"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#a0da0d3af0d148cd871e641e5bbb8d480">reload_start</a> = 0.f</td></tr>
+<tr class="separator:a0da0d3af0d148cd871e641e5bbb8d480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abacb972dc70bb30e72c29aa51173d0b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_player.html#abacb972dc70bb30e72c29aa51173d0b2">m_action</a> = <a class="el" href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a">ACTION::WALK</a></td></tr>
+<tr class="separator:abacb972dc70bb30e72c29aa51173d0b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_attribs_struct_game_objects_1_1_i_game_actor"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_struct_game_objects_1_1_i_game_actor')"><img src="closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="struct_game_objects_1_1_i_game_actor.html">GameObjects::IGameActor</a></td></tr>
+<tr class="memitem:a0d7424ecdf427d273e97771e319edaf4 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a>, std::shared_ptr&lt; <a class="el" href="struct_graphic_1_1_sprite_animator.html">Graphic::SpriteAnimator</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a0d7424ecdf427d273e97771e319edaf4">m_representative</a></td></tr>
+<tr class="separator:a0d7424ecdf427d273e97771e319edaf4 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eee72cd8bbe340f0642b83883a4d42e inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a1eee72cd8bbe340f0642b83883a4d42e">m_position</a></td></tr>
+<tr class="separator:a1eee72cd8bbe340f0642b83883a4d42e inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3452c4243ca2f4df75723a2d2884bf91 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a3452c4243ca2f4df75723a2d2884bf91">m_size</a></td></tr>
+<tr class="separator:a3452c4243ca2f4df75723a2d2884bf91 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa4ecd6e70e43b4855fca9e3427f686 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a1fa4ecd6e70e43b4855fca9e3427f686">m_rotation</a></td></tr>
+<tr class="separator:a1fa4ecd6e70e43b4855fca9e3427f686 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3073a1cb385f2f21bdbef5b4c5f0f1d6 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a3073a1cb385f2f21bdbef5b4c5f0f1d6">m_layer</a></td></tr>
+<tr class="separator:a3073a1cb385f2f21bdbef5b4c5f0f1d6 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49a37e034e58b48c3f72dc31a1a222c inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#af49a37e034e58b48c3f72dc31a1a222c">m_direction</a> {}</td></tr>
+<tr class="separator:af49a37e034e58b48c3f72dc31a1a222c inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52ee9747207aa8903766cbb7386a8f6 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">glm::vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#aa52ee9747207aa8903766cbb7386a8f6">m_up</a> {0.f, 0.f, 1.f}</td></tr>
+<tr class="separator:aa52ee9747207aa8903766cbb7386a8f6 inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d183fa2c395e79ea0408ff5333457c inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a93d183fa2c395e79ea0408ff5333457c">m_velocity</a> {}</td></tr>
+<tr class="separator:a93d183fa2c395e79ea0408ff5333457c inherit pro_attribs_struct_game_objects_1_1_i_game_actor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ae8f80aea83c1cf4d2f71122d3e85351e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8f80aea83c1cf4d2f71122d3e85351e">&#9670;&nbsp;</a></span>Player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObjects::Player::Player </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>layer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a865164333946c0aae7b15fea79b11fb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865164333946c0aae7b15fea79b11fb6">&#9670;&nbsp;</a></span>~Player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObjects::Player::~Player </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a8750a729709606dd24e23e9332017fc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8750a729709606dd24e23e9332017fc0">&#9670;&nbsp;</a></span>die()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameObjects::Player::die </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a9eca4dc37b7e9ecbf9f1a6b19815393f">GameObjects::IGameActor::die</a> </p>
+
+<p>Замещает <a class="el" href="struct_game_objects_1_1_i_game_actor.html#a9eca4dc37b7e9ecbf9f1a6b19815393f">GameObjects::IGameActor</a>.</p>
+
+</div>
+</div>
+<a id="a3735cb15d6a8b1e0a9146e7cd626cabe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3735cb15d6a8b1e0a9146e7cd626cabe">&#9670;&nbsp;</a></span>getBullets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::pair&lt;bool, std::shared_ptr&lt;<a class="el" href="struct_game_objects_1_1_bullet.html">GameObjects::Bullet</a>&gt; &gt; &gt;&amp; GameObjects::Player::getBullets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Геттер для пуль плеера </p><dl class="section return"><dt>Возвращает</dt><dd>вектор из пар свойств: выпущена ли пуля и ссылка на пулю </dd></dl>
+
+</div>
+</div>
+<a id="a064060ce4752e0386b84bc6fdefa620e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064060ce4752e0386b84bc6fdefa620e">&#9670;&nbsp;</a></span>getHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;float&gt; GameObjects::Player::getHealth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Геттер текущего HP игрока </p><dl class="section return"><dt>Возвращает</dt><dd>указатель на HP плеера </dd></dl>
+
+</div>
+</div>
+<a id="a1e4b47aa7d887532fcee59ea400fb334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e4b47aa7d887532fcee59ea400fb334">&#9670;&nbsp;</a></span>keyboard_controller()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Player::keyboard_controller </td>
+          <td>(</td>
+          <td class="paramtype">GLFWwindow *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>deltaTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>lastFrame</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Метод контролля нажатия клавиши и мыши </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>текущее окно состояния OpenGl </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2c053546ba86da83af5a6da6521731eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c053546ba86da83af5a6da6521731eb">&#9670;&nbsp;</a></span>mouse_controller()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Player::mouse_controller </td>
+          <td>(</td>
+          <td class="paramtype">GLFWwindow *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ypos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Метод контролля курсора мышки </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>текущее окно состояния OpenGl </td></tr>
+    <tr><td class="paramname">xpos</td><td>позиция мышки по x </td></tr>
+    <tr><td class="paramname">ypos</td><td>позиция мышки по y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1f7d707a380f14969da5ea4228e4cbf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f7d707a380f14969da5ea4228e4cbf0">&#9670;&nbsp;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Player::Render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a548e53818f646bb56bea915d487350e8">GameObjects::IGameActor::Render</a> </p>
+
+<p>Замещает <a class="el" href="struct_game_objects_1_1_i_game_actor.html#a548e53818f646bb56bea915d487350e8">GameObjects::IGameActor</a>.</p>
+
+</div>
+</div>
+<a id="afbefcafca11309c2ee271621aa8a1fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbefcafca11309c2ee271621aa8a1fd8">&#9670;&nbsp;</a></span>SetAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Player::SetAction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a>&#160;</td>
+          <td class="paramname"><em>act</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5880580983b1239503cddd7e9ba02ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5880580983b1239503cddd7e9ba02ba6">&#9670;&nbsp;</a></span>SetAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Player::SetAnimation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a>&#160;</td>
+          <td class="paramname"><em>act</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fcce7b206aeed4d3368fa04a30db566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fcce7b206aeed4d3368fa04a30db566">&#9670;&nbsp;</a></span>SetAnimator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Player::SetAnimator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a>&#160;</td>
+          <td class="paramname"><em>name_of_action</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="struct_graphic_1_1_sprite_animator.html">Graphic::SpriteAnimator</a> &gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="struct_game_objects_1_1_i_game_actor.html#a18bf6f8bdb36e04dc86da6531a421d68">GameObjects::IGameActor::SetAnimator</a> </p>
+
+<p>Замещает <a class="el" href="struct_game_objects_1_1_i_game_actor.html#a18bf6f8bdb36e04dc86da6531a421d68">GameObjects::IGameActor</a>.</p>
+
+</div>
+</div>
+<a id="a45ec30c9d1d9eaafd183e976482f0d5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ec30c9d1d9eaafd183e976482f0d5b">&#9670;&nbsp;</a></span>SetBullet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Player::SetBullet </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_graphic_1_1_sprite.html">Graphic::Sprite</a> &gt;&gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Задать пули плееру </p>
+
+</div>
+</div>
+<a id="add43f76c8d61de169dac007d5059eeff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add43f76c8d61de169dac007d5059eeff">&#9670;&nbsp;</a></span>UpdateSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObjects::Player::UpdateSprite </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_graphic_1_1_sprite.html">Graphic::Sprite</a> &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="struct_game_objects_1_1_enemy.html#a9247dd284cac0814f8d38cc62e7be16f">GameObjects::Enemy::UpdateSprite</a> </p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ae278c2d842ddee7d04cff0c2b81fe00a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae278c2d842ddee7d04cff0c2b81fe00a">&#9670;&nbsp;</a></span>bullet_num</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t GameObjects::Player::bullet_num = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0d86a93caa37f640788377db41cd809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0d86a93caa37f640788377db41cd809">&#9670;&nbsp;</a></span>bullets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::pair&lt;bool, std::shared_ptr&lt;<a class="el" href="struct_game_objects_1_1_bullet.html">Bullet</a>&gt; &gt; &gt; GameObjects::Player::bullets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa86049858722b7ecdd16e701e7c0b73d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa86049858722b7ecdd16e701e7c0b73d">&#9670;&nbsp;</a></span>health</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;float&gt; GameObjects::Player::health</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3a26032a67b58d58497614b852ba7a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3a26032a67b58d58497614b852ba7a6">&#9670;&nbsp;</a></span>is_reload</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameObjects::Player::is_reload = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26451c6c2f5be76c3f0ec369b7c64aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26451c6c2f5be76c3f0ec369b7c64aa3">&#9670;&nbsp;</a></span>lastBullet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObjects::Player::lastBullet = 0.f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abacb972dc70bb30e72c29aa51173d0b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abacb972dc70bb30e72c29aa51173d0b2">&#9670;&nbsp;</a></span>m_action</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___game___objects.html#ga0072938dba3ccc8db4f127aad716aea6">ACTION</a> GameObjects::Player::m_action = <a class="el" href="group___game___objects.html#gga0072938dba3ccc8db4f127aad716aea6abb2dfc184fa2e91373d3ff304cb01b8a">ACTION::WALK</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0da0d3af0d148cd871e641e5bbb8d480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0da0d3af0d148cd871e641e5bbb8d480">&#9670;&nbsp;</a></span>reload_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObjects::Player::reload_start = 0.f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Actors/<a class="el" href="_player_8h_source.html">Player.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

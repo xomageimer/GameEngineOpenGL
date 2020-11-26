@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: creating static polymorphism for pure C functions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">creating static polymorphism for pure C functions</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:gae0b6aa9204ea6da441975846d13d6c73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_____metaprogramming___macroprogramming.html#gae0b6aa9204ea6da441975846d13d6c73">UNIFORMTAG</a>(ph_1,  ph_2)&#160;&#160;&#160;glUniform ## ph_1 ## ph_2</td></tr>
+<tr class="memdesc:gae0b6aa9204ea6da441975846d13d6c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Макрос для вызова glUniform функции glfw на основе ее постфиксов  <a href="group_____metaprogramming___macroprogramming.html#gae0b6aa9204ea6da441975846d13d6c73">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae0b6aa9204ea6da441975846d13d6c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf2ce909bebc46ac242a6250efa17febc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_____metaprogramming___macroprogramming.html#gaf2ce909bebc46ac242a6250efa17febc">CallFuncs</a>(type,  separate)</td></tr>
+<tr class="separator:gaf2ce909bebc46ac242a6250efa17febc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae85c94a0710f0c9743059bfbef9a9fa1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_____metaprogramming___macroprogramming.html#gae85c94a0710f0c9743059bfbef9a9fa1">CallFuncsForMatrix</a>(type,  separate)</td></tr>
+<tr class="separator:gae85c94a0710f0c9743059bfbef9a9fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gad20826c02757b844a744c3a932574b0a"><td class="memTemplParams" colspan="2">template&lt;typename F , typename... S&gt; </td></tr>
+<tr class="memitem:gad20826c02757b844a744c3a932574b0a"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">CallIfCallable</a> (F &amp;&amp;func, S &amp;&amp;...args)</td></tr>
+<tr class="separator:gad20826c02757b844a744c3a932574b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<p>Использование макросов и метафункций для создания статического полиморфизма для чисто Сишных функций из библиотеки glfw </p>
+<h2 class="groupheader">Макросы</h2>
+<a id="gaf2ce909bebc46ac242a6250efa17febc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf2ce909bebc46ac242a6250efa17febc">&#9670;&nbsp;</a></span>CallFuncs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CallFuncs</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">separate&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">CallIfCallable</a>(<a class="code" href="group_____metaprogramming___macroprogramming.html#gae0b6aa9204ea6da441975846d13d6c73">UNIFORMTAG</a>(1, type), glGetUniformLocation(ID, val_name.c_str()), std::forward&lt;Params&gt;(params)...) <a class="code" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">separate \</a></div>
+<div class="line"><a class="code" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">    CallIfCallable</a>(<a class="code" href="group_____metaprogramming___macroprogramming.html#gae0b6aa9204ea6da441975846d13d6c73">UNIFORMTAG</a>(2, type), glGetUniformLocation(ID, val_name.c_str()), std::forward&lt;Params&gt;(params)...) <a class="code" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">separate \</a></div>
+<div class="line"><a class="code" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">    CallIfCallable</a>(<a class="code" href="group_____metaprogramming___macroprogramming.html#gae0b6aa9204ea6da441975846d13d6c73">UNIFORMTAG</a>(3, type), glGetUniformLocation(ID, val_name.c_str()), std::forward&lt;Params&gt;(params)...) <a class="code" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">separate  \</a></div>
+<div class="line"><a class="code" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">    CallIfCallable</a>(<a class="code" href="group_____metaprogramming___macroprogramming.html#gae0b6aa9204ea6da441975846d13d6c73">UNIFORMTAG</a>(4, type), glGetUniformLocation(ID, val_name.c_str()), std::forward&lt;Params&gt;(params)...)</div>
+</div><!-- fragment --><p>Макрос для генерации всех возможных функций с данными постфиксами для простых C типов </p>
+
+</div>
+</div>
+<a id="gae85c94a0710f0c9743059bfbef9a9fa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae85c94a0710f0c9743059bfbef9a9fa1">&#9670;&nbsp;</a></span>CallFuncsForMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CallFuncsForMatrix</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">separate&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">    <a class="code" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">CallIfCallable</a>(<a class="code" href="group_____metaprogramming___macroprogramming.html#gae0b6aa9204ea6da441975846d13d6c73">UNIFORMTAG</a>(type, 2fv), glGetUniformLocation(ID, val_name.c_str()), 1, GL_FALSE, glm::value_ptr(std::forward&lt;Params&gt;(params)...)) <a class="code" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">separate \</a></div>
+<div class="line"><a class="code" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">    CallIfCallable</a>(<a class="code" href="group_____metaprogramming___macroprogramming.html#gae0b6aa9204ea6da441975846d13d6c73">UNIFORMTAG</a>(type, 3fv), glGetUniformLocation(ID, val_name.c_str()), 1, GL_FALSE, glm::value_ptr(std::forward&lt;Params&gt;(params)...)) <a class="code" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">separate  \</a></div>
+<div class="line"><a class="code" href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">    CallIfCallable</a>(<a class="code" href="group_____metaprogramming___macroprogramming.html#gae0b6aa9204ea6da441975846d13d6c73">UNIFORMTAG</a>(type, 4fv), glGetUniformLocation(ID, val_name.c_str()), 1, GL_FALSE, glm::value_ptr(std::forward&lt;Params&gt;(params)...))</div>
+</div><!-- fragment --><p>Макрос для генерации всех возможных функций с данными постфиксами для матриц </p>
+
+</div>
+</div>
+<a id="gae0b6aa9204ea6da441975846d13d6c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0b6aa9204ea6da441975846d13d6c73">&#9670;&nbsp;</a></span>UNIFORMTAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UNIFORMTAG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ph_1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ph_2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;glUniform ## ph_1 ## ph_2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Макрос для вызова glUniform функции glfw на основе ее постфиксов </p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="gad20826c02757b844a744c3a932574b0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad20826c02757b844a744c3a932574b0a">&#9670;&nbsp;</a></span>CallIfCallable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F , typename... S&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void CallIfCallable </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">S &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Метафункция для перебора и попытки вызова с соотвествующими аргументами сишных функций </p><dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">F</td><td>тип указателя функции </td></tr>
+    <tr><td class="paramname">S</td><td>типы аргументов функции </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>функция </td></tr>
+    <tr><td class="paramname">args</td><td>аргументы </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>void </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="agroup_____metaprogramming___macroprogramming_html_gad20826c02757b844a744c3a932574b0a"><div class="ttname"><a href="group_____metaprogramming___macroprogramming.html#gad20826c02757b844a744c3a932574b0a">CallIfCallable</a></div><div class="ttdeci">constexpr void CallIfCallable(F &amp;&amp;func, S &amp;&amp;...args)</div><div class="ttdef"><b>Definition:</b> Shader.h:48</div></div>
+<div class="ttc" id="agroup_____metaprogramming___macroprogramming_html_gae0b6aa9204ea6da441975846d13d6c73"><div class="ttname"><a href="group_____metaprogramming___macroprogramming.html#gae0b6aa9204ea6da441975846d13d6c73">UNIFORMTAG</a></div><div class="ttdeci">#define UNIFORMTAG(ph_1, ph_2)</div><div class="ttdoc">Макрос для вызова glUniform функции glfw на основе ее постфиксов</div><div class="ttdef"><b>Definition:</b> Shader.h:23</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

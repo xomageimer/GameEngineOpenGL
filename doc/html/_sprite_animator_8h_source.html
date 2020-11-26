@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: Исходный файл C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Graphic/SpriteAnimator.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3350c4b2a8bfebf286552b4ce0c2b6d0.html">Graphic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SpriteAnimator.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_sprite_animator_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAMEENGINE_SPRITEANIMATOR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAMEENGINE_SPRITEANIMATOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// TODO класс обработчик анимации (по факту должен как-то итерироваться по одному изображению с кучей шитов (между этими шитами))</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_sprite_8h.html">Sprite.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_graphic.html">Graphic</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html">   16</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_graphic_1_1_sprite_animator.html">SpriteAnimator</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#a2e14c32e623bd0c4f1f8059e7b5362c7">   22</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html#a2e14c32e623bd0c4f1f8059e7b5362c7">SpriteAnimator</a>(std::shared_ptr&lt;Sprite&gt; sprite, <span class="keyword">const</span> std::vector&lt;std::vector&lt;float&gt;&gt; &amp;);</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#a33555fdb6fd4a1ea83d6536e4097ea53">   23</a></span>&#160;        <a class="code" href="struct_graphic_1_1_sprite_animator.html#a33555fdb6fd4a1ea83d6536e4097ea53">~SpriteAnimator</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#ad106ce04d69a981cb5358de1df7b6cf0">   25</a></span>&#160;        <a class="code" href="struct_graphic_1_1_sprite_animator.html#ad106ce04d69a981cb5358de1df7b6cf0">SpriteAnimator</a>(<span class="keyword">const</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html">SpriteAnimator</a> &amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#af10c616384ad400a9c09833c13c254fc">   26</a></span>&#160;        <a class="code" href="struct_graphic_1_1_sprite_animator.html">SpriteAnimator</a>&amp; <a class="code" href="struct_graphic_1_1_sprite_animator.html#af10c616384ad400a9c09833c13c254fc">operator=</a>(<span class="keyword">const</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html">SpriteAnimator</a> &amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#af9b2fab077ff7a6542f7abce825a8db7">   32</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html#af9b2fab077ff7a6542f7abce825a8db7">SetSheet</a>(<span class="keyword">const</span> glm::vec2 &amp;left_bottom, <span class="keyword">const</span> glm::vec2 &amp;right_top);</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#afbbd88d5fe25fe5b0379be9b37161e27">   42</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html#afbbd88d5fe25fe5b0379be9b37161e27">SetSheetAtlas</a>(glm::vec2 left_bottom, glm::vec2 right_top, <span class="keywordtype">float</span> x,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                           <span class="keywordtype">float</span> y, <span class="keywordtype">size_t</span> vertical, <span class="keywordtype">size_t</span> horizontal);</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#a420e65ceda987418e0724727ffd43d4b">   47</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html#a420e65ceda987418e0724727ffd43d4b">AnimationUpdate</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#ac186f8148ccaef3c5927d8d8dcb1af95">   51</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html#ac186f8148ccaef3c5927d8d8dcb1af95">ClearAnimPack</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#a0f6b55ed565a54d359992222dce87c30">   53</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt;std::vector&lt;float&gt;&gt; &amp; <a class="code" href="struct_graphic_1_1_sprite_animator.html#a0f6b55ed565a54d359992222dce87c30">GetAnim</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html#a6399d781efce431198092e03b4326dd9">animation</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#ad18a057543274e23452611c77bfcac13">   56</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> std::shared_ptr&lt;Sprite&gt; <a class="code" href="struct_graphic_1_1_sprite_animator.html#ad18a057543274e23452611c77bfcac13">GetSprite</a>() {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html#aaf75e3ec4b85c74dac2a6c0daa04ba7b">m_sprite</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#aee92db08ff79d3ff507cecdff2873349">   59</a></span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html#aee92db08ff79d3ff507cecdff2873349">SetSpeed</a>(<span class="keywordtype">float</span> new_speed) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="struct_graphic_1_1_sprite_animator.html#a5b794966d45d353aa91e7c27a342aefa">speed</a> = new_speed;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#aa8665a1f49c2b0600b4c1d31465b8a73">   64</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html#aa8665a1f49c2b0600b4c1d31465b8a73">prev_anim</a> = 0.f;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#a5b794966d45d353aa91e7c27a342aefa">   65</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html#a5b794966d45d353aa91e7c27a342aefa">speed</a> = 0.05f;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#acf346d0a0af394bc75a8f97ee7ee260d">   66</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="struct_graphic_1_1_sprite_animator.html#acf346d0a0af394bc75a8f97ee7ee260d">current_sheet</a> = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#aaf75e3ec4b85c74dac2a6c0daa04ba7b">   68</a></span>&#160;        std::shared_ptr&lt;Sprite&gt; <a class="code" href="struct_graphic_1_1_sprite_animator.html#aaf75e3ec4b85c74dac2a6c0daa04ba7b">m_sprite</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_sprite_animator.html#a6399d781efce431198092e03b4326dd9">   70</a></span>&#160;        std::vector&lt;std::vector&lt;float&gt;&gt; <a class="code" href="struct_graphic_1_1_sprite_animator.html#a6399d781efce431198092e03b4326dd9">animation</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif //GAMEENGINE_SPRITEANIMATOR_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_af10c616384ad400a9c09833c13c254fc"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#af10c616384ad400a9c09833c13c254fc">Graphic::SpriteAnimator::operator=</a></div><div class="ttdeci">SpriteAnimator &amp; operator=(const SpriteAnimator &amp;)=default</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_acf346d0a0af394bc75a8f97ee7ee260d"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#acf346d0a0af394bc75a8f97ee7ee260d">Graphic::SpriteAnimator::current_sheet</a></div><div class="ttdeci">size_t current_sheet</div><div class="ttdef"><b>Definition:</b> SpriteAnimator.h:66</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_aa8665a1f49c2b0600b4c1d31465b8a73"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#aa8665a1f49c2b0600b4c1d31465b8a73">Graphic::SpriteAnimator::prev_anim</a></div><div class="ttdeci">float prev_anim</div><div class="ttdef"><b>Definition:</b> SpriteAnimator.h:64</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_a6399d781efce431198092e03b4326dd9"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#a6399d781efce431198092e03b4326dd9">Graphic::SpriteAnimator::animation</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; float &gt; &gt; animation</div><div class="ttdef"><b>Definition:</b> SpriteAnimator.h:70</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html">Graphic::SpriteAnimator</a></div><div class="ttdef"><b>Definition:</b> SpriteAnimator.h:16</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_ac186f8148ccaef3c5927d8d8dcb1af95"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#ac186f8148ccaef3c5927d8d8dcb1af95">Graphic::SpriteAnimator::ClearAnimPack</a></div><div class="ttdeci">void ClearAnimPack()</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_afbbd88d5fe25fe5b0379be9b37161e27"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#afbbd88d5fe25fe5b0379be9b37161e27">Graphic::SpriteAnimator::SetSheetAtlas</a></div><div class="ttdeci">void SetSheetAtlas(glm::vec2 left_bottom, glm::vec2 right_top, float x, float y, size_t vertical, size_t horizontal)</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_a2e14c32e623bd0c4f1f8059e7b5362c7"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#a2e14c32e623bd0c4f1f8059e7b5362c7">Graphic::SpriteAnimator::SpriteAnimator</a></div><div class="ttdeci">SpriteAnimator(std::shared_ptr&lt; Sprite &gt; sprite, const std::vector&lt; std::vector&lt; float &gt;&gt; &amp;)</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_aaf75e3ec4b85c74dac2a6c0daa04ba7b"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#aaf75e3ec4b85c74dac2a6c0daa04ba7b">Graphic::SpriteAnimator::m_sprite</a></div><div class="ttdeci">std::shared_ptr&lt; Sprite &gt; m_sprite</div><div class="ttdef"><b>Definition:</b> SpriteAnimator.h:68</div></div>
+<div class="ttc" id="a_sprite_8h_html"><div class="ttname"><a href="_sprite_8h.html">Sprite.h</a></div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_a420e65ceda987418e0724727ffd43d4b"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#a420e65ceda987418e0724727ffd43d4b">Graphic::SpriteAnimator::AnimationUpdate</a></div><div class="ttdeci">void AnimationUpdate()</div></div>
+<div class="ttc" id="anamespace_graphic_html"><div class="ttname"><a href="namespace_graphic.html">Graphic</a></div><div class="ttdef"><b>Definition:</b> IndexBuffer.h:12</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_a0f6b55ed565a54d359992222dce87c30"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#a0f6b55ed565a54d359992222dce87c30">Graphic::SpriteAnimator::GetAnim</a></div><div class="ttdeci">const std::vector&lt; std::vector&lt; float &gt; &gt; &amp; GetAnim() const</div><div class="ttdef"><b>Definition:</b> SpriteAnimator.h:53</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_ad18a057543274e23452611c77bfcac13"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#ad18a057543274e23452611c77bfcac13">Graphic::SpriteAnimator::GetSprite</a></div><div class="ttdeci">std::shared_ptr&lt; Sprite &gt; GetSprite()</div><div class="ttdef"><b>Definition:</b> SpriteAnimator.h:56</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_a33555fdb6fd4a1ea83d6536e4097ea53"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#a33555fdb6fd4a1ea83d6536e4097ea53">Graphic::SpriteAnimator::~SpriteAnimator</a></div><div class="ttdeci">~SpriteAnimator()=default</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_ad106ce04d69a981cb5358de1df7b6cf0"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#ad106ce04d69a981cb5358de1df7b6cf0">Graphic::SpriteAnimator::SpriteAnimator</a></div><div class="ttdeci">SpriteAnimator(const SpriteAnimator &amp;)=default</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_af9b2fab077ff7a6542f7abce825a8db7"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#af9b2fab077ff7a6542f7abce825a8db7">Graphic::SpriteAnimator::SetSheet</a></div><div class="ttdeci">void SetSheet(const glm::vec2 &amp;left_bottom, const glm::vec2 &amp;right_top)</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_aee92db08ff79d3ff507cecdff2873349"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#aee92db08ff79d3ff507cecdff2873349">Graphic::SpriteAnimator::SetSpeed</a></div><div class="ttdeci">void SetSpeed(float new_speed)</div><div class="ttdef"><b>Definition:</b> SpriteAnimator.h:59</div></div>
+<div class="ttc" id="astruct_graphic_1_1_sprite_animator_html_a5b794966d45d353aa91e7c27a342aefa"><div class="ttname"><a href="struct_graphic_1_1_sprite_animator.html#a5b794966d45d353aa91e7c27a342aefa">Graphic::SpriteAnimator::speed</a></div><div class="ttdeci">float speed</div><div class="ttdef"><b>Definition:</b> SpriteAnimator.h:65</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

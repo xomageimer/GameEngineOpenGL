@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GameEngine: Исходный файл C:/Users/xomaq/CLionProjects/GameEngineOpenGL/src/Graphic/VertexArray.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GameEngine
+   </div>
+   <div id="projectbrief">Документация к игровому движку на C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3350c4b2a8bfebf286552b4ce0c2b6d0.html">Graphic</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">VertexArray.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_vertex_array_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAMEENGINE_VERTEXARRAY_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAMEENGINE_VERTEXARRAY_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;glad/glad.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;GLFW/glfw3.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_graphic.html">Graphic</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html">   13</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_graphic_1_1_vertex_array.html">VertexArray</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#aac3588a57e699e5490e8b2d9c5708bcd">   15</a></span>&#160;        <a class="code" href="struct_graphic_1_1_vertex_array.html#aac3588a57e699e5490e8b2d9c5708bcd">VertexArray</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#aa7f25da65e535f7059cec4a71e4cc785">   16</a></span>&#160;        <a class="code" href="struct_graphic_1_1_vertex_array.html#aa7f25da65e535f7059cec4a71e4cc785">~VertexArray</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#ae4412586919da6fe7c95141dfda2095e">   18</a></span>&#160;        <a class="code" href="struct_graphic_1_1_vertex_array.html#ae4412586919da6fe7c95141dfda2095e">VertexArray</a>(<span class="keyword">const</span> <a class="code" href="struct_graphic_1_1_vertex_array.html">VertexArray</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#acc6616ff5c995a07ddb3648ac9d3e48e">   19</a></span>&#160;        <a class="code" href="struct_graphic_1_1_vertex_array.html">VertexArray</a>&amp; <a class="code" href="struct_graphic_1_1_vertex_array.html#acc6616ff5c995a07ddb3648ac9d3e48e">operator=</a>(<span class="keyword">const</span> <a class="code" href="struct_graphic_1_1_vertex_array.html">VertexArray</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#a51eccd1ba617c7275aede5d6841e1d8a">   20</a></span>&#160;        <a class="code" href="struct_graphic_1_1_vertex_array.html#a51eccd1ba617c7275aede5d6841e1d8a">VertexArray</a>(<a class="code" href="struct_graphic_1_1_vertex_array.html">VertexArray</a>&amp;&amp;) noexcept;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#ac5622c9b0450f9aef3593f033331f0f7">   21</a></span>&#160;        <a class="code" href="struct_graphic_1_1_vertex_array.html">VertexArray</a>&amp; operator=(<a class="code" href="struct_graphic_1_1_vertex_array.html">VertexArray</a>&amp;&amp;) noexcept;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#ab3abeee246aa69d6d40ccedc0466ced8">   33</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#ab3abeee246aa69d6d40ccedc0466ced8">SetVertexAttrib</a>(<span class="keywordtype">size_t</span> index = 0,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                               <span class="keywordtype">size_t</span> size = 3,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                               <span class="keywordtype">size_t</span> stride = 0 * sizeof(<span class="keywordtype">float</span>),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                               <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> type = GL_FLOAT,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                               <span class="keywordtype">bool</span> normalized = GL_FALSE,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                               const <span class="keywordtype">void</span> * offset = <span class="keywordtype">nullptr</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#ae67d12acc1dbee10a3eca7c126995695">   42</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#ae67d12acc1dbee10a3eca7c126995695">bind</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#a4bdfef9aabce5d8c43deb2b96cf647f3">   47</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#a4bdfef9aabce5d8c43deb2b96cf647f3">unbind</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#a7878777798235cc47641b40154bfabfa">   52</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#a7878777798235cc47641b40154bfabfa">EnableAllAttrib</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#a68f1c05c37a658a72846ea413449cb2e">   56</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#a68f1c05c37a658a72846ea413449cb2e">DisableAllAttrib</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#a53d8ac3e2088ff7e3365149491f78e7b">   60</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#a53d8ac3e2088ff7e3365149491f78e7b">EnableAttrib</a>(<span class="keywordtype">size_t</span> i);</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#a7fcfdbcf9e0de9962d952a4886729ad2">   64</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#a7fcfdbcf9e0de9962d952a4886729ad2">DisableAttrib</a>(<span class="keywordtype">size_t</span> i);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#a76d629140547bc225633649bd8d7b249">   66</a></span>&#160;        [[nodiscard]] inline <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#a76d629140547bc225633649bd8d7b249">GetId</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#a816c9609786af6d16a52bc16e6f4eaf3">ID</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#af2564e48a05316222510dd40e8d1f9b0">   73</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#af2564e48a05316222510dd40e8d1f9b0">GetLastAttrib</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#a1598544f3e65ab26371a3cc890cc9175">m_last_attrib</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#a816c9609786af6d16a52bc16e6f4eaf3">   78</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#a816c9609786af6d16a52bc16e6f4eaf3">ID</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="struct_graphic_1_1_vertex_array.html#a1598544f3e65ab26371a3cc890cc9175">   79</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="struct_graphic_1_1_vertex_array.html#a1598544f3e65ab26371a3cc890cc9175">m_last_attrib</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    };</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif //GAMEENGINE_VERTEXARRAY_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_acc6616ff5c995a07ddb3648ac9d3e48e"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#acc6616ff5c995a07ddb3648ac9d3e48e">Graphic::VertexArray::operator=</a></div><div class="ttdeci">VertexArray &amp; operator=(const VertexArray &amp;)=delete</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_aa7f25da65e535f7059cec4a71e4cc785"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#aa7f25da65e535f7059cec4a71e4cc785">Graphic::VertexArray::~VertexArray</a></div><div class="ttdeci">~VertexArray()</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_aac3588a57e699e5490e8b2d9c5708bcd"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#aac3588a57e699e5490e8b2d9c5708bcd">Graphic::VertexArray::VertexArray</a></div><div class="ttdeci">VertexArray()</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_a4bdfef9aabce5d8c43deb2b96cf647f3"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#a4bdfef9aabce5d8c43deb2b96cf647f3">Graphic::VertexArray::unbind</a></div><div class="ttdeci">void unbind()</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_ae67d12acc1dbee10a3eca7c126995695"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#ae67d12acc1dbee10a3eca7c126995695">Graphic::VertexArray::bind</a></div><div class="ttdeci">void bind()</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_af2564e48a05316222510dd40e8d1f9b0"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#af2564e48a05316222510dd40e8d1f9b0">Graphic::VertexArray::GetLastAttrib</a></div><div class="ttdeci">size_t GetLastAttrib() const</div><div class="ttdef"><b>Definition:</b> VertexArray.h:73</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_a1598544f3e65ab26371a3cc890cc9175"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#a1598544f3e65ab26371a3cc890cc9175">Graphic::VertexArray::m_last_attrib</a></div><div class="ttdeci">size_t m_last_attrib</div><div class="ttdef"><b>Definition:</b> VertexArray.h:79</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html">Graphic::VertexArray</a></div><div class="ttdef"><b>Definition:</b> VertexArray.h:13</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_ae4412586919da6fe7c95141dfda2095e"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#ae4412586919da6fe7c95141dfda2095e">Graphic::VertexArray::VertexArray</a></div><div class="ttdeci">VertexArray(const VertexArray &amp;)=delete</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_a76d629140547bc225633649bd8d7b249"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#a76d629140547bc225633649bd8d7b249">Graphic::VertexArray::GetId</a></div><div class="ttdeci">unsigned int GetId() const</div><div class="ttdef"><b>Definition:</b> VertexArray.h:66</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_a7fcfdbcf9e0de9962d952a4886729ad2"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#a7fcfdbcf9e0de9962d952a4886729ad2">Graphic::VertexArray::DisableAttrib</a></div><div class="ttdeci">bool DisableAttrib(size_t i)</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_a53d8ac3e2088ff7e3365149491f78e7b"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#a53d8ac3e2088ff7e3365149491f78e7b">Graphic::VertexArray::EnableAttrib</a></div><div class="ttdeci">bool EnableAttrib(size_t i)</div></div>
+<div class="ttc" id="anamespace_graphic_html"><div class="ttname"><a href="namespace_graphic.html">Graphic</a></div><div class="ttdef"><b>Definition:</b> IndexBuffer.h:12</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_a816c9609786af6d16a52bc16e6f4eaf3"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#a816c9609786af6d16a52bc16e6f4eaf3">Graphic::VertexArray::ID</a></div><div class="ttdeci">unsigned int ID</div><div class="ttdef"><b>Definition:</b> VertexArray.h:78</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_a68f1c05c37a658a72846ea413449cb2e"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#a68f1c05c37a658a72846ea413449cb2e">Graphic::VertexArray::DisableAllAttrib</a></div><div class="ttdeci">void DisableAllAttrib()</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_a7878777798235cc47641b40154bfabfa"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#a7878777798235cc47641b40154bfabfa">Graphic::VertexArray::EnableAllAttrib</a></div><div class="ttdeci">void EnableAllAttrib()</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_ab3abeee246aa69d6d40ccedc0466ced8"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#ab3abeee246aa69d6d40ccedc0466ced8">Graphic::VertexArray::SetVertexAttrib</a></div><div class="ttdeci">size_t SetVertexAttrib(size_t index=0, size_t size=3, size_t stride=0 *sizeof(float), unsigned int type=GL_FLOAT, bool normalized=GL_FALSE, const void *offset=nullptr)</div></div>
+<div class="ttc" id="astruct_graphic_1_1_vertex_array_html_a51eccd1ba617c7275aede5d6841e1d8a"><div class="ttname"><a href="struct_graphic_1_1_vertex_array.html#a51eccd1ba617c7275aede5d6841e1d8a">Graphic::VertexArray::VertexArray</a></div><div class="ttdeci">VertexArray(VertexArray &amp;&amp;) noexcept</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

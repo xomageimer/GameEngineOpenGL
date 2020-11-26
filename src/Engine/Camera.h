@@ -6,6 +6,11 @@
 
 #include "Graphic/Shader.h"
 
+                    /*!
+                     * \addtogroup ENGINE_INTERFACE camera logic
+                     * @{ \details Класс для представления логики игровой камеры
+                     */
+
 struct Camera {
 public:
     Camera(const Camera &) = delete;
@@ -14,9 +19,15 @@ public:
     Camera& operator=(Camera &) = delete;
 
     Camera(std::shared_ptr<Shader> shrd);
-
+                /*!
+                 * Задать новую позицию камеры
+                 * @param NewCameraPos новая позиция камеры
+                 */
     void SetPos (const glm::vec2 & NewCameraPos);
 
+                /*!
+                 * Отрендерить новое положение сцены относительно точки камеры
+                 */
     void Render();
 
 private:
@@ -25,6 +36,6 @@ private:
 
     std::shared_ptr<Shader> m_shader;
 };
-
+                /*! @} */
 
 #endif //GAMEENGINE_CAMERA_H

@@ -23,8 +23,16 @@
 
 namespace Graphic {
 
+    /*!
+* \defgroup ENGINE_SMART_GRAPHIC_OBJECT smart objects of graphic logic
+* @{ \details Класс необходимой для создания спрайтов
+*/
+
     class Sprite {
     public:
+                                        /*!
+                                         * Задать текстуру и шейдер для текущего спрайта
+                                         */
         Sprite(std::shared_ptr<Texture2D>, std::shared_ptr<Shader>);
         ~Sprite() = default;
 
@@ -33,16 +41,25 @@ namespace Graphic {
 
         Sprite(Sprite &&) noexcept;
         Sprite& operator=(Sprite&&) noexcept;
-
+                                        /*!
+                                         * Сгенерировать спрайт
+                                         * принимает в себя данные голого вершинного буфера и голого индексного буфера
+                                         */
         void Init(const void *data_vert,
                           size_t size_vert,
                           unsigned int usage_vert,
                           const void *data_indic,
                           size_t size_indic,
                           unsigned int usage_indic);
-
+                                        /*!
+                                         * Задать текстурный атлас, что по сути заменяет спрайт на представление текстурного атласа
+                                         * принимает в себя координаты на атласе представляющие отдельный спрайт
+                                         */
         void SetSpriteSheet(const std::vector<float> & vec);
-
+                                        /*!
+                                         * отрисовать текущий спрайт
+                                         * инкапсулированность позволяет вызвать только этот метод чтобы выполнить задачу
+                                         */
         void draw();
 
         [[nodiscard]] inline std::shared_ptr<Texture2D> GetTexture(){
@@ -83,7 +100,7 @@ namespace Graphic {
 
         const std::vector<float> * textureCoords = nullptr;
     };
-
+    /*! @} */
 }
 
 #endif //GAMEENGINE_SPRITE_H
