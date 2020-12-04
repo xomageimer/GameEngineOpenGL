@@ -33,6 +33,11 @@ namespace GameObjects {
                      * Задать пули плееру
                      */
         void SetBullet(std::vector<std::shared_ptr<Graphic::Sprite>>);
+
+        void SetAmmo(size_t num);
+
+        void SetReloadTime(double time);
+
         void SetAnimation(ACTION act);
                     /*!
                    * @ref GameObjects::IGameActor::Render
@@ -75,10 +80,14 @@ namespace GameObjects {
         std::vector<std::pair<bool, std::shared_ptr<Bullet>>> bullets;
         size_t bullet_num = 0;
 
+        size_t ammo = 30;
+
         bool is_reload = false;
 
         float lastBullet = 0.f;
         float reload_start = 0.f;
+
+        float reload_timer = 0.8f;
 
         void SetAction(ACTION act);
         ACTION m_action = ACTION::WALK;

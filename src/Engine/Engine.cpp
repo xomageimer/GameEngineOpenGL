@@ -205,3 +205,21 @@ void Engine::ConfigSpritePauseSign(const std::string &sprite_name) {
     PauseSign->SetSprite(std::make_shared<Graphic::SpriteAnimator>(pool_sprites.find(sprite_name)->second, std::vector<std::vector<float>>{{0.999f, 0.999f, 0.999f, 0.011f, 0.011f, 0.011f, 0.011f, 0.999f}}));
 }
 
+void Engine::SetEnemiesConf(float velocity, float health, float damage, float get_damage) {
+    assert(health > 0 && velocity > 0 && damage > 0 && get_damage > 0);
+    for(auto & enemy : enemies){
+        enemy->setVelocity(velocity);
+        enemy->SetHp(health);
+        enemy->SetDamage(damage);
+        enemy->SetDamageReceived(get_damage);
+    }
+}
+
+void Engine::SetPlayerConf(float health, float velocity, float ammo, double reload_time) {
+    assert(health > 0 && velocity > 0 && ammo > 0 && ammo <= 100);
+    *player_controller->getHealth() = health;
+    player_controller->setVelocity(velocity);
+    player_controller->SetAmmo(ammo);
+    player_controller->SetReloadTime(reload_time);
+}
+

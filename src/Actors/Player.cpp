@@ -101,7 +101,7 @@ void GameObjects::Player::keyboard_controller(GLFWwindow *window, float & deltaT
         m_position += (right * CameraSpeed * 0.7f);
     }
     if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS) {
-        if (bullet_num != 30) {
+        if (bullet_num != ammo) {
             if (currentFrame - lastBullet >= 0.3f) {
                 bullets[bullet_num].first = true;
                 bullets[bullet_num++].second->Activate();
@@ -118,7 +118,7 @@ void GameObjects::Player::keyboard_controller(GLFWwindow *window, float & deltaT
         m_action = ACTION::IDLE;
     }
     if (is_reload || glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS) {
-        if (reload_start >= 0.8f) {
+        if (reload_start >= reload_timer) {
             bullet_num = 0;
             reload_start = 0.f;
             is_reload = false;
@@ -147,5 +147,15 @@ std::shared_ptr<float> GameObjects::Player::getHealth() {
 
 std::vector<std::pair<bool, std::shared_ptr<GameObjects::Bullet>>> & GameObjects::Player::getBullets() {
     return bullets;
+}
+
+void GameObjects::Player::SetAmmo(size_t num) {
+    assert(num > 0);
+    ammo = num;
+}
+
+void GameObjects::Player::SetReloadTime(double time) {
+    assert(time > 0);
+    reload_timer = time;
 }
 

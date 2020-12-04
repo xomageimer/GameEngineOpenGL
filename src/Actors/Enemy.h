@@ -38,6 +38,12 @@ namespace GameObjects {
                      * @param spawn массив координат спавнов
                      */
         void SetSpawn(std::vector<glm::vec2> spawn);
+
+        void SetDamage(float dmg);
+
+        void SetDamageReceived(float dmg);
+
+        void SetHp(float hp);
                     /*!
                     * @ref GameObjects::IGameActor::Render
                     */
@@ -81,6 +87,8 @@ namespace GameObjects {
         float m_lastFrame = 0.f;
 
         float health = 100.f;
+        float damage = 15.f;
+        float get_damage = 33.f;
 
         float reload_start = 0.f;
         float reload_spawn = 0.f;

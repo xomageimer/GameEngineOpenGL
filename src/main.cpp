@@ -54,7 +54,7 @@ int main()
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    AnimeTest(window);
+    ZombieShooter(window);
 
     auto clock = std::chrono::steady_clock::now();
     std::chrono::milliseconds frameTimeMin(30);

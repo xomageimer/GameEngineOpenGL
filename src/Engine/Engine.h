@@ -70,13 +70,14 @@ public:
                      * Также отвечает за перерес игрока
                      */
     void PlayerDeadChecker();
-
                     /*!
                      * Метод для того чтобы задать размер и время рестарта в случае смерти
                      * @param size размер
                      * @param timer_to_restart время до рестарта
                      */
     void SetDeadSign(glm::vec2 size = {1.f, 1.f}, float timer_to_restart = 3.f);
+
+    void SetPlayerConf(float health, float velocity, float ammo, double reload_time);
                     /*!
                      * Конфигурация таблички (спрайта) которая появится в случае смерти игрока
                      * @param sprite_name спрайт
@@ -130,6 +131,8 @@ public:
                      * Задать параметры для врагов
                      */
     void SetEnemies(glm::vec2 size, float layer, size_t numbers);
+
+    void SetEnemiesConf(float velocity, float health, float damage, float get_damage);
                     /*!
                      * Конфигуратор врага
                      * @param act действие врага

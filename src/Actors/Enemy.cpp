@@ -19,7 +19,7 @@ void GameObjects::Enemy::Update() {
             if (!i.second->die()) {
                 if (std::abs(i.second->GetCurrentPosition().x - m_position.x) <= 0.12f &&
                         std::abs(i.second->GetCurrentPosition().y - m_position.y) <= 0.12f) {
-                    health -= 15;
+                    health -= damage;
                     i.second->diactivate();
                 }
             }
@@ -42,7 +42,7 @@ void GameObjects::Enemy::Update() {
         if (std::abs(current_target->x - m_position.x) <= 0.12f && std::abs(current_target->y - m_position.y) <= 0.12f) {
             m_action = ACTION::SHOOTING;
             if (reload_start >= 0.4f) {
-                *current_health -= 33.f;
+                *current_health -= get_damage;
                 reload_start = 0.f;
             }
         } else {
@@ -102,4 +102,16 @@ void GameObjects::Enemy::SetSpawn(std::vector<glm::vec2> spawn) {
 
 void GameObjects::Enemy::Stop() {
     m_lastFrame = glfwGetTime();
+}
+
+void GameObjects::Enemy::SetDamage(float dmg) {
+    damage = dmg;
+}
+
+void GameObjects::Enemy::SetHp(float hp) {
+    health = hp;
+}
+
+void GameObjects::Enemy::SetDamageReceived(float dmg) {
+    get_damage = dmg;
 }
