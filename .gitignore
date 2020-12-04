@@ -41,7 +41,6 @@
 /Debug
 /.idea
 /cmake-build-debug
-/contrib
 /cmake-build-release
 doc/html
 

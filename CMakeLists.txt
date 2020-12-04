@@ -41,9 +41,11 @@ add_executable(${PROJECT_NAME_}
 
         dependencies/glad/src/glad.c
 
-)
+        src/test_engine.cpp)
 
 add_subdirectory(contrib/glfw)
+add_subdirectory("contrib/json/json")
+
 target_link_libraries(${PROJECT_NAME_} PRIVATE glfw)
 
 add_subdirectory(contrib/glm)
@@ -58,6 +60,7 @@ include_directories("dependencies")
 
 target_link_libraries(${PROJECT_NAME_} PRIVATE ${SOURCE_FILES})
 target_include_directories(${PROJECT_NAME_} PUBLIC dependencies)
+target_link_libraries(${PROJECT_NAME_} PRIVATE nlohmann_json)
 
 find_package(OpenGL REQUIRED)
 
