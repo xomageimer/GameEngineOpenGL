@@ -16,7 +16,8 @@ void processInput(GLFWwindow *window)
 }
 
 void ZombieShooter(GLFWwindow* window){
-    std::fstream config_file = (std::filesystem::current_path())/"res"/"config.json";
+    std::fstream config_file;
+    config_file.open(((std::filesystem::current_path())/"res"/"config.json").u8string());
 
     std::stringstream ss;
     ss << config_file.rdbuf();
